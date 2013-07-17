@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE docset [
+	
+	<!ENTITY template-content '
+		<element ref="if" />
+		<element ref="choose" />
+		<element ref="for-each" />
+		<element ref="value-of" />
+		<element ref="comment" />
+		<element ref="text" />
+		<element ref="param" />
+		<element ref="variable" />
+	'>
+
+	<!ENTITY root-content '
+		<element ref="import" />
+		<element ref="include" />
+		<element ref="key" />
+		<element ref="attribute-set" />
+		<element ref="output" />
+	'>
+]>
+<docset name="XSLT 1.0">
+	
+	<!-- Attributes for later reference -->
+	<attribute name="match" content="pattern" />
+	<attribute name="name" content="string" />
+	<attribute name="mode" content="string" />
+	<attribute name="select" content="expression" />
+	<attribute name="test" content="condition" />
+	<attribute name="disable-output-escaping" content="boolean" />
+
+	<!-- Elements for later reference -->
+	<element name="stylesheet">
+		<attribute name="version" content="number" />
+		
+		&root-content;
+		
+	</element>
+
+	<element name="template">
+		<attribute ref="name" />
+		<attribute ref="mode" />
+		<attribute name="priority" content="number" />
+
+		&template-content;
+		
+	</element>
+
+	<!-- Output elements -->
+	<element name="value-of">
+		<attribute ref="select" />
+		<attribute ref="disable-output-escaping" />
+	</element>
+	
+	<element name="text">
+		<attribute ref="disable-output-escaping" />
+	</element>
+	
+	<element name="comment" />
+	
+	<!-- Program flow elements -->
+	<element name="apply-templates">
+		<attribute ref="select" />
+		<attribute ref="mode" />
+		
+		<element ref="sort" />
+	</element>
+
+	<element name="call-template">
+		<attribute ref="name" />
+		
+		<element name="with-param">
+			<attribute ref="name" />
+			<attribute ref="select" />
+		</element>
+	</element>
+	
+	<element name="for-each">
+		<attribute ref="select" />
+		<element ref="sort" />
+		
+		&template-content;
+		
+	</element>
+	
+	<element name="if">
+		<attribute ref="test" />
+	</element>
+
+	<element name="choose">
+		<element name="when">
+			<attribute ref="test" />
+		</element>
+		<element name="otherwise">
+			&template-content;
+		</element>
+	</element>
+	
+	<!-- Misc. elements -->
+	<element name="variable">
+		<attribute ref="name" />
+		<attribute name="select" />
+		
+		&template-content;
+		
+	</element>
+	
+	<element name="param">
+		<attribute ref="name" />
+		<attribute name="select" />
+		
+		&template-content;
+		
+	</element>
+	
+	<element name="sort">
+		<attribute ref="select" />
+		<attribute name="data-type" content="enum" values="text|number" />
+		<attribute name="order" content="enum" values="ascending|descending" />
+		<attribute name="case-order" content="enum" values="upper-first|lower-first" />
+		<attribute name="lang" content="string" />
+	</element>
+	
+	<element name="key">
+		<attribute ref="match" />
+		<attribute ref="name" />
+		<attribute name="use" content="expression" />
+	</element>
+	
+	<element name="include">
+		<attribute name="href" content="url" />
+	</element>
+		
+	<element name="import">
+		<attribute name="href" content="url" />
+	</element>
+	
+</docset>
