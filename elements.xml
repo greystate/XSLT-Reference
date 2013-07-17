@@ -38,6 +38,13 @@
 		
 	</element>
 
+	<element name="transform">
+		<attribute name="version" content="number" />
+		
+		&root-content;
+		
+	</element>
+
 	<element name="template">
 		<attribute ref="name" />
 		<attribute ref="mode" />
