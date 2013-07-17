@@ -20,7 +20,7 @@
 	<xsl:template match="/">
 		<html>
 		<head>
-			<link rel="stylesheet" href="file:///Users/chriz/Development/src/xslt-reference/docset.css" />
+			<link rel="stylesheet" href="/css/docset.css" />
 		</head>
 		<body>
 			<xsl:apply-templates select="docset/element" />
