@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE xsl:stylesheet [
+	<!ENTITY id-prefix "e-">
+]>
 <xsl:stylesheet
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -29,7 +32,7 @@
 	</xsl:template>
 	
 	<xsl:template match="element">
-		<section class="element" id="e-{@name}">
+		<section class="element" id="&id-prefix;{@name}">
 			<xsl:apply-templates select="@name" />
 			<ul class="content">
 				<xsl:apply-templates select="attribute" mode="content" />
@@ -57,7 +60,7 @@
 		<xsl:variable name="name" select="concat(@name, key('nodes-by-name', @ref)/@name)" />
 		<xsl:variable name="displayName" select="concat($prefix, $name, $suffix)" />
 		<li class="elem-ref">
-			<a href="#e-{$name}">
+			<a href="#&id-prefix;{$name}">
 				<xsl:value-of select="$displayName" />
 			</a>
 		</li>
