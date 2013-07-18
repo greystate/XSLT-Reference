@@ -11,7 +11,6 @@ body {
 	
 	max-width: 600px;
 	margin: 0 auto;
-	padding: 2em;
 	background: #dcdcdc;
 	color: #314159;
 	font-family: inconsolata, "courier new", monospace;
@@ -25,7 +24,7 @@ a {
 }
 
 .element {
-	margin: 10px;
+	margin: 10px 2em;
 	padding: 10px;
 
 	font-size: 1em;
@@ -36,6 +35,10 @@ a {
 		color: @color_elem;
 	}
 	
+	&:hover {
+		background: @color_hovered;
+		cursor: pointer;
+	}
 }
 
 .content {
@@ -64,9 +67,20 @@ a {
 }
 
 :target {
-	border: solid #300;
-	border-width: 2px 0;
+	box-shadow:
+		0 10px 8px -10px hsla(120, 0%, 0%, 0.8),
+		0 -10px 8px -10px hsla(120, 0%, 0%, 0.8);
+	
+	border: solid rgba(0, 0, 0, 0.4);
+	border-width: 1px 0;
 	
 	background: @color_selected;
 	font-size: 175%;
+	margin: 10px 0;
+	
+	a { text-decoration: none; }
+	
+	&:hover {
+		background: @color_selected;
+	}
 }

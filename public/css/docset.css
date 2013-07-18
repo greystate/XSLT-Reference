@@ -190,7 +190,6 @@ body {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
-  padding: 2em;
   background: #dcdcdc;
   color: #314159;
   font-family: inconsolata, "courier new", monospace;
@@ -203,7 +202,7 @@ a:hover {
   text-decoration: underline;
 }
 .element {
-  margin: 10px;
+  margin: 10px 2em;
   padding: 10px;
   font-size: 1em;
 }
@@ -211,6 +210,10 @@ a:hover {
   font-size: 1.4em;
   margin: 0;
   color: #006600;
+}
+.element:hover {
+  background: rgba(198, 198, 185, 0.5);
+  cursor: pointer;
 }
 .content {
   padding: 0 0 0 10px;
@@ -235,8 +238,16 @@ a:hover {
   content: "@";
 }
 :target {
-  border: solid #300;
-  border-width: 2px 0;
-  background: rgba(223, 223, 159, 0.8);
+  box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
+  border: solid rgba(0, 0, 0, 0.4);
+  border-width: 1px 0;
+  background: rgba(214, 207, 194, 0.8);
   font-size: 175%;
+  margin: 10px 0;
+}
+:target a {
+  text-decoration: none;
+}
+:target:hover {
+  background: rgba(214, 207, 194, 0.8);
 }
