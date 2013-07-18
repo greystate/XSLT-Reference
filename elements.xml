@@ -98,6 +98,7 @@
 	<element name="choose">
 		<element name="when">
 			<attribute ref="test" />
+			&template-content;
 		</element>
 		<element name="otherwise">
 			&template-content;
