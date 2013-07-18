@@ -8,7 +8,13 @@ I'm building it for two main purposes:
 2. To serve as a reference section on [Pimp My XSLT][PIMP] so I can easily point people to a
    URL that explains a specific element
 
-[DASH]: http://kapeli.com/dash
-[PIMP]: http://pimpmyxslt.com/
+## Dev notes
+
+I use [CodeKit][] for preprocessing the LESS file, and a simple bash script to transform the XML file with
+the list of elements into a single HTML file. Yay, XSLT!
 
 *Chriztian Steinmeier, 2013*
+
+[DASH]: http://kapeli.com/dash/
+[PIMP]: http://pimpmyxslt.com/
+[CodeKit]: http://incident57.com/codekit/
