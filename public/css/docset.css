@@ -241,7 +241,7 @@ a:hover {
   box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   border: solid rgba(0, 0, 0, 0.4);
   border-width: 1px 0;
-  background: rgba(214, 207, 194, 0.8);
+  background: rgba(255, 255, 255, 0.6);
   font-size: 175%;
   margin: 10px 0;
 }
@@ -249,5 +249,5 @@ a:hover {
   text-decoration: none;
 }
 :target:hover {
-  background: rgba(214, 207, 194, 0.8);
+  background: rgba(255, 255, 255, 0.6);
 }
