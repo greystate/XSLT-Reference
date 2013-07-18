@@ -75,6 +75,8 @@
 	</element>
 	
 	<element name="attribute">
+		<attribute ref="name" />
+		<attribute name="namespace" content="URI" />
 		&template-content;
 	</element>
 	
