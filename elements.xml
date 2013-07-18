@@ -40,6 +40,9 @@
 	</element>
 
 	<element name="transform">
+		<description>
+			<p>This is an alias for the <ref>stylesheet</ref> element - almost never used.</p>
+		</description>
 		<attribute name="version" content="number" />
 		
 		&root-content;
@@ -65,7 +68,11 @@
 		<attribute ref="disable-output-escaping" />
 	</element>
 	
-	<element name="comment" />
+	<element name="comment">
+		<description>
+			<p>Use this to generate a comment in the output.</p>
+		</description>
+	</element>
 	
 	<element name="attribute">
 		&template-content;
