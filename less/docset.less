@@ -1,12 +1,19 @@
-@import "helpers";
+@import "helpers-0.6";
 @import "normalize";
+@import "constants";
+
+html {
+	font-size: @root_size;
+}
 
 body {
+	max-width: 600px;
+	margin: 0 auto;
 	padding: 2em;
 	background: #dcdcdc;
 	color: #314159;
 	font-family: inconsolata, fantasy;
-	font-size: 14px;
+	.font-size(12);
 }
 
 a {
@@ -20,32 +27,45 @@ a {
 	margin: 10px;
 	padding: 10px;
 
+	font-size: 1em;
+
 	> h1 {
+		font-size: 1.4em;
 		margin: 0;
-		font-size: 26px;
-		color: #060;
-	}
-	
-	> h2 {
-		font-size: 14px;
-		color: #600;
+		color: @color_elem;
 	}
 	
 }
 
 .content {
 	padding: 0 0 0 10px;
-	margin: 0;
+	margin: 5px 0;
 	list-style: none;
 	
 	> h2 { font-size: 12px; }
 }
 
-.elem-ref {
+.elem-ref, .attr-ref {
 	padding: 0;
 	margin: 0 0 0 1em;
 }
 
+.elem-ref {
+	color: @color_elem;
+}
+
+.attr-ref {
+	color: @color_attr;
+}
+
 .attr-ref:before {
 	content: "@";
+}
+
+:target {
+	border: solid #300;
+	border-width: 2px 0;
+	
+	background: @color_selected;
+	font-size: 175%;
 }
