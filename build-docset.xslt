@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE xsl:stylesheet [
-	<!ENTITY id-prefix "e-">
+	<!ENTITY id-prefix "">
 ]>
 <xsl:stylesheet
 	version="1.0"
