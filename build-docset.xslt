@@ -50,9 +50,11 @@
 	
 	<xsl:template match="element/@name">
 		<h1>
-			<xsl:value-of select="$prefix" />
-			<xsl:value-of select="." />
-			<xsl:value-of select="$suffix" />
+			<a href="#&id-prefix;{.}">
+				<xsl:value-of select="$prefix" />
+				<xsl:value-of select="." />
+				<xsl:value-of select="$suffix" />
+			</a>
 		</h1>
 		
 	</xsl:template>
