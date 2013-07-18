@@ -10,6 +10,7 @@
 		<element ref="text" />
 		<element ref="param" />
 		<element ref="variable" />
+		<element ref="number" />
 	'>
 
 	<!ENTITY root-content '
@@ -68,6 +69,18 @@
 	
 	<element name="attribute">
 		&template-content;
+	</element>
+	
+	<element name="number">
+		<attribute name="count" content="expression" />
+		<attribute name="level" content="enum" values="single|multiple|any" />
+		<attribute name="from" content="expression" />
+		<attribute name="value" content="expression" />
+		<attribute name="format" content="string" />
+		<attribute name="lang" content="string" />
+		<attribute name="letter-value" content="enum" values="alphabetic|traditional" />
+		<attribute name="grouping-separator" content="character" />
+		<attribute name="grouping-size" content="number" />
 	</element>
 	
 	<!-- Program flow elements -->
