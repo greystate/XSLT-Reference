@@ -215,6 +215,15 @@ a:hover {
   background: rgba(198, 198, 185, 0.5);
   cursor: pointer;
 }
+.desc {
+  display: none;
+}
+.desc a {
+  font-weight: bold;
+}
+.desc a:hover {
+  text-decoration: underline;
+}
 .content {
   padding: 0 0 0 10px;
   margin: 5px 0;
@@ -250,4 +259,7 @@ a:hover {
 }
 :target:hover {
   background: rgba(255, 255, 255, 0.6);
+}
+:target .desc {
+  display: block;
 }
