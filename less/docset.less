@@ -41,6 +41,19 @@ a {
 	}
 }
 
+.desc {
+	display: none;
+	
+	a {
+		font-weight: bold;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}
+
 .content {
 	padding: 0 0 0 10px;
 	margin: 5px 0;
@@ -83,4 +96,6 @@ a {
 	&:hover {
 		background: @color_selected;
 	}
+	
+	.desc { display: block; }
 }

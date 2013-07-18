@@ -39,6 +39,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 	<xsl:template match="element">
 		<section class="element" id="&id-prefix;{@name}">
 			<xsl:apply-templates select="@name" />
+			<xsl:apply-templates select="description" />
 			<ul class="content">
 				<xsl:apply-templates select="attribute" mode="content" />
 			</ul>
@@ -78,6 +79,24 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		<li class="attr-ref">
 			<xsl:value-of select="$name" />
 		</li>
+	</xsl:template>
+	
+	<xsl:template match="description">
+		<div class="desc">
+			<xsl:apply-templates />
+		</div>
+	</xsl:template>
+	
+	<xsl:template match="description//*">
+		<xsl:copy>
+			<xsl:apply-templates select="* | text()" />
+		</xsl:copy>
+	</xsl:template>
+	
+	<xsl:template match="description//ref">
+		<a href="#{.}">
+			<xsl:value-of select="." />
+		</a>
 	</xsl:template>
 
 </xsl:stylesheet>
