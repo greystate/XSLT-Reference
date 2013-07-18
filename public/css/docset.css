@@ -1,16 +1,3 @@
-.contain:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-* html .contain {
-  height: 1%;
-}
-*:first-child + html .contain {
-  min-height: 1px;
-}
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 article,
 aside,
@@ -195,12 +182,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+html {
+  font-size: 62.5%;
+}
 body {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 2em;
   background: #dcdcdc;
   color: #314159;
   font-family: inconsolata, fantasy;
-  font-size: 14px;
+  font-size: 12px;
+  font-size: 1.2rem;
 }
 a {
   color: inherit;
@@ -212,28 +205,38 @@ a:hover {
 .element {
   margin: 10px;
   padding: 10px;
+  font-size: 1em;
 }
 .element > h1 {
+  font-size: 1.4em;
   margin: 0;
-  font-size: 26px;
-  color: #060;
-}
-.element > h2 {
-  font-size: 14px;
-  color: #600;
+  color: #006600;
 }
 .content {
   padding: 0 0 0 10px;
-  margin: 0;
+  margin: 5px 0;
   list-style: none;
 }
 .content > h2 {
   font-size: 12px;
 }
-.elem-ref {
+.elem-ref,
+.attr-ref {
   padding: 0;
   margin: 0 0 0 1em;
 }
+.elem-ref {
+  color: #006600;
+}
+.attr-ref {
+  color: #660000;
+}
 .attr-ref:before {
   content: "@";
+}
+:target {
+  border: solid #300;
+  border-width: 2px 0;
+  background: rgba(223, 223, 159, 0.8);
+  font-size: 175%;
 }
