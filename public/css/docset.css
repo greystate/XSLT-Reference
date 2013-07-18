@@ -186,14 +186,14 @@ html {
   font-size: 62.5%;
 }
 body {
+  font-size: 12px;
+  font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
   padding: 2em;
   background: #dcdcdc;
   color: #314159;
-  font-family: inconsolata, fantasy;
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-family: inconsolata, "courier new", monospace;
 }
 a {
   color: inherit;
