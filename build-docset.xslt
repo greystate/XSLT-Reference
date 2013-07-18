@@ -33,6 +33,8 @@
 			<xsl:apply-templates select="@name" />
 			<ul class="content">
 				<xsl:apply-templates select="attribute" mode="content" />
+			</ul>
+			<ul class="content">
 				<xsl:apply-templates select="element" mode="content" />
 			</ul>
 		</section>
