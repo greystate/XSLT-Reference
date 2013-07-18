@@ -66,6 +66,10 @@
 	
 	<element name="comment" />
 	
+	<element name="attribute">
+		&template-content;
+	</element>
+	
 	<!-- Program flow elements -->
 	<element name="apply-templates">
 		<attribute ref="select" />
@@ -120,6 +124,11 @@
 		
 		&template-content;
 		
+	</element>
+	
+	<element name="attribute-set">
+		<attribute ref="name" />
+		<element ref="attribute" />
 	</element>
 	
 	<element name="sort">
