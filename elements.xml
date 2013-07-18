@@ -32,7 +32,7 @@
 
 	<!-- Elements for later reference -->
 	<element name="stylesheet">
-		<attribute name="version" content="number" />
+		<attribute name="version" content="enum" values="1.0" />
 		
 		&root-content;
 		
