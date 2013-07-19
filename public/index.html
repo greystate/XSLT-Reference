@@ -82,7 +82,27 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
-</ul></section><section class="element" id="number"><h1><a href="#number">&lt;xsl:number&gt;</a></h1>
+</ul></section><section class="element" id="element"><h1><a href="#element">&lt;xsl:element&gt;</a></h1>
+<ul class="content">
+<li class="attr-ref">name <span class="type"><span class="general">string</span></span>
+</li>
+<li class="attr-ref">namespace <span class="type"><span class="general">URI</span></span>
+</li>
+</ul>
+<ul class="content">
+<li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;xsl:comment&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
+<li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
+<li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+</ul></section><section class="element" id="processing-instruction"><h1><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h1>
+<ul class="content"><li class="attr-ref">name <span class="type"><span class="general">string</span></span>
+</li></ul>
+<ul class="content"></ul></section><section class="element" id="number"><h1><a href="#number">&lt;xsl:number&gt;</a></h1>
 <ul class="content">
 <li class="attr-ref">count <span class="type"><span class="general">expression</span></span>
 </li>
@@ -130,11 +150,46 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </ul></section><section class="element" id="if"><h1><a href="#if">&lt;xsl:if&gt;</a></h1>
 <ul class="content"><li class="attr-ref">test <span class="type"><span class="general">condition</span></span>
 </li></ul>
-<ul class="content"></ul></section><section class="element" id="choose"><h1><a href="#choose">&lt;xsl:choose&gt;</a></h1>
+<ul class="content">
+<li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;xsl:comment&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
+<li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
+<li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+</ul></section><section class="element" id="choose"><h1><a href="#choose">&lt;xsl:choose&gt;</a></h1>
 <ul class="content"></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#when">&lt;xsl:when&gt;</a></li>
 <li class="elem-ref"><a href="#otherwise">&lt;xsl:otherwise&gt;</a></li>
+</ul></section><section class="element" id="when"><h1><a href="#when">&lt;xsl:when&gt;</a></h1>
+<ul class="content"><li class="attr-ref">test <span class="type"><span class="general">condition</span></span>
+</li></ul>
+<ul class="content">
+<li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;xsl:comment&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
+<li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
+<li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+</ul></section><section class="element" id="otherwise"><h1><a href="#otherwise">&lt;xsl:otherwise&gt;</a></h1>
+<ul class="content"></ul>
+<ul class="content">
+<li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
+<li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
+<li class="elem-ref"><a href="#for-each">&lt;xsl:for-each&gt;</a></li>
+<li class="elem-ref"><a href="#value-of">&lt;xsl:value-of&gt;</a></li>
+<li class="elem-ref"><a href="#comment">&lt;xsl:comment&gt;</a></li>
+<li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
+<li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
+<li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
+<li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="variable"><h1><a href="#variable">&lt;xsl:variable&gt;</a></h1>
 <ul class="content">
 <li class="attr-ref">name <span class="type"><span class="general">string</span></span>
@@ -175,7 +230,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <ul class="content"><li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li></ul></section><section class="element" id="sort"><h1><a href="#sort">&lt;xsl:sort&gt;</a></h1>
 <div class="desc">
 			<p>
-				This <strong>must</strong> be the first element inside a <a href="#for-each">for-each</a> or an
+				If present, this <strong>must</strong> be the first element inside a <a href="#for-each">for-each</a> or an
 				<a href="#apply-templates">apply-templates</a> instruction.
 			</p>
 			<p>
