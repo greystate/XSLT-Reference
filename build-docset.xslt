@@ -79,7 +79,18 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		<xsl:variable name="name" select="$attr/@name" />
 		<li class="attr-ref">
 			<xsl:value-of select="$name" />
+			<xsl:apply-templates select="$attr" mode="typeinfo" />
 		</li>
+	</xsl:template>
+	
+	<xsl:template match="attribute" mode="typeinfo">
+		<xsl:text> </xsl:text>
+		<span class="type"><xsl:value-of select="@content" /></span>
+	</xsl:template>
+	
+	<xsl:template match="attribute[@content = 'enum']" mode="typeinfo">
+		<xsl:text> </xsl:text>
+		<span class="type enum">(<xsl:value-of select="@values" />)</span>
 	</xsl:template>
 	
 	<xsl:template match="description">
