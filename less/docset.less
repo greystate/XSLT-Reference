@@ -79,6 +79,17 @@ a {
 	content: "@";
 }
 
+.type {
+	display: none;
+	color: @color_attr_type;
+	font-style: italic;
+}
+
+.enum {
+	color: @color_attr_type_enum;
+	font-style: normal;
+}
+
 :target {
 	box-shadow:
 		0 10px 8px -10px hsla(120, 0%, 0%, 0.8),
@@ -98,4 +109,5 @@ a {
 	}
 	
 	.desc { display: block; }
+	.type { display: inline; }
 }
