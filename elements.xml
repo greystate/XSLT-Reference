@@ -134,7 +134,7 @@
 	<!-- Misc. elements -->
 	<element name="variable">
 		<attribute ref="name" />
-		<attribute name="select" />
+		<attribute ref="select" />
 		
 		&template-content;
 		
@@ -183,11 +183,11 @@
 	</element>
 	
 	<element name="include">
-		<attribute name="href" content="url" />
+		<attribute name="href" content="URI" />
 	</element>
 		
 	<element name="import">
-		<attribute name="href" content="url" />
+		<attribute name="href" content="URI" />
 	</element>
 	
 </docset>
