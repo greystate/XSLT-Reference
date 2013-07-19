@@ -156,7 +156,7 @@
 	<element name="sort">
 		<description>
 			<p>
-				This <strong>must</strong> be the first element inside a <ref>for-each</ref> or an
+				If present, this <strong>must</strong> be the first element inside a <ref>for-each</ref> or an
 				<ref>apply-templates</ref> instruction.
 			</p>
 			<p>
