@@ -65,17 +65,18 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 	</xsl:template>
 	
 	<xsl:template match="element" mode="content">
-		<xsl:variable name="name" select="concat(@name, key('nodes-by-name', @ref)/@name)" />
-		<xsl:variable name="displayName" select="concat($prefix, $name, $suffix)" />
+		<xsl:variable name="elem" select=". | key('nodes-by-name', @ref)" />
+		<xsl:variable name="displayName" select="concat($prefix, $elem/@name, $suffix)" />
 		<li class="elem-ref">
-			<a href="#&id-prefix;{$name}">
+			<a href="#&id-prefix;{$elem/@name}">
 				<xsl:value-of select="$displayName" />
 			</a>
 		</li>
 	</xsl:template>
 	
 	<xsl:template match="attribute" mode="content">
-		<xsl:variable name="name" select="concat(@name, key('nodes-by-name', @ref)/@name)" />
+		<xsl:variable name="attr" select=". | key('nodes-by-name', @ref)" />
+		<xsl:variable name="name" select="$attr/@name" />
 		<li class="attr-ref">
 			<xsl:value-of select="$name" />
 		</li>
