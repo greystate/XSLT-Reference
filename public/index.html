@@ -11,7 +11,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </head>
 <body>
 <section class="element" id="stylesheet"><h1><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></h1>
-<ul class="content"><li class="attr-ref">version</li></ul>
+<ul class="content"><li class="attr-ref">version <span class="type enum">(1.0)</span>
+</li></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#import">&lt;xsl:import&gt;</a></li>
 <li class="elem-ref"><a href="#include">&lt;xsl:include&gt;</a></li>
@@ -22,7 +23,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <div class="desc">
 			<p>This is an alias for the <a href="#stylesheet">stylesheet</a> element - almost never used.</p>
 		</div>
-<ul class="content"><li class="attr-ref">version</li></ul>
+<ul class="content"><li class="attr-ref">version <span class="type">number</span>
+</li></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#import">&lt;xsl:import&gt;</a></li>
 <li class="elem-ref"><a href="#include">&lt;xsl:include&gt;</a></li>
@@ -31,9 +33,12 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#">&lt;xsl:&gt;</a></li>
 </ul></section><section class="element" id="template"><h1><a href="#template">&lt;xsl:template&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">name</li>
-<li class="attr-ref">mode</li>
-<li class="attr-ref">priority</li>
+<li class="attr-ref">name <span class="type">string</span>
+</li>
+<li class="attr-ref">mode <span class="type">string</span>
+</li>
+<li class="attr-ref">priority <span class="type">number</span>
+</li>
 </ul>
 <ul class="content">
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
@@ -47,11 +52,14 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="value-of"><h1><a href="#value-of">&lt;xsl:value-of&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">select</li>
-<li class="attr-ref">disable-output-escaping</li>
+<li class="attr-ref">select <span class="type">expression</span> <span class="type"></span> <span class="type"></span>
+</li>
+<li class="attr-ref">disable-output-escaping <span class="type">boolean</span>
+</li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="text"><h1><a href="#text">&lt;xsl:text&gt;</a></h1>
-<ul class="content"><li class="attr-ref">disable-output-escaping</li></ul>
+<ul class="content"><li class="attr-ref">disable-output-escaping <span class="type">boolean</span>
+</li></ul>
 <ul class="content"></ul></section><section class="element" id="comment"><h1><a href="#comment">&lt;xsl:comment&gt;</a></h1>
 <div class="desc">
 			<p>Use this to generate a comment in the output.</p>
@@ -59,8 +67,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <ul class="content"></ul>
 <ul class="content"></ul></section><section class="element" id="attribute"><h1><a href="#attribute">&lt;xsl:attribute&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">name</li>
-<li class="attr-ref">namespace</li>
+<li class="attr-ref">name <span class="type">string</span>
+</li>
+<li class="attr-ref">namespace <span class="type">URI</span>
+</li>
 </ul>
 <ul class="content">
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
@@ -74,25 +84,38 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="number"><h1><a href="#number">&lt;xsl:number&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">count</li>
-<li class="attr-ref">level</li>
-<li class="attr-ref">from</li>
-<li class="attr-ref">value</li>
-<li class="attr-ref">format</li>
-<li class="attr-ref">lang</li>
-<li class="attr-ref">letter-value</li>
-<li class="attr-ref">grouping-separator</li>
-<li class="attr-ref">grouping-size</li>
+<li class="attr-ref">count <span class="type">expression</span>
+</li>
+<li class="attr-ref">level <span class="type enum">(single|multiple|any)</span>
+</li>
+<li class="attr-ref">from <span class="type">expression</span>
+</li>
+<li class="attr-ref">value <span class="type">expression</span>
+</li>
+<li class="attr-ref">format <span class="type">string</span>
+</li>
+<li class="attr-ref">lang <span class="type">string</span>
+</li>
+<li class="attr-ref">letter-value <span class="type enum">(alphabetic|traditional)</span>
+</li>
+<li class="attr-ref">grouping-separator <span class="type">character</span>
+</li>
+<li class="attr-ref">grouping-size <span class="type">number</span>
+</li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="apply-templates"><h1><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">select</li>
-<li class="attr-ref">mode</li>
+<li class="attr-ref">select <span class="type">expression</span> <span class="type"></span> <span class="type"></span>
+</li>
+<li class="attr-ref">mode <span class="type">string</span>
+</li>
 </ul>
 <ul class="content"><li class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></li></ul></section><section class="element" id="call-template"><h1><a href="#call-template">&lt;xsl:call-template&gt;</a></h1>
-<ul class="content"><li class="attr-ref">name</li></ul>
+<ul class="content"><li class="attr-ref">name <span class="type">string</span>
+</li></ul>
 <ul class="content"><li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li></ul></section><section class="element" id="for-each"><h1><a href="#for-each">&lt;xsl:for-each&gt;</a></h1>
-<ul class="content"><li class="attr-ref">select</li></ul>
+<ul class="content"><li class="attr-ref">select <span class="type">expression</span> <span class="type"></span> <span class="type"></span>
+</li></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></li>
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
@@ -105,7 +128,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="if"><h1><a href="#if">&lt;xsl:if&gt;</a></h1>
-<ul class="content"><li class="attr-ref">test</li></ul>
+<ul class="content"><li class="attr-ref">test <span class="type">condition</span>
+</li></ul>
 <ul class="content"></ul></section><section class="element" id="choose"><h1><a href="#choose">&lt;xsl:choose&gt;</a></h1>
 <ul class="content"></ul>
 <ul class="content">
@@ -113,8 +137,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#otherwise">&lt;xsl:otherwise&gt;</a></li>
 </ul></section><section class="element" id="variable"><h1><a href="#variable">&lt;xsl:variable&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">name</li>
-<li class="attr-ref">select</li>
+<li class="attr-ref">name <span class="type">string</span>
+</li>
+<li class="attr-ref">select <span class="type"></span>
+</li>
 </ul>
 <ul class="content">
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
@@ -128,8 +154,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="param"><h1><a href="#param">&lt;xsl:param&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">name</li>
-<li class="attr-ref">select</li>
+<li class="attr-ref">name <span class="type">string</span>
+</li>
+<li class="attr-ref">select <span class="type"></span>
+</li>
 </ul>
 <ul class="content">
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
@@ -142,7 +170,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="attribute-set"><h1><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h1>
-<ul class="content"><li class="attr-ref">name</li></ul>
+<ul class="content"><li class="attr-ref">name <span class="type">string</span>
+</li></ul>
 <ul class="content"><li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li></ul></section><section class="element" id="sort"><h1><a href="#sort">&lt;xsl:sort&gt;</a></h1>
 <div class="desc">
 			<p>
@@ -154,11 +183,16 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 		</div>
 <ul class="content">
-<li class="attr-ref">select</li>
-<li class="attr-ref">data-type</li>
-<li class="attr-ref">order</li>
-<li class="attr-ref">case-order</li>
-<li class="attr-ref">lang</li>
+<li class="attr-ref">select <span class="type">expression</span> <span class="type"></span> <span class="type"></span>
+</li>
+<li class="attr-ref">data-type <span class="type enum">(text|number)</span>
+</li>
+<li class="attr-ref">order <span class="type enum">(ascending|descending)</span>
+</li>
+<li class="attr-ref">case-order <span class="type enum">(upper-first|lower-first)</span>
+</li>
+<li class="attr-ref">lang <span class="type">string</span>
+</li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="key"><h1><a href="#key">&lt;xsl:key&gt;</a></h1>
 <div class="desc">
@@ -168,14 +202,19 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 		</div>
 <ul class="content">
-<li class="attr-ref">match</li>
-<li class="attr-ref">name</li>
-<li class="attr-ref">use</li>
+<li class="attr-ref">match <span class="type">pattern</span>
+</li>
+<li class="attr-ref">name <span class="type">string</span>
+</li>
+<li class="attr-ref">use <span class="type">expression</span>
+</li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="include"><h1><a href="#include">&lt;xsl:include&gt;</a></h1>
-<ul class="content"><li class="attr-ref">href</li></ul>
+<ul class="content"><li class="attr-ref">href <span class="type">url</span>
+</li></ul>
 <ul class="content"></ul></section><section class="element" id="import"><h1><a href="#import">&lt;xsl:import&gt;</a></h1>
-<ul class="content"><li class="attr-ref">href</li></ul>
+<ul class="content"><li class="attr-ref">href <span class="type">url</span>
+</li></ul>
 <ul class="content"></ul></section>
 </body>
 </html>

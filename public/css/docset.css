@@ -246,6 +246,15 @@ a:hover {
 .attr-ref:before {
   content: "@";
 }
+.type {
+  display: none;
+  color: #666666;
+  font-style: italic;
+}
+.enum {
+  color: #006600;
+  font-style: normal;
+}
 :target {
   box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   border: solid rgba(0, 0, 0, 0.4);
@@ -262,4 +271,7 @@ a:hover {
 }
 :target .desc {
   display: block;
+}
+:target .type {
+  display: inline;
 }
