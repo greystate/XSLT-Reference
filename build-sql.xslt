@@ -19,7 +19,7 @@
 		</xsl:if>
 		<xsl:text>INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('</xsl:text>
 			<xsl:value-of select="@name" />
-			<xsl:text>', 'Element', '#</xsl:text>
+			<xsl:text>', 'Element', 'index.html#</xsl:text>
 			<xsl:value-of select="@name" />
 		<xsl:text>');</xsl:text>
 	</xsl:template>
