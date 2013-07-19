@@ -80,6 +80,16 @@
 		&template-content;
 	</element>
 	
+	<element name="element">
+		<attribute ref="name" />
+		<attribute name="namespace" content="URI" />
+		&template-content;
+	</element>
+	
+	<element name="processing-instruction">
+		<attribute ref="name" />
+	</element>
+	
 	<element name="number">
 		<attribute name="count" content="expression" />
 		<attribute name="level" content="enum" values="single|multiple|any" />
@@ -119,16 +129,23 @@
 	
 	<element name="if">
 		<attribute ref="test" />
+		
+		&template-content;
+		
 	</element>
 
 	<element name="choose">
-		<element name="when">
-			<attribute ref="test" />
-			&template-content;
-		</element>
-		<element name="otherwise">
-			&template-content;
-		</element>
+		<element ref="when" />
+		<element ref="otherwise" />
+	</element>
+
+	<element name="when">
+		<attribute ref="test" />
+		&template-content;
+	</element>
+
+	<element name="otherwise">
+		&template-content;
 	</element>
 	
 	<!-- Misc. elements -->
