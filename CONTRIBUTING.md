@@ -17,6 +17,6 @@ Here's how I usually do when contributing to other people's projects, so it'll w
 
 		git checkout master
 		git fetch upstream
-		git rebase upstream/masetr
+		git rebase upstream/master
 	
 * Create a pull-request
