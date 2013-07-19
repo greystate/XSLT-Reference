@@ -217,6 +217,12 @@ a:hover {
 }
 .desc {
   display: none;
+  padding: 5px;
+  margin: 0 10px;
+  color: #336699;
+}
+.desc > p {
+  margin: 0 0 0.6em;
 }
 .desc a {
   font-weight: bold;
