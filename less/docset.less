@@ -82,13 +82,15 @@ a {
 .type {
 	display: none;
 	color: @color_attr_type;
-	font-style: italic;
+
+	.enum {
+		color: @color_attr_type_enum;
+		font-style: normal;
+	}
+	
+	.general { font-style: italic; }
 }
 
-.enum {
-	color: @color_attr_type_enum;
-	font-style: normal;
-}
 
 :target {
 	box-shadow:

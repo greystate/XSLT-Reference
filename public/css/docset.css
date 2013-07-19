@@ -249,11 +249,13 @@ a:hover {
 .type {
   display: none;
   color: #666666;
-  font-style: italic;
 }
-.enum {
+.type .enum {
   color: #006600;
   font-style: normal;
+}
+.type .general {
+  font-style: italic;
 }
 :target {
   box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);

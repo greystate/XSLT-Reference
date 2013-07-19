@@ -85,12 +85,17 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 	
 	<xsl:template match="attribute" mode="typeinfo">
 		<xsl:text> </xsl:text>
-		<span class="type"><xsl:value-of select="@content" /></span>
+		<span class="type">
+			<span class="general"><xsl:value-of select="@content" /></span>
+		</span>
 	</xsl:template>
 	
 	<xsl:template match="attribute[@content = 'enum']" mode="typeinfo">
-		<xsl:text> </xsl:text>
-		<span class="type enum">(<xsl:value-of select="@values" />)</span>
+		<span class="type">
+			<xsl:text> (</xsl:text>
+			<span class="enum"><xsl:value-of select="@values" /></span>
+			<xsl:text>)</xsl:text>
+		</span>
 	</xsl:template>
 	
 	<xsl:template match="description">
