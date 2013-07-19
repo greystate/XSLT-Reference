@@ -23,6 +23,7 @@
 	<xsl:template match="/">
 		<html>
 		<head>
+			<title>XSLT Quick Reference</title>
 			<link rel="stylesheet" href="css/docset.css" />
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<xsl:comment>
