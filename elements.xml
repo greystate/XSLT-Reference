@@ -154,6 +154,15 @@
 	</element>
 	
 	<element name="sort">
+		<description>
+			<p>
+				This <strong>must</strong> be the first element inside a <ref>for-each</ref> or an
+				<ref>apply-templates</ref> instruction.
+			</p>
+			<p>
+				Note that multiple sort elements are allowed.
+			</p>
+		</description>
 		<attribute ref="select" />
 		<attribute name="data-type" content="enum" values="text|number" />
 		<attribute name="order" content="enum" values="ascending|descending" />
@@ -162,6 +171,12 @@
 	</element>
 	
 	<element name="key">
+		<description>
+			<p>
+				Creates a named index of elements matching the expression in the <var>match</var> attribute.
+				The value retrieved from the <var>use</var> attribute is stored as the index value.
+			</p>
+		</description>
 		<attribute ref="match" />
 		<attribute ref="name" />
 		<attribute name="use" content="expression" />
