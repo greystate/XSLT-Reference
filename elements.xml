@@ -113,11 +113,12 @@
 
 	<element name="call-template">
 		<attribute ref="name" />
-		
-		<element name="with-param">
-			<attribute ref="name" />
-			<attribute ref="select" />
-		</element>
+		<element ref="with-param" />
+	</element>
+
+	<element name="with-param">
+		<attribute ref="name" />
+		<attribute ref="select" />
 	</element>
 	
 	<element name="for-each">
