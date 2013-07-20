@@ -32,7 +32,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</xsl:comment>
 		</head>
 		<body>
-			<xsl:apply-templates select="docset/element" />
+			<xsl:apply-templates select="docset/element">
+				<xsl:sort select="@name" data-type="text" order="ascending" />
+			</xsl:apply-templates>
 		</body>
 		</html>
 	</xsl:template>
