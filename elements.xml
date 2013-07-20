@@ -108,6 +108,7 @@
 		<attribute ref="mode" />
 		
 		<element ref="sort" />
+		<element ref="with-param" />
 	</element>
 
 	<element name="call-template">
