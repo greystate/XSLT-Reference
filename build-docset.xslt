@@ -99,6 +99,14 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</span>
 	</xsl:template>
 	
+	<xsl:template match="attribute[@content = 'boolean']" mode="typeinfo">
+		<span class="type">
+			<xsl:text> (</xsl:text>
+			<span class="enum">yes|no</span>
+			<xsl:text>)</xsl:text>
+		</span>
+	</xsl:template>
+	
 	<xsl:template match="description">
 		<div class="desc">
 			<xsl:apply-templates />
