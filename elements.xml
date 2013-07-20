@@ -209,4 +209,13 @@
 		<attribute name="href" content="URI" />
 	</element>
 	
+	<element name="output">
+		<attribute name="method" content="enum" values="html|xml|text" />
+		<attribute name="indent" content="boolean" />
+		<attribute name="omit-xml-declaration" content="boolean" />
+		<attribute name="doctype-public" content="string" />
+		<attribute name="doctype-system" content="string" />
+		<attribute name="cdata-section-elements" content="string" />
+	</element>
+	
 </docset>
