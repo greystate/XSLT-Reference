@@ -12,6 +12,16 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </head>
 <body>
 <section class="element" id="apply-templates"><h1><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h1>
+<div class="desc">
+			<p>
+				Collects the nodes specified by the <var>select</var> attribute and
+				starts processing them using the matching templates.
+			</p>
+			<p>
+				Using the <var>mode</var> attribute restricts the applied templates to
+				only those with an identical mode attribute.
+			</p>
+		</div>
 <ul class="content">
 <li class="attr-ref">select <span class="type"><span class="general">expression</span></span> <span class="type"><span class="general"></span></span>
 </li>
@@ -220,6 +230,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#output">&lt;xsl:output&gt;</a></li>
 </ul></section><section class="element" id="template"><h1><a href="#template">&lt;xsl:template&gt;</a></h1>
 <ul class="content">
+<li class="attr-ref">match <span class="type"><span class="general">pattern</span></span>
+</li>
 <li class="attr-ref">name <span class="type"><span class="general">string</span></span>
 </li>
 <li class="attr-ref">mode <span class="type"><span class="general">string</span></span>

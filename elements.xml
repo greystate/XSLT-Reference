@@ -105,6 +105,16 @@
 	
 	<!-- Program flow elements -->
 	<element name="apply-templates">
+		<description>
+			<p>
+				Collects the nodes specified by the <var>select</var> attribute and
+				starts processing them using the matching templates.
+			</p>
+			<p>
+				Using the <var>mode</var> attribute restricts the applied templates to
+				only those with an identical mode attribute.
+			</p>
+		</description>
 		<attribute ref="select" />
 		<attribute ref="mode" />
 		
