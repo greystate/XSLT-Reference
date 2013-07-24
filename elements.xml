@@ -33,7 +33,9 @@
 
 	<!-- Elements for later reference -->
 	<element name="stylesheet">
-		<attribute name="version" content="enum" values="1.0" />
+		<attribute name="version" content="enum" values="1.0" required="yes" />
+		<attribute name="exclude-result-prefixes" content="string" />
+		<attribute name="extension-element-prefixes" content="string" />
 		
 		&root-content;
 		
@@ -61,7 +63,7 @@
 
 	<!-- Output elements -->
 	<element name="value-of">
-		<attribute ref="select" />
+		<attribute ref="select" required="yes" />
 		<attribute ref="disable-output-escaping" />
 	</element>
 	
@@ -76,12 +78,30 @@
 	</element>
 	
 	<element name="attribute">
-		<attribute ref="name" />
+		<description>
+			<p>
+				Generates an attribute on the element being output. Must precede any
+				content generated for an element (i.e.: text, child elements, comments etc.)
+			</p>
+			<note>
+				Can be used to override an attribute you've already set, as
+				duplicate attribute names are not allowed in XML.
+			</note>
+		</description>
+		<attribute ref="name" required="yes" />
 		<attribute name="namespace" content="URI" />
 		&template-content;
 	</element>
 	
 	<element name="element">
+		<description>
+			<p>
+				Only necessary if you don't know the name of the element, or if you need to create
+				the element in a specific namespace. Otherwise it's much better to just use the
+				element tag directly (i.e., just use <code><![CDATA[<div>]]></code>
+				instead of <code><![CDATA[<xsl:element name="div">]]></code>).
+			</p>
+		</description>
 		<attribute ref="name" />
 		<attribute name="namespace" content="URI" />
 		&template-content;
@@ -125,9 +145,8 @@
 	<element name="call-template">
 		<description>
 			<p>
-				Explicitly call the template that has a <var>name</var> attribute matching
-				the name specified here in this element's <var>name</var> attribute. The template
-				will execute with the context at the point of this instruction.
+				Explicitly call a named <ref>template</ref> (a template with a name attribute).
+				The template will execute with the context at the point of this instruction.
 			</p>
 		</description>
 		<attribute ref="name" />
@@ -148,7 +167,7 @@
 	</element>
 	
 	<element name="if">
-		<attribute ref="test" />
+		<attribute ref="test" required="yes" />
 		
 		&template-content;
 		
@@ -160,7 +179,7 @@
 	</element>
 
 	<element name="when">
-		<attribute ref="test" />
+		<attribute ref="test" required="yes" />
 		&template-content;
 	</element>
 
@@ -170,7 +189,7 @@
 	
 	<!-- Misc. elements -->
 	<element name="variable">
-		<attribute ref="name" />
+		<attribute ref="name" required="yes" />
 		<attribute ref="select" />
 		
 		&template-content;
@@ -178,7 +197,7 @@
 	</element>
 	
 	<element name="param">
-		<attribute ref="name" />
+		<attribute ref="name" required="yes" />
 		<attribute name="select" />
 		
 		&template-content;
@@ -186,7 +205,7 @@
 	</element>
 	
 	<element name="attribute-set">
-		<attribute ref="name" />
+		<attribute ref="name" required="yes" />
 		<element ref="attribute" />
 	</element>
 	
@@ -196,9 +215,9 @@
 				If present, this <strong>must</strong> be the first element inside a <ref>for-each</ref> or an
 				<ref>apply-templates</ref> instruction.
 			</p>
-			<p>
-				Note that multiple sort elements are allowed.
-			</p>
+			<note>
+				Multiple sort elements are allowed.
+			</note>
 		</description>
 		<attribute ref="select" />
 		<attribute name="data-type" content="enum" values="text|number" />
@@ -214,25 +233,25 @@
 				The value retrieved from the <var>use</var> attribute is stored as the index value.
 			</p>
 		</description>
-		<attribute ref="match" />
-		<attribute ref="name" />
-		<attribute name="use" content="expression" />
+		<attribute ref="match" required="yes" />
+		<attribute ref="name" required="yes" />
+		<attribute name="use" content="expression" required="yes" />
 	</element>
 	
 	<element name="include">
-		<attribute name="href" content="URI" />
+		<attribute name="href" content="URI" required="yes" />
 	</element>
 		
 	<element name="import">
-		<attribute name="href" content="URI" />
+		<attribute name="href" content="URI" required="yes" />
 	</element>
 	
 	<element name="output">
 		<attribute name="method" content="enum" values="html|xml|text" />
 		<attribute name="indent" content="boolean" />
 		<attribute name="omit-xml-declaration" content="boolean" />
-		<attribute name="doctype-public" content="string" />
-		<attribute name="doctype-system" content="string" />
+		<attribute name="doctype-public" content="URI" />
+		<attribute name="doctype-system" content="URI" />
 		<attribute name="cdata-section-elements" content="string" />
 	</element>
 	
