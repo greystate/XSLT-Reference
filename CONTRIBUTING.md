@@ -13,9 +13,9 @@ Here's how I usually do when contributing to other people's projects, so it'll w
 
 * Edit the code
 * Commit locally
-* Sync your fork's master with the upstream master:
+* Sync your fork with the upstream master:
 
-		git checkout master
+		git checkout <your-branch-name>
 		git fetch upstream
 		git rebase upstream/master
 	
