@@ -60,6 +60,22 @@ a {
 
 }
 
+.note {
+	.border-radius(3px);
+	
+	padding: 10px;
+	font-size: 75%;
+	color: @color_note;
+	background: @bgcolor_note;
+	
+	&:before {
+		content: "Note:\A0";
+		float: left;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+
 .content {
 	padding: 0 0 0 10px;
 	margin: 5px 0;

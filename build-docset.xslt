@@ -122,6 +122,12 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</xsl:copy>
 	</xsl:template>
 	
+	<xsl:template match="description//note">
+		<p class="note">
+			<xsl:apply-templates />
+		</p>
+	</xsl:template>
+	
 	<xsl:template match="description//ref">
 		<a href="#{.}">
 			<xsl:value-of select="." />
