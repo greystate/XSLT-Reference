@@ -129,9 +129,15 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 	</xsl:template>
 	
 	<xsl:template match="description//ref">
-		<a href="#{.}">
+		<a href="#{.}" class="elem-ref">
 			<xsl:value-of select="." />
 		</a>
+	</xsl:template>
+	
+	<xsl:template match="description//var">
+		<var class="attr-ref">
+			<xsl:value-of select="." />
+		</var>
 	</xsl:template>
 
 </xsl:stylesheet>

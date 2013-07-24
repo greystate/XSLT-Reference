@@ -84,9 +84,13 @@ a {
 	> h2 { font-size: 12px; }
 }
 
-.elem-ref, .attr-ref {
+li.elem-ref, li.attr-ref {
 	padding: 0;
 	margin: 0 0 0 1em;
+}
+
+li.attr-ref:before {
+	content: "@";
 }
 
 .elem-ref {
@@ -94,11 +98,8 @@ a {
 }
 
 .attr-ref {
+	font-style: normal;
 	color: @color_attr;
-}
-
-.attr-ref:before {
-	content: "@";
 }
 
 .required {

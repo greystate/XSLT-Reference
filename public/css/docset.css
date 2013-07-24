@@ -259,19 +259,20 @@ a:hover {
 .content > h2 {
   font-size: 12px;
 }
-.elem-ref,
-.attr-ref {
+li.elem-ref,
+li.attr-ref {
   padding: 0;
   margin: 0 0 0 1em;
+}
+li.attr-ref:before {
+  content: "@";
 }
 .elem-ref {
   color: #006600;
 }
 .attr-ref {
+  font-style: normal;
   color: #660000;
-}
-.attr-ref:before {
-  content: "@";
 }
 .required {
   font-weight: bold;
