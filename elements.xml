@@ -134,6 +134,10 @@
 				Using the <var>mode</var> attribute restricts the applied templates to
 				only those with an identical mode attribute.
 			</p>
+			<note>
+				If no select attribute is present, it defaults to "*", i.e. the children
+				of the current node.
+			</note>
 		</description>
 		<attribute ref="select" />
 		<attribute ref="mode" />
