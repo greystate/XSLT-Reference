@@ -81,6 +81,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		<xsl:variable name="attr" select="self::attribute[@name] | key('nodes-by-name', @ref)" />
 		<xsl:variable name="name" select="$attr/@name" />
 		<li class="attr-ref">
+			<xsl:if test="@required = 'yes'"><xsl:attribute name="class">attr-ref required</xsl:attribute></xsl:if>
 			<xsl:value-of select="$name" />
 			<xsl:apply-templates select="$attr" mode="typeinfo" />
 		</li>
