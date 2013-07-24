@@ -32,8 +32,18 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#sort">&lt;xsl:sort&gt;</a></li>
 <li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li>
 </ul></section><section class="element" id="attribute"><h1><a href="#attribute">&lt;xsl:attribute&gt;</a></h1>
+<div class="desc">
+			<p>
+				Generates an attribute on the element being output. Must precede any
+				content generated for an element (i.e.: text, child elements, comments etc.)
+			</p>
+			<p class="note">
+				Can be used to override an attribute you've already set, as
+				duplicate attribute names are not allowed in XML.
+			</p>
+		</div>
 <ul class="content">
-<li class="attr-ref">name <span class="type"><span class="general">string</span></span>
+<li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
 </li>
 <li class="attr-ref">namespace <span class="type"><span class="general">URI</span></span>
 </li>
@@ -49,14 +59,13 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="attribute-set"><h1><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h1>
-<ul class="content"><li class="attr-ref">name <span class="type"><span class="general">string</span></span>
+<ul class="content"><li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
 </li></ul>
 <ul class="content"><li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li></ul></section><section class="element" id="call-template"><h1><a href="#call-template">&lt;xsl:call-template&gt;</a></h1>
 <div class="desc">
 			<p>
-				Explicitly call the template that has a <var>name</var> attribute matching
-				the name specified here in this element's <var>name</var> attribute. The template
-				will execute with the context at the point of this instruction.
+				Explicitly call a named <a href="#template">template</a> (a template with a name attribute).
+				The template will execute with the context at the point of this instruction.
 			</p>
 		</div>
 <ul class="content"><li class="attr-ref">name <span class="type"><span class="general">string</span></span>
@@ -72,6 +81,14 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</div>
 <ul class="content"></ul>
 <ul class="content"></ul></section><section class="element" id="element"><h1><a href="#element">&lt;xsl:element&gt;</a></h1>
+<div class="desc">
+			<p>
+				Only necessary if you don't know the name of the element, or if you need to create
+				the element in a specific namespace. Otherwise it's much better to just use the
+				element tag directly (i.e., just use <code>&lt;div&gt;</code>
+				instead of <code>&lt;xsl:element name="div"&gt;</code>).
+			</p>
+		</div>
 <ul class="content">
 <li class="attr-ref">name <span class="type"><span class="general">string</span></span>
 </li>
@@ -103,7 +120,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="if"><h1><a href="#if">&lt;xsl:if&gt;</a></h1>
-<ul class="content"><li class="attr-ref">test <span class="type"><span class="general">condition</span></span>
+<ul class="content"><li class="attr-ref required">test <span class="type"><span class="general">condition</span></span>
 </li></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
@@ -116,10 +133,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="import"><h1><a href="#import">&lt;xsl:import&gt;</a></h1>
-<ul class="content"><li class="attr-ref">href <span class="type"><span class="general">URI</span></span>
+<ul class="content"><li class="attr-ref required">href <span class="type"><span class="general">URI</span></span>
 </li></ul>
 <ul class="content"></ul></section><section class="element" id="include"><h1><a href="#include">&lt;xsl:include&gt;</a></h1>
-<ul class="content"><li class="attr-ref">href <span class="type"><span class="general">URI</span></span>
+<ul class="content"><li class="attr-ref required">href <span class="type"><span class="general">URI</span></span>
 </li></ul>
 <ul class="content"></ul></section><section class="element" id="key"><h1><a href="#key">&lt;xsl:key&gt;</a></h1>
 <div class="desc">
@@ -129,11 +146,11 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 		</div>
 <ul class="content">
-<li class="attr-ref">match <span class="type"><span class="general">pattern</span></span>
+<li class="attr-ref required">match <span class="type"><span class="general">pattern</span></span>
 </li>
-<li class="attr-ref">name <span class="type"><span class="general">string</span></span>
+<li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
 </li>
-<li class="attr-ref">use <span class="type"><span class="general">expression</span></span>
+<li class="attr-ref required">use <span class="type"><span class="general">expression</span></span>
 </li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="number"><h1><a href="#number">&lt;xsl:number&gt;</a></h1>
@@ -177,16 +194,16 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 <li class="attr-ref">omit-xml-declaration<span class="type"> (<span class="enum">yes|no</span>)</span>
 </li>
-<li class="attr-ref">doctype-public <span class="type"><span class="general">string</span></span>
+<li class="attr-ref">doctype-public <span class="type"><span class="general">URI</span></span>
 </li>
-<li class="attr-ref">doctype-system <span class="type"><span class="general">string</span></span>
+<li class="attr-ref">doctype-system <span class="type"><span class="general">URI</span></span>
 </li>
 <li class="attr-ref">cdata-section-elements <span class="type"><span class="general">string</span></span>
 </li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="param"><h1><a href="#param">&lt;xsl:param&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">name <span class="type"><span class="general">string</span></span>
+<li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
 </li>
 <li class="attr-ref">select <span class="type"><span class="general"></span></span>
 </li>
@@ -210,8 +227,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				If present, this <strong>must</strong> be the first element inside a <a href="#for-each">for-each</a> or an
 				<a href="#apply-templates">apply-templates</a> instruction.
 			</p>
-			<p>
-				Note that multiple sort elements are allowed.
+			<p class="note">
+				Multiple sort elements are allowed.
 			</p>
 		</div>
 <ul class="content">
@@ -227,8 +244,14 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="stylesheet"><h1><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></h1>
-<ul class="content"><li class="attr-ref">version<span class="type"> (<span class="enum">1.0</span>)</span>
-</li></ul>
+<ul class="content">
+<li class="attr-ref required">version<span class="type"> (<span class="enum">1.0</span>)</span>
+</li>
+<li class="attr-ref">exclude-result-prefixes <span class="type"><span class="general">string</span></span>
+</li>
+<li class="attr-ref">extension-element-prefixes <span class="type"><span class="general">string</span></span>
+</li>
+</ul>
 <ul class="content">
 <li class="elem-ref"><a href="#import">&lt;xsl:import&gt;</a></li>
 <li class="elem-ref"><a href="#include">&lt;xsl:include&gt;</a></li>
@@ -273,14 +296,14 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#output">&lt;xsl:output&gt;</a></li>
 </ul></section><section class="element" id="value-of"><h1><a href="#value-of">&lt;xsl:value-of&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">select <span class="type"><span class="general">expression</span></span> <span class="type"><span class="general"></span></span>
+<li class="attr-ref required">select <span class="type"><span class="general">expression</span></span> <span class="type"><span class="general"></span></span>
 </li>
 <li class="attr-ref">disable-output-escaping<span class="type"> (<span class="enum">yes|no</span>)</span>
 </li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="variable"><h1><a href="#variable">&lt;xsl:variable&gt;</a></h1>
 <ul class="content">
-<li class="attr-ref">name <span class="type"><span class="general">string</span></span>
+<li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
 </li>
 <li class="attr-ref">select <span class="type"><span class="general">expression</span></span> <span class="type"><span class="general"></span></span>
 </li>
@@ -296,7 +319,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="when"><h1><a href="#when">&lt;xsl:when&gt;</a></h1>
-<ul class="content"><li class="attr-ref">test <span class="type"><span class="general">condition</span></span>
+<ul class="content"><li class="attr-ref required">test <span class="type"><span class="general">condition</span></span>
 </li></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>

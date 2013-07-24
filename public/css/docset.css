@@ -234,6 +234,23 @@ a:hover {
 .desc a:hover {
   text-decoration: underline;
 }
+.note {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 75%;
+  color: #264c73;
+  background: #e1e4bd;
+}
+.note:before {
+  content: "Note:\A0";
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 .content {
   padding: 0 0 0 10px;
   margin: 5px 0;
@@ -255,6 +272,9 @@ a:hover {
 }
 .attr-ref:before {
   content: "@";
+}
+.required {
+  font-weight: bold;
 }
 .type {
   display: none;
