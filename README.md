@@ -9,7 +9,7 @@ I'm building it for two main purposes:
    URL that explains a specific element
 
 It's primarily meant to be used whenever you can't remember all the attributes of, say, the [`<xsl:number>`][EX1]
-instruction - after a quick look at this, you're back in business (*"Of **course** – it has to be `level="multiple"` #facepalm"*).
+instruction - after a quick look at this, you're back in business (<q>_Of **course** – it has to be `level="multiple"` #facepalm_</q>).
 
 I hope to be able to add some concise examples for all the elements (when they'd make sense).
 
@@ -30,4 +30,4 @@ the list of elements into a single HTML file. Yay, XSLT!
 [PIMP]: http://pimpmyxslt.com/
 [CodeKit]: http://incident57.com/codekit/
 [EX1]: http://pimpmyxslt.com/reference/#number
-[ISSUES]: issues/
+[ISSUES]: https://github.com/greystate/XSLT-Reference/issues
