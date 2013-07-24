@@ -52,6 +52,28 @@
 	</element>
 
 	<element name="template">
+		<description>
+			<p>
+				A template defines a chunk of output. When using the <var>match</var> attribute,
+				it can only be invoked by an <ref>apply-templates</ref> instruction (which can process multiple
+				elements and their templates in a single operation), and is guaranteed to have the context of
+				an element matching the pattern in the <var>match</var> attribute.
+			</p>
+			<p>
+				When using the <var>name</var> attribute, the template can be manually invoked by
+				a <ref>call-template</ref> instruction, thus resembling a <em>sub-routine</em> in other
+				languages.
+			</p>
+			<p>
+				The <var>mode</var> attribute facilitates multiple outputs for the same element, e.g. if
+				an <code><![CDATA[<article>]]></code> needs a short version for the Table of Contents at
+				the top of the output, and a longer version for the actual article content.
+			</p>
+			<note>
+				It's perfectly valid to have both a <var>match</var> and a <var>name</var> attribute on a
+				template, if it makes sense. But you're required to use at least one of them.
+			</note>
+		</description>
 		<attribute ref="match" />
 		<attribute ref="name" />
 		<attribute ref="mode" />
@@ -128,7 +150,7 @@
 		<description>
 			<p>
 				Collects the nodes specified by the <var>select</var> attribute and
-				starts processing them using the matching templates.
+				starts processing them using matching templates.
 			</p>
 			<p>
 				Using the <var>mode</var> attribute restricts the applied templates to
@@ -201,6 +223,22 @@
 	</element>
 	
 	<element name="param">
+		<description>
+			<p>
+				Used to define a value that can be used in many places, which should be easily changeable
+				from e.g. the top of the file. Once defined, a parameter can be used by prefixing the name
+				with a dollar-sign, e.g. <code><![CDATA[<xsl:value-of select="$primary-color">]]></code>
+				or <code><![CDATA[<div class="{$selected-class}">]]></code>.
+			</p>
+			<p>
+				A parameter is very similar to a <ref>variable</ref>, and none of them can be changed
+				within the same transformation.
+			</p>
+			<note>
+				The difference between a parameter and a <ref>variable</ref> is that a parameter can be set
+				from the XSLT Processor when invoking the transform.
+			</note>
+		</description>
 		<attribute ref="name" required="yes" />
 		<attribute name="select" />
 		

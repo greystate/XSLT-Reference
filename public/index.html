@@ -14,11 +14,11 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <section class="element" id="apply-templates"><h1><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h1>
 <div class="desc">
 			<p>
-				Collects the nodes specified by the <var>select</var> attribute and
-				starts processing them using the matching templates.
+				Collects the nodes specified by the <var class="attr-ref">select</var> attribute and
+				starts processing them using matching templates.
 			</p>
 			<p>
-				Using the <var>mode</var> attribute restricts the applied templates to
+				Using the <var class="attr-ref">mode</var> attribute restricts the applied templates to
 				only those with an identical mode attribute.
 			</p>
 			<p class="note">
@@ -68,7 +68,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <ul class="content"><li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li></ul></section><section class="element" id="call-template"><h1><a href="#call-template">&lt;xsl:call-template&gt;</a></h1>
 <div class="desc">
 			<p>
-				Explicitly call a named <a href="#template">template</a> (a template with a name attribute).
+				Explicitly call a named <a href="#template" class="elem-ref">template</a> (a template with a name attribute).
 				The template will execute with the context at the point of this instruction.
 			</p>
 		</div>
@@ -145,8 +145,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <ul class="content"></ul></section><section class="element" id="key"><h1><a href="#key">&lt;xsl:key&gt;</a></h1>
 <div class="desc">
 			<p>
-				Creates a named index of elements matching the expression in the <var>match</var> attribute.
-				The value retrieved from the <var>use</var> attribute is stored as the index value.
+				Creates a named index of elements matching the expression in the <var class="attr-ref">match</var> attribute.
+				The value retrieved from the <var class="attr-ref">use</var> attribute is stored as the index value.
 			</p>
 		</div>
 <ul class="content">
@@ -206,6 +206,18 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="param"><h1><a href="#param">&lt;xsl:param&gt;</a></h1>
+<div class="desc">
+			<p>
+				Used to define a value that can be used in many places, but should be easily changeable
+				from e.g. the top of the file. Once defined, a parameter can be used by prefixing the name
+				with a dollar-sign, e.g. <code>&lt;xsl:value-of select="$primary-color"&gt;</code>
+				or <code>&lt;div class="{$selected-class}"&gt;</code>.
+			</p>
+			<p class="note">
+				The difference between a parameter and a <a href="#variable" class="elem-ref">variable</a> is that a parameter can be set
+				from the XSLT Processor when invoking the transform.
+			</p>
+		</div>
 <ul class="content">
 <li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
 </li>
@@ -228,8 +240,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <ul class="content"></ul></section><section class="element" id="sort"><h1><a href="#sort">&lt;xsl:sort&gt;</a></h1>
 <div class="desc">
 			<p>
-				If present, this <strong>must</strong> be the first element inside a <a href="#for-each">for-each</a> or an
-				<a href="#apply-templates">apply-templates</a> instruction.
+				If present, this <strong>must</strong> be the first element inside a <a href="#for-each" class="elem-ref">for-each</a> or an
+				<a href="#apply-templates" class="elem-ref">apply-templates</a> instruction.
 			</p>
 			<p class="note">
 				Multiple sort elements are allowed.
@@ -263,6 +275,28 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></li>
 <li class="elem-ref"><a href="#output">&lt;xsl:output&gt;</a></li>
 </ul></section><section class="element" id="template"><h1><a href="#template">&lt;xsl:template&gt;</a></h1>
+<div class="desc">
+			<p>
+				A template defines a chunk of output. When using the <var class="attr-ref">match</var> attribute,
+				it can only be invoked by an <a href="#apply-templates" class="elem-ref">apply-templates</a> instruction (which can process multiple
+				elements and their templates in a single operation), and is guaranteed to have the context of
+				an element matching the pattern in the <var class="attr-ref">match</var> attribute.
+			</p>
+			<p>
+				When using the <var class="attr-ref">name</var> attribute, the template can be manually invoked by
+				a <a href="#call-template" class="elem-ref">call-template</a> instruction, thus resembling a <em>sub-routine</em> in other
+				languages.
+			</p>
+			<p>
+				The <var class="attr-ref">mode</var> attribute facilitates multiple outputs for the same element, e.g. if
+				an <code>&lt;article&gt;</code> needs a short version for the Table of Contents at
+				the top of the output, and a longer version for the actual article content.
+			</p>
+			<p class="note">
+				It's perfectly valid to have both a <var class="attr-ref">match</var> and a <var class="attr-ref">name</var> attribute on a
+				template, if it makes sense. But you're required to use at least one of them.
+			</p>
+		</div>
 <ul class="content">
 <li class="attr-ref">match <span class="type"><span class="general">pattern</span></span>
 </li>
@@ -288,7 +322,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li></ul>
 <ul class="content"></ul></section><section class="element" id="transform"><h1><a href="#transform">&lt;xsl:transform&gt;</a></h1>
 <div class="desc">
-			<p>This is an alias for the <a href="#stylesheet">stylesheet</a> element - almost never used.</p>
+			<p>This is an alias for the <a href="#stylesheet" class="elem-ref">stylesheet</a> element - almost never used.</p>
 		</div>
 <ul class="content"><li class="attr-ref">version <span class="type"><span class="general">number</span></span>
 </li></ul>
