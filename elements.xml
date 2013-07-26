@@ -13,6 +13,15 @@
 		<element ref="number" />
 	'>
 
+	<!ENTITY param-content '
+		<element ref="if" />
+		<element ref="choose" />
+		<element ref="for-each" />
+		<element ref="value-of" />
+		<element ref="text" />
+		<element ref="number" />
+	'>
+
 	<!ENTITY root-content '
 		<element ref="import" />
 		<element ref="include" />
@@ -218,7 +227,7 @@
 		<attribute ref="name" required="yes" />
 		<attribute ref="select" />
 		
-		&template-content;
+		&param-content;
 		
 	</element>
 	
@@ -267,7 +276,7 @@
 		<attribute ref="name" required="yes" />
 		<attribute name="select" />
 		
-		&template-content;
+		&param-content;
 		
 	</element>
 	
