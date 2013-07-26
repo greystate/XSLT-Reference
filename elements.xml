@@ -43,8 +43,8 @@
 	<!-- Elements for later reference -->
 	<element name="stylesheet">
 		<attribute name="version" content="enum" values="1.0" required="yes" />
-		<attribute name="exclude-result-prefixes" content="string" />
-		<attribute name="extension-element-prefixes" content="string" />
+		<attribute name="exclude-result-prefixes" content="nmtokens" />
+		<attribute name="extension-element-prefixes" content="nmtokens" />
 		
 		&root-content;
 		
@@ -54,7 +54,7 @@
 		<description>
 			<p>This is an alias for the <ref>stylesheet</ref> element - almost never used.</p>
 		</description>
-		<attribute name="version" content="number" />
+		<attribute name="version" content="enum" values="1.0" required="yes" />
 		
 		&root-content;
 		
@@ -328,7 +328,7 @@
 		<attribute name="omit-xml-declaration" content="boolean" />
 		<attribute name="doctype-public" content="URI" />
 		<attribute name="doctype-system" content="URI" />
-		<attribute name="cdata-section-elements" content="string" />
+		<attribute name="cdata-section-elements" content="nmtokens" />
 	</element>
 	
 </docset>

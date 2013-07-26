@@ -202,7 +202,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 <li class="attr-ref">doctype-system <span class="type"><span class="general">URI</span></span>
 </li>
-<li class="attr-ref">cdata-section-elements <span class="type"><span class="general">string</span></span>
+<li class="attr-ref">cdata-section-elements <span class="type"><span class="nmtokens">list of names</span></span>
 </li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="param"><h1><a href="#param">&lt;xsl:param&gt;</a></h1>
@@ -287,9 +287,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <ul class="content">
 <li class="attr-ref required">version<span class="type"> (<span class="enum">1.0</span>)</span>
 </li>
-<li class="attr-ref">exclude-result-prefixes <span class="type"><span class="general">string</span></span>
+<li class="attr-ref">exclude-result-prefixes <span class="type"><span class="nmtokens">list of names</span></span>
 </li>
-<li class="attr-ref">extension-element-prefixes <span class="type"><span class="general">string</span></span>
+<li class="attr-ref">extension-element-prefixes <span class="type"><span class="nmtokens">list of names</span></span>
 </li>
 </ul>
 <ul class="content">
@@ -348,7 +348,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <div class="desc">
 			<p>This is an alias for the <a href="#stylesheet" class="elem-ref">stylesheet</a> element - almost never used.</p>
 		</div>
-<ul class="content"><li class="attr-ref">version <span class="type"><span class="general">number</span></span>
+<ul class="content"><li class="attr-ref required">version<span class="type"> (<span class="enum">1.0</span>)</span>
 </li></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#import">&lt;xsl:import&gt;</a></li>
