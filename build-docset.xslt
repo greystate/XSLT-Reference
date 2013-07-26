@@ -110,6 +110,13 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</span>
 	</xsl:template>
 	
+	<xsl:template match="attribute[@content = 'nmtokens']" mode="typeinfo">
+		<xsl:text> </xsl:text>
+		<span class="type">
+			<span class="nmtokens">list of names</span>
+		</span>
+	</xsl:template>
+	
 	<xsl:template match="description">
 		<div class="desc">
 			<xsl:apply-templates />
