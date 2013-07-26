@@ -222,10 +222,35 @@
 		
 	</element>
 	
+	<element name="strip-space">
+		<description>
+			<p>
+				Instructs the processor to remove all white-space nodes from specific
+				elements in the source document before they're handled by XSLT.
+			</p>
+		</description>
+		<attribute name="elements" content="nmtokens" />
+	</element>
+	
+	<element name="preserve-space">
+		<description>
+			<p>
+				Instructs the processor to preserve white-space nodes from specific
+				elements in the source document before they're handled by XSLT.
+			</p>
+			<note>
+				The default behavior is to preserve white-space, so this element is provided
+				so you can preserve specific elements' white-space, in case <ref>strip-space</ref>
+				has been set to "all others" ("*").
+			</note>
+		</description>
+		<attribute name="elements" content="nmtokens" />
+	</element>
+	
 	<element name="param">
 		<description>
 			<p>
-				Used to define a value that can be used in many places, which should be easily changeable
+				Defines a value that can be used in many places, which should be easily changeable
 				from e.g. the top of the file. Once defined, a parameter can be used by prefixing the name
 				with a dollar-sign, e.g. <code><![CDATA[<xsl:value-of select="$primary-color">]]></code>
 				or <code><![CDATA[<div class="{$selected-class}">]]></code>.

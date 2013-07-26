@@ -208,10 +208,14 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <ul class="content"></ul></section><section class="element" id="param"><h1><a href="#param">&lt;xsl:param&gt;</a></h1>
 <div class="desc">
 			<p>
-				Used to define a value that can be used in many places, but should be easily changeable
+				Defines a value that can be used in many places, which should be easily changeable
 				from e.g. the top of the file. Once defined, a parameter can be used by prefixing the name
 				with a dollar-sign, e.g. <code>&lt;xsl:value-of select="$primary-color"&gt;</code>
 				or <code>&lt;div class="{$selected-class}"&gt;</code>.
+			</p>
+			<p>
+				A parameter is very similar to a <a href="#variable" class="elem-ref">variable</a>, and none of them can be changed
+				within the same transformation.
 			</p>
 			<p class="note">
 				The difference between a parameter and a <a href="#variable" class="elem-ref">variable</a> is that a parameter can be set
@@ -234,7 +238,21 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
-</ul></section><section class="element" id="processing-instruction"><h1><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h1>
+</ul></section><section class="element" id="preserve-space"><h1><a href="#preserve-space">&lt;xsl:preserve-space&gt;</a></h1>
+<div class="desc">
+			<p>
+				Instructs the processor to preserve white-space nodes from specific
+				elements in the source document before they're handled by XSLT.
+			</p>
+			<p class="note">
+				The default behavior is to preserve white-space, so this element is provided
+				so you can preserve specific elements' white-space, in case <a href="#strip-space" class="elem-ref">strip-space</a>
+				has been set to "all others" ("*").
+			</p>
+		</div>
+<ul class="content"><li class="attr-ref">elements <span class="type"><span class="nmtokens">list of names</span></span>
+</li></ul>
+<ul class="content"></ul></section><section class="element" id="processing-instruction"><h1><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h1>
 <ul class="content"><li class="attr-ref">name <span class="type"><span class="general">string</span></span>
 </li></ul>
 <ul class="content"></ul></section><section class="element" id="sort"><h1><a href="#sort">&lt;xsl:sort&gt;</a></h1>
@@ -259,6 +277,15 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="attr-ref">lang <span class="type"><span class="general">string</span></span>
 </li>
 </ul>
+<ul class="content"></ul></section><section class="element" id="strip-space"><h1><a href="#strip-space">&lt;xsl:strip-space&gt;</a></h1>
+<div class="desc">
+			<p>
+				Instructs the processor to remove all white-space nodes from specific
+				elements in the source document before they're handled by XSLT.
+			</p>
+		</div>
+<ul class="content"><li class="attr-ref">elements <span class="type"><span class="nmtokens">list of names</span></span>
+</li></ul>
 <ul class="content"></ul></section><section class="element" id="stylesheet"><h1><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></h1>
 <ul class="content">
 <li class="attr-ref required">version<span class="type"> (<span class="enum">1.0</span>)</span>
