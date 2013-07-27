@@ -150,7 +150,7 @@
 		<attribute name="format" content="string" />
 		<attribute name="lang" content="string" />
 		<attribute name="letter-value" content="enum" values="alphabetic|traditional" />
-		<attribute name="grouping-separator" content="character" />
+		<attribute name="grouping-separator" content="char" />
 		<attribute name="grouping-size" content="number" />
 	</element>
 	
@@ -283,6 +283,20 @@
 	<element name="attribute-set">
 		<attribute ref="name" required="yes" />
 		<element ref="attribute" />
+	</element>
+	
+	<element name="decimal-format">
+		<attribute ref="name" />
+		<attribute name="decimal-separator" content="char" />
+		<attribute name="grouping-separator" content="char" />
+		<attribute name="infinity" content="string" />
+		<attribute name="minus-sign" content="char" />
+		<attribute name="NaN" content="string" />
+		<attribute name="percent" content="char" />
+		<attribute name="per-mille" content="char" />
+		<attribute name="zero-digit" content="char" />
+		<attribute name="digit" content="char" />
+		<attribute name="pattern-separator" content="char" />
 	</element>
 	
 	<element name="sort">
