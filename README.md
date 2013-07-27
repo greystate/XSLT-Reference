@@ -20,7 +20,8 @@ if you see anything that's missing.
 
 ## Dev notes
 
-I use [CodeKit][] for preprocessing the LESS file, and a simple bash script to transform the XML file with
+Although I use LESS, I use [-prefix-free][PREFIXFREE] so I can write as much real CSS as possible.
+I use  [CodeKit][] for preprocessing the LESS file, and a simple bash script to transform the XML file with
 the list of elements into a single HTML file. Yay, XSLT!
 
 *Chriztian Steinmeier, 2013*
@@ -31,3 +32,4 @@ the list of elements into a single HTML file. Yay, XSLT!
 [CodeKit]: http://incident57.com/codekit/
 [EX1]: http://pimpmyxslt.com/reference/#number
 [ISSUES]: https://github.com/greystate/XSLT-Reference/issues
+[PREFIXFREE]: https://github.com/leaverou/prefixfree#README
