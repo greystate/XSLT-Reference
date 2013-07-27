@@ -18,5 +18,5 @@ Here's how I usually do when contributing to other people's projects, so it'll w
 		git checkout <your-branch-name>
 		git fetch upstream
 		git rebase upstream/master
-	
-* Create a pull-request
+
+* Push to your fork and create a pull-request on GitHub
