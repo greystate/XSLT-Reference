@@ -189,7 +189,7 @@
 	</element>
 
 	<element name="with-param">
-		<attribute ref="name" />
+		<attribute ref="name" required="yes" />
 		<attribute ref="select" />
 	</element>
 	
