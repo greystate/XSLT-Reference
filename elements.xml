@@ -184,7 +184,7 @@
 				The template will execute with the context at the point of this instruction.
 			</p>
 		</description>
-		<attribute ref="name" />
+		<attribute ref="name" required="yes" />
 		<element ref="with-param" />
 	</element>
 
