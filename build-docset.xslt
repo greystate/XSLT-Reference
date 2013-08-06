@@ -36,6 +36,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			<xsl:apply-templates select="docset/element">
 				<xsl:sort select="@name" data-type="text" order="ascending" />
 			</xsl:apply-templates>
+			
+			<xsl:call-template name="fork-banner" />
 		</body>
 		</html>
 	</xsl:template>
@@ -146,6 +148,16 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		<var class="attr-ref">
 			<xsl:value-of select="." />
 		</var>
+	</xsl:template>
+
+	<xsl:template name="fork-banner">
+		<a href="https://github.com/greystate/XSLT-Reference#readme">
+			<img
+				class="forkme"
+				src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-orange@2x.png"
+				alt="Fork me on GitHub"
+			/>
+		</a>
 	</xsl:template>
 
 </xsl:stylesheet>
