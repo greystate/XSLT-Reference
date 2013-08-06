@@ -139,6 +139,10 @@
 	</element>
 	
 	<element name="processing-instruction">
+		<description>
+			<note>Although the <var>name</var> attribute isn't required, no output
+			will be generated if it's missing.</note>
+		</description>
 		<attribute ref="name" />
 	</element>
 	
