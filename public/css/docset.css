@@ -182,6 +182,20 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.forkme {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0;
+  width: 149px;
+  height: 149px;
+}
+@media only screen and (max-width: 680px) {
+  .forkme {
+    transform: scale(0.6);
+    transform-origin: 100% 0;
+  }
+}
 html {
   font-size: 62.5%;
 }
@@ -212,10 +226,6 @@ a:hover {
   color: #006600;
 }
 .element:hover {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   border-radius: 6px;
   background: rgba(198, 198, 185, 0.5);
 }
@@ -235,10 +245,6 @@ a:hover {
   text-decoration: underline;
 }
 .note {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   padding: 10px;
   font-size: 75%;
@@ -289,10 +295,6 @@ li.attr-ref:before {
   font-style: italic;
 }
 :target {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   border-radius: 6px;
   box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   border: solid rgba(0, 0, 0, 0.4);
