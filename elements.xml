@@ -194,7 +194,7 @@
 	</element>
 	
 	<element name="for-each">
-		<attribute ref="select" />
+		<attribute ref="select" required="yes" />
 		<element ref="sort" />
 		
 		&template-content;
