@@ -11,6 +11,7 @@
 		<element ref="param" />
 		<element ref="variable" />
 		<element ref="number" />
+		<element ref="processing-instruction" />
 	'>
 
 	<!ENTITY param-content '
