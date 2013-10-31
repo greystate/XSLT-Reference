@@ -191,6 +191,10 @@
 				Explicitly call a named <ref>template</ref> (a template with a name attribute).
 				The template will execute with the context at the point of this instruction.
 			</p>
+			<p>
+				If the template accepts arguments (parameters), use the <ref>with-param</ref> element
+				to supply values to those.
+			</p>
 		</description>
 		<attribute ref="name" required="yes" />
 		<element ref="with-param" />
