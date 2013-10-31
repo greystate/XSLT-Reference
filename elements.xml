@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE docset [
 	
-	<!ENTITY template-content '
+	<!ENTITY fallback-content '
 		<element ref="if" />
 		<element ref="choose" />
 		<element ref="for-each" />
@@ -12,6 +12,11 @@
 		<element ref="variable" />
 		<element ref="number" />
 		<element ref="processing-instruction" />
+	'>
+
+	<!ENTITY template-content '
+		&fallback-content;
+		<element ref="fallback" />
 	'>
 
 	<!ENTITY param-content '
