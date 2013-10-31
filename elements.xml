@@ -258,6 +258,12 @@
 	</element>
 
 	<element name="otherwise">
+		<description>
+			<p>
+				Part of a <ref>choose</ref> construct - executed if none of the preceding
+				<ref>when</ref> statements returned <var>true()</var>.
+			</p>
+		</description>
 		&template-content;
 	</element>
 	
