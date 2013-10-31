@@ -107,9 +107,20 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </ul></section><section class="element" id="comment"><h1><a href="#comment">&lt;xsl:comment&gt;</a></h1>
 <div class="desc">
 			<p>Use this to generate a comment in the output.</p>
+			<p class="note">
+				This is necessary because a regular comment is in fact just
+				a comment in the stylesheet, which is used to comment the code,
+				and is in fact stripped by the XML parser before the XSLT processor
+				gets the stylesheet.
+			</p>
 		</div>
 <ul class="content"></ul>
 <ul class="content"></ul></section><section class="element" id="decimal-format"><h1><a href="#decimal-format">&lt;xsl:decimal-format&gt;</a></h1>
+<div class="desc">
+			<p>
+				Defines a named custom format for use with the <var class="attr-ref">format-number()</var> function.
+			</p>
+		</div>
 <ul class="content">
 <li class="attr-ref">name <span class="type"><span class="general">string</span></span>
 </li>
