@@ -238,6 +238,16 @@
 	</element>
 
 	<element name="when">
+		<description>
+			<p>
+				Used in the <ref>choose</ref> construct to test a condition and
+				if <var>true()</var>, execute the contents.
+			</p>
+			<p>
+				The expression in the test attribute is implicitly wrapped in a <var>boolean()</var>
+				function to return <var>true()</var> or <var>false()</var>.
+			</p>
+		</description>
 		<attribute ref="test" required="yes" />
 		&template-content;
 	</element>
