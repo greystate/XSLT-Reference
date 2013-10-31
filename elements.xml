@@ -386,4 +386,11 @@
 		<attribute name="cdata-section-elements" content="nmtokens" />
 	</element>
 	
+	<element name="fallback">
+		&fallback-content;
+	</element>
+	
+	<element name="message">
+		<attribute name="terminate" content="boolean" />
+	</element>
 </docset>
