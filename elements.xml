@@ -111,6 +111,12 @@
 	<element name="comment">
 		<description>
 			<p>Use this to generate a comment in the output.</p>
+			<note>
+				This is necessary because a regular comment is in fact just
+				a comment in the stylesheet, which is used to comment the code,
+				and is in fact stripped by the XML parser before the XSLT processor
+				gets the stylesheet.
+			</note>
 		</description>
 	</element>
 	
