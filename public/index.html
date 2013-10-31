@@ -64,6 +64,13 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 </ul></section><section class="element" id="attribute-set"><h1><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h1>
+<div class="desc">
+			<p>
+				Used to build a set of attributes for reuse on multiple output elemets.
+				Use the special <var class="attr-ref">xsl:use-attribute-sets</var> attribute on any literal output element,
+				to tell the processor to generate these attributes on the element.
+			</p>
+		</div>
 <ul class="content"><li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
 </li></ul>
 <ul class="content"><li class="elem-ref"><a href="#attribute">&lt;xsl:attribute&gt;</a></li></ul></section><section class="element" id="call-template"><h1><a href="#call-template">&lt;xsl:call-template&gt;</a></h1>
@@ -71,6 +78,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			<p>
 				Explicitly call a named <a href="#template" class="elem-ref">template</a> (a template with a name attribute).
 				The template will execute with the context at the point of this instruction.
+			</p>
+			<p>
+				If the template accepts arguments (parameters), use the <a href="#with-param" class="elem-ref">with-param</a> element
+				to supply values to those.
 			</p>
 		</div>
 <ul class="content"><li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
@@ -113,8 +124,11 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <ul class="content"></ul></section><section class="element" id="element"><h1><a href="#element">&lt;xsl:element&gt;</a></h1>
 <div class="desc">
 			<p>
-				Only necessary if you don't know the name of the element, or if you need to create
-				the element in a specific namespace. Otherwise it's much better to just use the
+				Creates an element with a specific <var class="attr-ref">name</var>.
+			</p>
+			<p>
+				Only necessary if you don't know the name of the element (e.g. if it's computed, like <code>&lt;xsl:element name="h{$level}"&gt;</code>),
+				or if you need to create the element in a specific namespace. Otherwise it's much better to just use the
 				element tag directly (i.e., just use <code>&lt;div&gt;</code>
 				instead of <code>&lt;xsl:element name="div"&gt;</code>).
 			</p>
