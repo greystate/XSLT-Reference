@@ -96,7 +96,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 			<p>
 				Only the first <a href="#when" class="elem-ref">when</a> where the test returns <var class="attr-ref">true()</var> will be executed
-				(or the contents of <a href="#otherwise" class="elem-ref">otherwise</a>, if present).
+				(or, if no <a href="#when" class="elem-ref">when</a>-statements succeed, the contents of <a href="#otherwise" class="elem-ref">otherwise</a>, if present).
 			</p>
 		</div>
 <ul class="content"></ul>
@@ -441,7 +441,12 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </ul></section><section class="element" id="when"><h1><a href="#when">&lt;xsl:when&gt;</a></h1>
 <div class="desc">
 			<p>
-				Used in the <a href="#choose" class="elem-ref">choose</a> construct to 
+				Used in the <a href="#choose" class="elem-ref">choose</a> construct to test a condition and
+				if <var class="attr-ref">true()</var>, execute the contents.
+			</p>
+			<p>
+				The expression in the test attribute is implicitly wrapped in a <var class="attr-ref">boolean()</var>
+				function to return <var class="attr-ref">true()</var> or <var class="attr-ref">false()</var>.
 			</p>
 		</div>
 <ul class="content"><li class="attr-ref required">test <span class="type"><span class="general">condition</span></span>
