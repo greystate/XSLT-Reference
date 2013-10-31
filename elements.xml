@@ -228,6 +228,10 @@
 				A/B scenarios it's often possible to handle the logic in a single XPath
 				statement instead.
 			</p>
+			<p>
+				Only the first <ref>when</ref> where the test returns <var>true()</var> will be executed
+				(or, if no <ref>when</ref>-statements succeed, the contents of <ref>otherwise</ref>, if present).
+			</p>
 		</description>
 		<element ref="when" />
 		<element ref="otherwise" />

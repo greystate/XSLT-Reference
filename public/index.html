@@ -88,10 +88,16 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li></ul>
 <ul class="content"><li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li></ul></section><section class="element" id="choose"><h1><a href="#choose">&lt;xsl:choose&gt;</a></h1>
 <div class="desc">
-			Similar to switch and if/elseif statements in other languages, this is used
-			to choose between one or more outcomes. It's a bit verbose, and for simple
-			A/B scenarios it's often possible to handle the logic in a single XPath
-			statement instead.
+			<p>
+				Similar to switch and if/elseif statements in other languages, this is used
+				to choose between one or more outcomes. It's a bit verbose, and for simple
+				A/B scenarios it's often possible to handle the logic in a single XPath
+				statement instead.
+			</p>
+			<p>
+				Only the first <a href="#when" class="elem-ref">when</a> where the test returns <var class="attr-ref">true()</var> will be executed
+				(or the contents of <a href="#otherwise" class="elem-ref">otherwise</a>, if present).
+			</p>
 		</div>
 <ul class="content"></ul>
 <ul class="content">
@@ -433,6 +439,11 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#text">&lt;xsl:text&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 </ul></section><section class="element" id="when"><h1><a href="#when">&lt;xsl:when&gt;</a></h1>
+<div class="desc">
+			<p>
+				Used in the <a href="#choose" class="elem-ref">choose</a> construct to 
+			</p>
+		</div>
 <ul class="content"><li class="attr-ref required">test <span class="type"><span class="general">condition</span></span>
 </li></ul>
 <ul class="content">
