@@ -215,6 +215,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
+code {
+  font-family: inherit;
+  font-size: 1em;
+  color: #008800;
+  background: #ecebe8;
+}
 .element {
   margin: 10px 2em;
   padding: 10px;
