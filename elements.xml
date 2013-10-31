@@ -128,8 +128,11 @@
 	<element name="element">
 		<description>
 			<p>
-				Only necessary if you don't know the name of the element, or if you need to create
-				the element in a specific namespace. Otherwise it's much better to just use the
+				Creates an element with a specific <var>name</var>.
+			</p>
+			<p>
+				Only necessary if you don't know the name of the element (e.g. if it's computed, like <code><![CDATA[<xsl:element name="h{$level}">]]></code>),
+				or if you need to create the element in a specific namespace. Otherwise it's much better to just use the
 				element tag directly (i.e., just use <code><![CDATA[<div>]]></code>
 				instead of <code><![CDATA[<xsl:element name="div">]]></code>).
 			</p>
