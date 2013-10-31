@@ -289,6 +289,13 @@
 	</element>
 	
 	<element name="attribute-set">
+		<description>
+			<p>
+				Used to build a set of attributes for reuse on multiple output elemets.
+				Use the special <var>xsl:use-attribute-sets</var> attribute on any literal output element,
+				to tell the processor to generate these attributes on the element.
+			</p>
+		</description>
 		<attribute ref="name" required="yes" />
 		<element ref="attribute" />
 	</element>
