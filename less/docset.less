@@ -125,7 +125,7 @@ li.attr-ref:before {
 }
 
 
-:target {
+.element:target {
 	border-radius: 6px;
 
 	box-shadow:
@@ -147,4 +147,16 @@ li.attr-ref:before {
 	
 	.desc { display: block; }
 	.type { display: inline; }
+}
+
+#toc:target {
+	.element {
+		margin-top: 0;
+		padding-bottom: 0;
+		
+		.desc, .content {
+			clip: rect(0, 0, 0, 0);
+			position: absolute;
+		}
+	}
 }
