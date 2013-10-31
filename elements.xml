@@ -344,6 +344,11 @@
 	</element>
 	
 	<element name="decimal-format">
+		<description>
+			<p>
+				Defines a named custom format for use with the <var>format-number()</var> function.
+			</p>
+		</description>
 		<attribute ref="name" />
 		<attribute name="decimal-separator" content="char" />
 		<attribute name="grouping-separator" content="char" />
