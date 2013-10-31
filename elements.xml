@@ -221,6 +221,14 @@
 	</element>
 
 	<element name="choose">
+		<description>
+			<p>
+				Similar to switch and if/elseif statements in other languages, this is used
+				to choose between one or more outcomes. It's a bit verbose, and for simple
+				A/B scenarios it's often possible to handle the logic in a single XPath
+				statement instead.
+			</p>
+		</description>
 		<element ref="when" />
 		<element ref="otherwise" />
 	</element>
