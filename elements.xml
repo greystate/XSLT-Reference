@@ -410,6 +410,12 @@
 	</element>
 	
 	<element name="fallback">
+		<description>
+			<p>
+				The contents of the fallback instruction is only instantiated if its
+				parent element is not supported by the XSLT processor. Rarely used.
+			</p>
+		</description>
 		&fallback-content;
 	</element>
 	
