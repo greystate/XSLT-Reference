@@ -118,7 +118,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <ul class="content"></ul></section><section class="element" id="decimal-format"><h1><a href="#decimal-format">&lt;xsl:decimal-format&gt;</a></h1>
 <div class="desc">
 			<p>
-				Defines a named custom format for use with the <var class="attr-ref">format-number()</var> function.
+				Defines a named custom format for use with the <a href="#number" class="elem-ref">number</a> instruction
+				and the <var class="attr-ref">format-number()</var> function.
 			</p>
 		</div>
 <ul class="content">
@@ -176,6 +177,12 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
 </ul></section><section class="element" id="fallback"><h1><a href="#fallback">&lt;xsl:fallback&gt;</a></h1>
+<div class="desc">
+			<p>
+				The contents of the fallback instruction is only instantiated if its
+				parent element is not supported by the XSLT processor. Rarely used.
+			</p>
+		</div>
 <ul class="content"></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
@@ -189,6 +196,12 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 </ul></section><section class="element" id="for-each"><h1><a href="#for-each">&lt;xsl:for-each&gt;</a></h1>
+<div class="desc">
+			<p>
+				Almost an alias for <a href="#apply-templates" class="elem-ref">apply-templates</a> in that it also collects a set of nodes
+				for processing, but all nodes will be processed using the same (embedded) template.
+			</p>
+		</div>
 <ul class="content"><li class="attr-ref required">select <span class="type"><span class="general">expression</span></span> <span class="type"><span class="general"></span></span>
 </li></ul>
 <ul class="content">
@@ -241,6 +254,13 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 </ul>
 <ul class="content"></ul></section><section class="element" id="message"><h1><a href="#message">&lt;xsl:message&gt;</a></h1>
+<div class="desc">
+			<p>
+				Used to output debugging/logging info to <code>stdout</code> during
+				transformation. If the <var class="attr-ref">terminate</var> attribute is set to <code>yes</code>,
+				the transformation will terminate.
+			</p>
+		</div>
 <ul class="content"><li class="attr-ref">terminate<span class="type"> (<span class="enum">yes|no</span>)</span>
 </li></ul>
 <ul class="content"></ul></section><section class="element" id="number"><h1><a href="#number">&lt;xsl:number&gt;</a></h1>
