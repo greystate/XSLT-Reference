@@ -294,6 +294,9 @@
 				Instructs the processor to remove all white-space nodes from specific
 				elements in the source document before they're handled by XSLT.
 			</p>
+			<note>
+				You can use the value "*" to strip space from all elements.
+			</note>
 		</description>
 		<attribute name="elements" content="nmtokens" />
 	</element>
