@@ -217,6 +217,12 @@
 	</element>
 	
 	<element name="for-each">
+		<description>
+			<p>
+				Almost an alias for <ref>apply-templates</ref> in that it also collects a set of nodes
+				for processing, but all nodes will be processed using the same (embedded) template.
+			</p>
+		</description>
 		<attribute ref="select" required="yes" />
 		<element ref="sort" />
 		
