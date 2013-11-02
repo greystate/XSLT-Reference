@@ -346,7 +346,8 @@
 	<element name="decimal-format">
 		<description>
 			<p>
-				Defines a named custom format for use with the <var>format-number()</var> function.
+				Defines a named custom format for use with the <ref>number</ref> instruction
+				and the <var>format-number()</var> function.
 			</p>
 		</description>
 		<attribute ref="name" />
