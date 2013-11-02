@@ -420,6 +420,13 @@
 	</element>
 	
 	<element name="message">
+		<description>
+			<p>
+				Used to output debugging/logging info to <code>stdout</code> during
+				transformation. If the <var>terminate</var> attribute is set to <code>yes</code>,
+				the transformation will terminate.
+			</p>
+		</description>
 		<attribute name="terminate" content="boolean" />
 	</element>
 </docset>
