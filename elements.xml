@@ -395,6 +395,9 @@
 				Creates a named index of elements matching the expression in the <var>match</var> attribute.
 				The value retrieved from the <var>use</var> attribute is stored as the index value.
 			</p>
+			<note>
+				To retrieve nodes from the index, use the XPath <var>key()</var> function.
+			</note>
 		</description>
 		<attribute ref="match" required="yes" />
 		<attribute ref="name" required="yes" />
