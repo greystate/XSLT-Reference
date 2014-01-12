@@ -300,7 +300,7 @@ li.attr-ref:before {
 .type .general {
   font-style: italic;
 }
-:target {
+.element:target {
   border-radius: 6px;
   box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   border: solid rgba(0, 0, 0, 0.4);
@@ -309,15 +309,24 @@ li.attr-ref:before {
   font-size: 175%;
   margin: 10px 0;
 }
-:target a {
+.element:target a {
   text-decoration: none;
 }
-:target:hover {
+.element:target:hover {
   background: rgba(255, 255, 255, 0.6);
 }
-:target .desc {
+.element:target .desc {
   display: block;
 }
-:target .type {
+.element:target .type {
   display: inline;
+}
+#toc:target .element {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+#toc:target .element .desc,
+#toc:target .element .content {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
 }

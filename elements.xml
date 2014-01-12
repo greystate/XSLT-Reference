@@ -217,6 +217,12 @@
 	</element>
 	
 	<element name="for-each">
+		<description>
+			<p>
+				Almost an alias for <ref>apply-templates</ref> in that it also collects a set of nodes
+				for processing, but all nodes will be processed using the same (embedded) template.
+			</p>
+		</description>
 		<attribute ref="select" required="yes" />
 		<element ref="sort" />
 		
@@ -288,6 +294,9 @@
 				Instructs the processor to remove all white-space nodes from specific
 				elements in the source document before they're handled by XSLT.
 			</p>
+			<note>
+				You can use the value "*" to strip space from all elements.
+			</note>
 		</description>
 		<attribute name="elements" content="nmtokens" />
 	</element>
@@ -334,7 +343,7 @@
 	<element name="attribute-set">
 		<description>
 			<p>
-				Used to build a set of attributes for reuse on multiple output elemets.
+				Used to build a set of attributes for reuse on multiple output elements.
 				Use the special <var>xsl:use-attribute-sets</var> attribute on any literal output element,
 				to tell the processor to generate these attributes on the element.
 			</p>
@@ -346,7 +355,8 @@
 	<element name="decimal-format">
 		<description>
 			<p>
-				Defines a named custom format for use with the <var>format-number()</var> function.
+				Defines a named custom format for use with the <ref>number</ref> instruction
+				and the <var>format-number()</var> function.
 			</p>
 		</description>
 		<attribute ref="name" />
@@ -385,6 +395,9 @@
 				Creates a named index of elements matching the expression in the <var>match</var> attribute.
 				The value retrieved from the <var>use</var> attribute is stored as the index value.
 			</p>
+			<note>
+				To retrieve nodes from the index, use the XPath <var>key()</var> function.
+			</note>
 		</description>
 		<attribute ref="match" required="yes" />
 		<attribute ref="name" required="yes" />
@@ -409,10 +422,23 @@
 	</element>
 	
 	<element name="fallback">
+		<description>
+			<p>
+				The contents of the fallback instruction is only instantiated if its
+				parent element is not supported by the XSLT processor. Rarely used.
+			</p>
+		</description>
 		&fallback-content;
 	</element>
 	
 	<element name="message">
+		<description>
+			<p>
+				Used to output debugging/logging info to <code>stdout</code> during
+				transformation. If the <var>terminate</var> attribute is set to <code>yes</code>,
+				the transformation will terminate.
+			</p>
+		</description>
 		<attribute name="terminate" content="boolean" />
 	</element>
 </docset>
