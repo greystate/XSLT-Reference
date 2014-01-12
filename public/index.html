@@ -67,7 +67,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </ul></section><section class="element" id="attribute-set"><h1><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h1>
 <div class="desc">
 			<p>
-				Used to build a set of attributes for reuse on multiple output elemets.
+				Used to build a set of attributes for reuse on multiple output elements.
 				Use the special <var class="attr-ref">xsl:use-attribute-sets</var> attribute on any literal output element,
 				to tell the processor to generate these attributes on the element.
 			</p>
@@ -243,6 +243,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			<p>
 				Creates a named index of elements matching the expression in the <var class="attr-ref">match</var> attribute.
 				The value retrieved from the <var class="attr-ref">use</var> attribute is stored as the index value.
+			</p>
+			<p class="note">
+				To retrieve nodes from the index, use the XPath <var class="attr-ref">key()</var> function.
 			</p>
 		</div>
 <ul class="content">
