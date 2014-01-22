@@ -100,6 +100,18 @@
 
 	<!-- Output elements -->
 	<element name="value-of">
+		<description>
+			<p>
+				This is used to generate a string value in the output by selecting something from the
+				input document. The <var>select</var> attribute is an XPath expression - if it selects
+				a node set, <em>only the string value of the first node in the set will be output.</em>
+			</p>
+			<note>
+				Though the <var>disable-output-escaping</var> attribute can be used to output text as
+				HTML or XML, it is thus also possible to generate invalid XML - so be sure to know what
+				the source contains before blindly transferring it to the output document.
+			</note>
+		</description>
 		<attribute ref="select" required="yes" />
 		<attribute ref="disable-output-escaping" />
 	</element>

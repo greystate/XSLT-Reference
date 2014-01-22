@@ -483,6 +483,18 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></li>
 <li class="elem-ref"><a href="#output">&lt;xsl:output&gt;</a></li>
 </ul></section><section class="element" id="value-of"><h1><a href="#value-of">&lt;xsl:value-of&gt;</a></h1>
+<div class="desc">
+			<p>
+				This is used to generate a string value in the output by selecting something from the
+				input document. The <var class="attr-ref">select</var> attribute is an XPath expression - if it selects
+				a node set, <em>only the string value of the first node in the set will be output.</em>
+			</p>
+			<p class="note">
+				Though the <var class="attr-ref">disable-output-escaping</var> attribute can be used to output text as
+				HTML or XML, it is thus also possible to generate invalid XML - so be sure to know what
+				the source contains before blindly transferring it to the output document.
+			</p>
+		</div>
 <ul class="content">
 <li class="attr-ref required">select <span class="type"><span class="general">expression</span></span> <span class="type"><span class="general"></span></span>
 </li>
