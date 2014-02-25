@@ -289,6 +289,7 @@ li.attr-ref:before {
 }
 .arg-ref {
   font-weight: normal;
+  font-style: italic;
   color: #880000;
 }
 .required {
@@ -305,7 +306,8 @@ li.attr-ref:before {
 .type .general {
   font-style: italic;
 }
-.element:target {
+.element:target,
+.function:target {
   border-radius: 6px;
   -webkit-box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
@@ -315,16 +317,20 @@ li.attr-ref:before {
   font-size: 175%;
   margin: 10px 0;
 }
-.element:target a {
+.element:target a,
+.function:target a {
   text-decoration: none;
 }
-.element:target:hover {
+.element:target:hover,
+.function:target:hover {
   background: rgba(255, 255, 255, 0.6);
 }
-.element:target .desc {
+.element:target .desc,
+.function:target .desc {
   display: block;
 }
-.element:target .type {
+.element:target .type,
+.function:target .type {
   display: inline;
 }
 #toc:target .element {
