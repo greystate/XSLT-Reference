@@ -34,11 +34,13 @@
 			<xsl:if test="@required = 'yes'"><xsl:attribute name="class">arg-ref required</xsl:attribute></xsl:if>
 			<xsl:value-of select="@name" />
 		</span>
+		<xsl:apply-templates select="." mode="typeinfo" />
 		<xsl:if test="not(position() = last())">, </xsl:if>
+		
 	</xsl:template>
 
 	<xsl:template match="argument" mode="typeinfo">
-		<xsl:text> :</xsl:text>
+		<xsl:text> </xsl:text>
 		<span class="type">
 			<span class="general"><xsl:value-of select="@type" /></span>
 		</span>

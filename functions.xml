@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <functions>
 	<function name="translate">
-		<argument name="source" type="expression" />
-		<argument name="find" type="expression" />
-		<argument name="replace" type="expression" />
+		<argument name="source" type="string" />
+		<argument name="find" type="string" />
+		<argument name="replace" type="string" />
 	</function>
 
 	<function name="generate-id">
