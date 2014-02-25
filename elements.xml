@@ -453,4 +453,6 @@
 		</description>
 		<attribute name="terminate" content="boolean" />
 	</element>
+	
+	<include href="functions.xml" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
 </docset>
