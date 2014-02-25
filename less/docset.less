@@ -14,7 +14,7 @@ body {
 	margin: 0 auto;
 	background: #dcdcdc;
 	color: #314159;
-	font-family: inconsolata, "courier new", monospace;
+	font-family: inconsolata, "courier new", monospace;	
 }
 
 a {
@@ -31,7 +31,7 @@ code {
 	background: @bgcolor_code;
 }
 
-.element {
+.element, .function {
 	margin: 10px 2em;
 	padding: 10px;
 
@@ -46,6 +46,12 @@ code {
 	&:hover {
 		border-radius: 6px;
 		background: @color_hovered;
+	}
+}
+
+.function {
+	> h1 {
+		color: @color_func;
 	}
 }
 
@@ -82,7 +88,7 @@ code {
 	}
 }
 
-.content {
+.content, .args {
 	padding: 0 0 0 10px;
 	margin: 5px 0;
 	list-style: none;
@@ -106,6 +112,11 @@ li.attr-ref:before {
 .attr-ref {
 	font-style: normal;
 	color: @color_attr;
+}
+
+.arg-ref {
+	font-weight: normal;
+	color: @color_args;
 }
 
 .required {
