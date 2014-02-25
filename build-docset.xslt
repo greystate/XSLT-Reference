@@ -37,6 +37,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				<xsl:sort select="@name" data-type="text" order="ascending" />
 			</xsl:apply-templates>
 			
+			<xsl:apply-templates select="docset/functions/function">
+				<xsl:sort select="@name" data-type="text" order="ascending" />
+			</xsl:apply-templates>
+			
 			<xsl:call-template name="fork-banner" />
 		</body>
 		</html>
@@ -158,5 +162,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			/>
 		</a>
 	</xsl:template>
+	
+	<xsl:include href="_functions.xslt" />
 
 </xsl:stylesheet>
