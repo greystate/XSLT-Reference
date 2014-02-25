@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+	<function name="translate">
+		<argument name="source" type="expression" />
+		<argument name="find" type="expression" />
+		<argument name="replace" type="expression" />
+	</function>
+
+	<function name="generate-id">
+		<description>
+			<p>Returns a unique string ID for the selected node (or the current node if none specified)</p>
+		</description>
+		<argument name="node" type="expression" />
+		
+	</function>
+	
+</functions>
