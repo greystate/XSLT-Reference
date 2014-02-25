@@ -14,4 +14,22 @@
 		
 	</function>
 	
+	<function name="position">
+		<description>
+			<p>Returns the current node's index (1-based) within the <em>current nodelist</em></p>
+		</description>
+	</function>
+	
+	<function name="current">
+		<description>
+			<p>Returns the current node</p>
+		</description>
+	</function>
+	
+	<function name="substring">
+		<argument name="string" type="string" required="yes" />
+		<argument name="start" type="number" required="yes" />
+		<argument name="length" type="number" />
+	</function>
+	
 </functions>
