@@ -104,10 +104,8 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
-
   padding: 0;
   /* 2 */
-
 }
 button,
 input,
@@ -115,13 +113,10 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
-
   font-size: 100%;
   /* 2 */
-
   margin: 0;
   /* 3 */
-
 }
 button,
 input {
@@ -133,10 +128,8 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-
   cursor: pointer;
   /* 3 */
-
 }
 button[disabled],
 input[disabled] {
@@ -144,21 +137,19 @@ input[disabled] {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
-
   padding: 0;
   /* 2 */
-
 }
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
-
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -173,10 +164,8 @@ input::-moz-focus-inner {
 textarea {
   overflow: auto;
   /* 1 */
-
   vertical-align: top;
   /* 2 */
-
 }
 table {
   border-collapse: collapse;
@@ -192,7 +181,11 @@ table {
 }
 @media only screen and (max-width: 680px) {
   .forkme {
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
     transform: scale(0.6);
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
   }
 }
@@ -221,19 +214,25 @@ code {
   color: #008800;
   background: #ecebe8;
 }
-.element {
+.element,
+.function {
   margin: 10px 2em;
   padding: 10px;
   font-size: 1em;
 }
-.element > h1 {
+.element > h1,
+.function > h1 {
   font-size: 1.4em;
   margin: 0;
   color: #006600;
 }
-.element:hover {
+.element:hover,
+.function:hover {
   border-radius: 6px;
   background: rgba(198, 198, 185, 0.5);
+}
+.function > h1 {
+  color: #333333;
 }
 .desc {
   display: none;
@@ -263,12 +262,14 @@ code {
   font-weight: bold;
   text-transform: uppercase;
 }
-.content {
+.content,
+.args {
   padding: 0 0 0 10px;
   margin: 5px 0;
   list-style: none;
 }
-.content > h2 {
+.content > h2,
+.args > h2 {
   font-size: 12px;
 }
 li.elem-ref,
@@ -286,6 +287,10 @@ li.attr-ref:before {
   font-style: normal;
   color: #660000;
 }
+.arg-ref {
+  font-weight: normal;
+  color: #880000;
+}
 .required {
   font-weight: bold;
 }
@@ -302,6 +307,7 @@ li.attr-ref:before {
 }
 .element:target {
   border-radius: 6px;
+  -webkit-box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   border: solid rgba(0, 0, 0, 0.4);
   border-width: 1px 0;
