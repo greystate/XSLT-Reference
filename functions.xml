@@ -36,8 +36,11 @@
 	</function>
 	
 	<function name="substring-after">
-		<argument name="string" type="expression" required="yes" />
-		<argument name="string" type="expression" required="yes" />
+		<description>
+			<p>Returns the rest of the <var>source</var> string, following the <var>find</var> string.</p>
+		</description>
+		<argument name="source" type="expression" required="yes" />
+		<argument name="find" type="expression" required="yes" />
 	</function>
 	
 	
