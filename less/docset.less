@@ -17,6 +17,13 @@ body {
 	font-family: inconsolata, "courier new", monospace;	
 }
 
+#xslt-elements, #xpath-functions {
+	> h1 {
+		margin: 1em 0 0.4em 0.4em;
+		border-bottom: 2px solid;
+	}
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
@@ -164,13 +171,22 @@ li.attr-ref:before {
 .toc-link {
 	.font-size(14);
 
+	font-family: Helvetica;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100px;
 	height: 100px;
-	text-align: center;
+	text-align: right;
 	
+	a { display: block; }
+	
+	@media only screen and (max-width: 680px) {
+		right: 0;
+		left: auto;
+		top: 100px;
+		width: 60px;
+	}
 }
 
 #toc:target {
