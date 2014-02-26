@@ -8,7 +8,7 @@
 
 	<function name="generate-id">
 		<description>
-			<p>Returns a unique string ID for the selected node (or the current node if none specified)</p>
+			<p>Returns a unique string ID for the selected node (or the current node if none specified).</p>
 		</description>
 		<argument name="node" type="expression" />
 		
@@ -16,7 +16,7 @@
 	
 	<function name="position">
 		<description>
-			<p>Returns the current node's index (1-based) within the <em>current nodelist</em></p>
+			<p>Returns the current node's index (1-based) within the <em>current nodelist</em>.</p>
 		</description>
 	</function>
 	
