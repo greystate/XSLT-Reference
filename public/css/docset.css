@@ -342,3 +342,10 @@ li.attr-ref:before {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+#toc:target .function {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+#toc:target .function .arglist {
+  display: none;
+}
