@@ -161,11 +161,27 @@ li.attr-ref:before {
 	.type { display: inline; }
 }
 
+.toc-link {
+	.font-size(14);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	
+}
+
 #toc:target {
-	.element {
-		margin-top: 0;
+	.element, .function {
+		margin-top: 2px;
+		margin-bottom: 0;
 		padding-bottom: 0;
-		
+		padding-top: 0;
+	}
+	
+	.element {
 		.desc, .content {
 			clip: rect(0, 0, 0, 0);
 			position: absolute;
@@ -173,9 +189,6 @@ li.attr-ref:before {
 	}
 	
 	.function {
-		margin-top: 0;
-		padding-bottom: 0;
-		
 		.arglist {
 			display: none;
 		}
