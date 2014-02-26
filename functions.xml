@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <functions>
 	<function name="translate">
-		<argument name="source" type="string" />
-		<argument name="find" type="string" />
-		<argument name="replace" type="string" />
+		<argument name="source" type="string" required="yes" />
+		<argument name="find" type="string" required="yes" />
+		<argument name="replace" type="string" required="yes" />
 	</function>
 
 	<function name="generate-id">
@@ -27,9 +27,15 @@
 	</function>
 	
 	<function name="substring">
-		<argument name="string" type="string" required="yes" />
+		<argument name="string" type="expression" required="yes" />
 		<argument name="start" type="number" required="yes" />
 		<argument name="length" type="number" />
 	</function>
+	
+	<function name="substring-after">
+		<argument name="string" type="expression" required="yes" />
+		<argument name="string" type="expression" required="yes" />
+	</function>
+	
 	
 </functions>
