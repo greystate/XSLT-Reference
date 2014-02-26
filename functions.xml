@@ -27,6 +27,9 @@
 	</function>
 	
 	<function name="substring">
+		<description>
+			<p>Returns part of a string starting at <var>start</var>, spanning at most <var>length</var> characters.</p>
+		</description>
 		<argument name="string" type="expression" required="yes" />
 		<argument name="start" type="number" required="yes" />
 		<argument name="length" type="number" />
