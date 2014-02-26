@@ -172,9 +172,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 	
 	<xsl:template name="toc-link">
 		<nav class="toc-link">
-			<a href="#toc" title="Show a simplified table of contents">Contents</a>
-			<a href="#xslt-elements">XSLT</a>
-			<a href="#xpath-functions">XPath</a>
+			<a href="#toc" title="Show a simplified table of contents">Summary</a>
+			<a href="#xslt-elements">Elements</a>
+			<a href="#xpath-functions">Functions</a>
 		</nav>
 	</xsl:template>
 	
