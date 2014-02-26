@@ -42,6 +42,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</xsl:apply-templates>
 			
 			<xsl:call-template name="fork-banner" />
+			<xsl:call-template name="toc-link" />
 		</body>
 		</html>
 	</xsl:template>
@@ -161,6 +162,14 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				alt="Fork me on GitHub"
 			/>
 		</a>
+	</xsl:template>
+	
+	<xsl:template name="toc-link">
+		<nav class="toc-link">
+			<a href="#toc" title="Show a simplified table of contents">Contents</a>
+			<a href="#xslt-elements">XSLT</a>
+			<a href="#xpath-functions">XPath</a>
+		</nav>
 	</xsl:template>
 	
 	<xsl:include href="_functions.xslt" />
