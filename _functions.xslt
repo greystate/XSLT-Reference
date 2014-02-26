@@ -40,8 +40,8 @@
 	</xsl:template>
 
 	<xsl:template match="argument" mode="typeinfo">
-		<xsl:text> </xsl:text>
 		<span class="type">
+			<xsl:text> </xsl:text>
 			<span class="general"><xsl:value-of select="@type" /></span>
 		</span>
 	</xsl:template>
