@@ -23,7 +23,9 @@
 			<a href="#&id-prefix;{.}">
 				<xsl:value-of select="." />
 				<xsl:value-of select="$func-prefix" />
-				<xsl:apply-templates select="../argument" mode="arglist" />
+				<span class="arglist">
+					<xsl:apply-templates select="../argument" mode="arglist" />
+				</span>
 				<xsl:value-of select="$func-suffix" />
 			</a>
 		</h1>
