@@ -34,7 +34,9 @@
 	<xsl:template match="argument" mode="arglist">
 		<span class="arg-ref">
 			<xsl:if test="@required = 'yes'"><xsl:attribute name="class">arg-ref required</xsl:attribute></xsl:if>
+			<xsl:if test="not(@required = 'yes')">[</xsl:if>
 			<xsl:value-of select="@name" />
+			<xsl:if test="not(@required = 'yes')">]</xsl:if>
 		</span>
 		<xsl:apply-templates select="." mode="typeinfo" />
 		<xsl:if test="not(position() = last())">, </xsl:if>
