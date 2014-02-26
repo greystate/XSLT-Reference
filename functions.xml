@@ -43,5 +43,13 @@
 		<argument name="find" type="expression" required="yes" />
 	</function>
 	
+	<function name="substring-before">
+		<description>
+			<p>Returns everything that comes before the <var>find</var> string inside the <var>source</var> string.</p>
+		</description>
+		<argument name="source" type="expression" required="yes" />
+		<argument name="find" type="expression" required="yes" />
+	</function>
+	
 	
 </functions>
