@@ -1,6 +1,6 @@
-# XSLT Reference
+# XSLT Quick Reference
 
-This is a quick reference/cheatsheet for XSLT 1.0 elements and their attributes.
+This is a quick reference/cheatsheet for XSLT 1.0 elements and their attributes, along with the available XPath functions.
 
 I'm building it for two main purposes:
 
@@ -11,7 +11,7 @@ I'm building it for two main purposes:
 It's primarily meant to be used whenever you can't remember all the attributes of, say, the [`<xsl:number>`][EX1]
 instruction - after a quick look at this, you're back in business (<q>_Of **course** – it has to be `level="multiple"` #facepalm_</q>).
 
-I hope to be able to add some concise examples for all the elements (when they'd make sense).
+I hope to be able to add some concise examples for all elements and functions (when they'd make sense).
 
 ## Glaring errors, omissions or falsy information?
 
