@@ -24,7 +24,7 @@ Although I use LESS, I use [-prefix-free][PREFIXFREE] so I can write as much rea
 I use  [CodeKit][] for preprocessing the LESS file, and a simple bash script to transform the XML file with
 the list of elements into a single HTML file. Yay, XSLT!
 
-*Chriztian Steinmeier, 2013*
+*Chriztian Steinmeier, 2013–2014*
 
 [DASH]: http://kapeli.com/dash/
 [XSLTREF]: http://pimpmyxslt.com/reference/
