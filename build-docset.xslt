@@ -33,11 +33,22 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</xsl:comment>
 		</head>
 		<body id="toc">
-			<xsl:apply-templates select="docset/element">
-				<xsl:sort select="@name" data-type="text" order="ascending" />
-			</xsl:apply-templates>
+			<section id="xslt-elements">
+				<h1>XSLT elements</h1>
+				<xsl:apply-templates select="docset/element">
+					<xsl:sort select="@name" data-type="text" order="ascending" />
+				</xsl:apply-templates>
+			</section>
+
+			<section id="xpath-functions">
+				<h1>XPath functions</h1>
+				<xsl:apply-templates select="docset/functions/function">
+					<xsl:sort select="@name" data-type="text" order="ascending" />
+				</xsl:apply-templates>
+			</section>
 			
 			<xsl:call-template name="fork-banner" />
+			<xsl:call-template name="toc-link" />
 		</body>
 		</html>
 	</xsl:template>
@@ -158,5 +169,15 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			/>
 		</a>
 	</xsl:template>
+	
+	<xsl:template name="toc-link">
+		<nav class="toc-link">
+			<a href="#toc" title="Show a simplified table of contents">Summary</a>
+			<a href="#xslt-elements">Elements</a>
+			<a href="#xpath-functions">Functions</a>
+		</nav>
+	</xsl:template>
+	
+	<xsl:include href="_functions.xslt" />
 
 </xsl:stylesheet>

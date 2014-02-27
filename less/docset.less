@@ -14,7 +14,18 @@ body {
 	margin: 0 auto;
 	background: #dcdcdc;
 	color: #314159;
-	font-family: inconsolata, "courier new", monospace;
+	font-family: inconsolata, "courier new", monospace;	
+	
+	@media only screen and (max-width: 680px) {
+		.font-size(10);
+	}
+}
+
+#xslt-elements, #xpath-functions {
+	> h1 {
+		margin: 1em 0 0.4em 0.4em;
+		border-bottom: 2px solid;
+	}
 }
 
 a {
@@ -31,7 +42,7 @@ code {
 	background: @bgcolor_code;
 }
 
-.element {
+.element, .function {
 	margin: 10px 2em;
 	padding: 10px;
 
@@ -46,6 +57,12 @@ code {
 	&:hover {
 		border-radius: 6px;
 		background: @color_hovered;
+	}
+}
+
+.function {
+	> h1 {
+		color: @color_func;
 	}
 }
 
@@ -82,7 +99,7 @@ code {
 	}
 }
 
-.content {
+.content, .args {
 	padding: 0 0 0 10px;
 	margin: 5px 0;
 	list-style: none;
@@ -108,6 +125,12 @@ li.attr-ref:before {
 	color: @color_attr;
 }
 
+.arg-ref {
+	font-weight: normal;
+	font-style: italic;
+	color: @color_args;
+}
+
 .required {
 	font-weight: bold;
 }
@@ -125,7 +148,7 @@ li.attr-ref:before {
 }
 
 
-.element:target {
+.element:target, .function:target {
 	border-radius: 6px;
 
 	box-shadow:
@@ -149,14 +172,50 @@ li.attr-ref:before {
 	.type { display: inline; }
 }
 
+.toc-link {
+	.font-size(14);
+
+	font-family: Helvetica;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	text-align: right;
+	
+	a { display: block; }
+	
+	@media only screen and (max-width: 680px) {
+		right: 0;
+		left: auto;
+		top: 100px;
+		width: 60px;
+	}
+}
+
 #toc:target {
-	.element {
-		margin-top: 0;
+	#xslt-elements, #xpath-functions {
+		width: 45%;
+		float: left;
+	}
+	
+	.element, .function {
+		margin-top: 2px;
+		margin-bottom: 0;
 		padding-bottom: 0;
-		
+		padding-top: 0;
+	}
+	
+	.element {
 		.desc, .content {
 			clip: rect(0, 0, 0, 0);
 			position: absolute;
+		}
+	}
+	
+	.function {
+		.arglist {
+			display: none;
 		}
 	}
 }

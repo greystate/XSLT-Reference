@@ -421,6 +421,12 @@
 	</element>
 		
 	<element name="import">
+		<description>
+			<note>
+				The <ref>import</ref> statement(s) <strong>must</strong> appear before
+				any other child node of the main stylesheet.
+			</note>
+		</description>
 		<attribute name="href" content="URI" required="yes" />
 	</element>
 	
@@ -453,4 +459,6 @@
 		</description>
 		<attribute name="terminate" content="boolean" />
 	</element>
+	
+	<include href="functions.xml" parse="xml" xmlns="http://www.w3.org/2001/XInclude" />
 </docset>
