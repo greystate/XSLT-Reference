@@ -51,5 +51,18 @@
 		<argument name="find" type="expression" required="yes" />
 	</function>
 	
+	<function name="normalize-space">
+		<description>
+			<p>
+				Returns a copy of the <var>source</var> string with leading and trailing space removed, as well as
+				compressing runs of whitespace characters into a single space.
+			</p>
+		</description>
+		<example>
+			<code>normalize-space('  a   little  tiny space   ')</code> returns: <code>a little tiny space</code>
+		</example>
+		<argument name="source" type="expression" />
+	</function>
+	
 	
 </functions>
