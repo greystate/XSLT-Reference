@@ -201,6 +201,12 @@ body {
   color: #314159;
   font-family: inconsolata, "courier new", monospace;
 }
+@media only screen and (max-width: 680px) {
+  body {
+    font-size: 10px;
+    font-size: 1rem;
+  }
+}
 #xslt-elements > h1,
 #xpath-functions > h1 {
   margin: 1em 0 0.4em 0.4em;
@@ -359,6 +365,11 @@ li.attr-ref:before {
     top: 100px;
     width: 60px;
   }
+}
+#toc:target #xslt-elements,
+#toc:target #xpath-functions {
+  width: 45%;
+  float: left;
 }
 #toc:target .element,
 #toc:target .function {
