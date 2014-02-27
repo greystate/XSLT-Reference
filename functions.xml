@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <functions>
 	<function name="translate">
+		<description>
+			<p>
+				Performs character-replacements in the <var>source</var> string, by replacing every character in the
+				<var>find</var> argument found in <var>source</var>, with the character in <var>replace</var> at
+				the same index </p>
+		</description>
 		<argument name="source" type="string" required="yes" />
 		<argument name="find" type="string" required="yes" />
 		<argument name="replace" type="string" required="yes" />
@@ -28,7 +34,7 @@
 	
 	<function name="substring">
 		<description>
-			<p>Returns part of a string starting at <var>start</var>, spanning at most <var>length</var> characters.</p>
+			<p>Returns part of (a) <var>string</var> starting at <var>start</var>, spanning at most <var>length</var> characters.</p>
 		</description>
 		<argument name="string" type="expression" required="yes" />
 		<argument name="start" type="number" required="yes" />
