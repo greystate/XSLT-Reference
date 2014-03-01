@@ -109,5 +109,11 @@
 		<argument name="function" type="string" required="yes" />
 	</function>
 	
+	<function name="format-number">
+		<argument name="number" type="expression" required="yes" />
+		<argument name="pattern" type="string" required="yes" />
+		<argument name="decimal-format" type="string" />
+	</function>
+	
 	
 </functions>
