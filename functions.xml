@@ -110,9 +110,17 @@
 	</function>
 	
 	<function name="format-number">
+		
 		<argument name="number" type="expression" required="yes" />
 		<argument name="pattern" type="string" required="yes" />
 		<argument name="decimal-format" type="string" />
+	</function>
+	
+	<function name="boolean">
+		<description>
+			<p>Convert the <var>condition</var> expression to either <var>true()</var> or <var>false()</var>.</p>
+		</description>
+		<argument name="condition" type="expression" required="yes" />
 	</function>
 	
 	
