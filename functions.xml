@@ -84,7 +84,7 @@
 		<description>
 			<p>
 				Returns <var>true()</var> if the <var>source</var> string contains the <var>find</var> string.
-				Otherwise it returns <var>false()</var>
+				Otherwise, it returns <var>false().</var>
 			</p>
 		</description>
 		<argument name="source" type="expression" required="yes" />
