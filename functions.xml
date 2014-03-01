@@ -70,5 +70,14 @@
 		<argument name="source" type="expression" />
 	</function>
 	
+	<function name="concat">
+		<description>
+			<p>Returns a string by concatenating the string value of all arguments</p>
+		</description>
+
+		<argument name="string1" type="expression" required="yes" />
+		<argument name="string2" type="expression" required="yes" />
+		<argument name="stringN&#8230;" type="expression" />
+	</function>
 	
 </functions>
