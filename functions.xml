@@ -80,4 +80,16 @@
 		<argument name="stringN&#8230;" type="expression" />
 	</function>
 	
+	<function name="contains">
+		<description>
+			<p>
+				Returns <var>true()</var> if the <var>source</var> string contains the <var>find</var> string.
+				Otherwise it returns <var>false()</var>
+			</p>
+		</description>
+		<argument name="source" type="expression" required="yes" />
+		<argument name="find" type="expression" required="yes" />
+	</function>
+	
+	
 </functions>
