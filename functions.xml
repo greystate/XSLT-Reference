@@ -98,4 +98,16 @@
 		<argument name="string" type="expression" required="yes" />
 	</function>
 	
+	<function name="function-available">
+		<description>
+			<p>Returns <var>true()</var> if a function with the specified name exists.</p>
+			<note>
+				You should include the prefix if the function is defined in another namespace, e.g.:
+				<code>function-available('msxsl:node-set')</code>
+			</note>
+		</description>
+		<argument name="function" type="string" required="yes" />
+	</function>
+	
+	
 </functions>
