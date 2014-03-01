@@ -153,6 +153,12 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			<xsl:value-of select="." />
 		</a>
 	</xsl:template>
+	
+	<xsl:template match="description//ref[contains(., '()')]">
+		<a href="#{substring-before(., '()')}" class="func-ref">
+			<xsl:value-of select="." />
+		</a>
+	</xsl:template>
 
 	<xsl:template match="description//var">
 		<var class="attr-ref">
