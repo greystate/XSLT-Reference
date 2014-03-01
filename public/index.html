@@ -120,7 +120,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <div class="desc">
 			<p>
 				Defines a named custom format for use with the <a href="#number" class="elem-ref">number</a> instruction
-				and the <var class="attr-ref">format-number()</var> function.
+				and the <a href="#format-number" class="func-ref">format-number()</a> function.
 			</p>
 		</div>
 <ul class="content">
@@ -555,9 +555,28 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 </ul>
 <ul class="content"></ul></section></section><section id="xpath-functions"><h1>XPath functions</h1>
-<section class="function" id="current"><h1><a href="#current">current(<span class="arglist"></span>)</a></h1>
+<section class="function" id="boolean"><h1><a href="#boolean">boolean(<span class="arglist"><span class="arg-ref required">condition</span></span>)</a></h1>
+<div class="desc">
+			<p>Convert the <var class="attr-ref">condition</var> expression to either <var class="attr-ref">true()</var> or <var class="attr-ref">false()</var>.</p>
+		</div></section><section class="function" id="concat"><h1><a href="#concat">concat(<span class="arglist"><span class="arg-ref required">string1</span>, <span class="arg-ref required">string2</span>, <span class="arg-ref">[stringN…]</span></span>)</a></h1>
+<div class="desc">
+			<p>Returns a string by concatenating the string value of all arguments</p>
+		</div></section><section class="function" id="contains"><h1><a href="#contains">contains(<span class="arglist"><span class="arg-ref required">source</span>, <span class="arg-ref required">find</span></span>)</a></h1>
+<div class="desc">
+			<p>
+				Returns <var class="attr-ref">true()</var> if the <var class="attr-ref">source</var> string contains the <var class="attr-ref">find</var> string.
+				Otherwise, it returns <var class="attr-ref">false().</var>
+			</p>
+		</div></section><section class="function" id="current"><h1><a href="#current">current(<span class="arglist"></span>)</a></h1>
 <div class="desc">
 			<p>Returns the current node</p>
+		</div></section><section class="function" id="format-number"><h1><a href="#format-number">format-number(<span class="arglist"><span class="arg-ref required">number</span>, <span class="arg-ref required">pattern</span>, <span class="arg-ref">[decimal-format]</span></span>)</a></h1></section><section class="function" id="function-available"><h1><a href="#function-available">function-available(<span class="arglist"><span class="arg-ref required">function</span></span>)</a></h1>
+<div class="desc">
+			<p>Returns <var class="attr-ref">true()</var> if a function with the specified name exists.</p>
+			<p class="note">
+				You should include the prefix if the function is defined in another namespace, e.g.:
+				<code>function-available('msxsl:node-set')</code>
+			</p>
 		</div></section><section class="function" id="generate-id"><h1><a href="#generate-id">generate-id(<span class="arglist"><span class="arg-ref">[node]</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns a unique string ID for the selected node (or the current node if none specified).</p>
@@ -570,6 +589,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</div></section><section class="function" id="position"><h1><a href="#position">position(<span class="arglist"></span>)</a></h1>
 <div class="desc">
 			<p>Returns the current node's index (1-based) within the <em>current nodelist</em>.</p>
+		</div></section><section class="function" id="string-length"><h1><a href="#string-length">string-length(<span class="arglist"><span class="arg-ref required">string</span></span>)</a></h1>
+<div class="desc">
+			<p>Returns the number of characters in the <var class="attr-ref">string</var>.</p>
 		</div></section><section class="function" id="substring"><h1><a href="#substring">substring(<span class="arglist"><span class="arg-ref required">string</span>, <span class="arg-ref required">start</span>, <span class="arg-ref">[length]</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns part of (a) <var class="attr-ref">string</var> starting at <var class="attr-ref">start</var>, spanning at most <var class="attr-ref">length</var> characters.</p>
@@ -579,6 +601,12 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</div></section><section class="function" id="substring-before"><h1><a href="#substring-before">substring-before(<span class="arglist"><span class="arg-ref required">source</span>, <span class="arg-ref required">find</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns everything that comes before the <var class="attr-ref">find</var> string inside the <var class="attr-ref">source</var> string.</p>
-		</div></section><section class="function" id="translate"><h1><a href="#translate">translate(<span class="arglist"><span class="arg-ref required">source</span>, <span class="arg-ref required">find</span>, <span class="arg-ref required">replace</span></span>)</a></h1></section></section><a href="https://github.com/greystate/XSLT-Reference#readme"><img class="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-orange@2x.png" alt="Fork me on GitHub"></a><nav class="toc-link"><a href="#toc" title="Show a simplified table of contents">Summary</a><a href="#xslt-elements">Elements</a><a href="#xpath-functions">Functions</a></nav>
+		</div></section><section class="function" id="translate"><h1><a href="#translate">translate(<span class="arglist"><span class="arg-ref required">source</span>, <span class="arg-ref required">find</span>, <span class="arg-ref required">replace</span></span>)</a></h1>
+<div class="desc">
+			<p>
+				Performs character-replacements in the <var class="attr-ref">source</var> string, by replacing every character in the
+				<var class="attr-ref">find</var> argument found in <var class="attr-ref">source</var>, with the character in <var class="attr-ref">replace</var> at
+				the same index </p>
+		</div></section></section><a href="https://github.com/greystate/XSLT-Reference#readme"><img class="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-orange@2x.png" alt="Fork me on GitHub"></a><nav class="toc-link"><a href="#toc" title="Show a simplified table of contents">Summary</a><a href="#xslt-elements">Elements</a><a href="#xpath-functions">Functions</a></nav>
 </body>
 </html>
