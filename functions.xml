@@ -91,5 +91,11 @@
 		<argument name="find" type="expression" required="yes" />
 	</function>
 	
+	<function name="string-length">
+		<description>
+			<p>Returns the number of characters in the <var>string</var>.</p>
+		</description>
+		<argument name="string" type="expression" required="yes" />
+	</function>
 	
 </functions>
