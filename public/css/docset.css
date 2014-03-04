@@ -137,6 +137,8 @@ input[disabled] {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -179,7 +181,11 @@ table {
 }
 @media only screen and (max-width: 680px) {
   .forkme {
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
     transform: scale(0.6);
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
   }
 }
@@ -317,6 +323,7 @@ li.attr-ref:before {
 .element:target,
 .function:target {
   border-radius: 6px;
+  -webkit-box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   border: solid rgba(0, 0, 0, 0.4);
   border-width: 1px 0;
@@ -365,6 +372,10 @@ li.attr-ref:before {
     width: 60px;
     border-width: 0 3px;
   }
+}
+.feed {
+  margin-top: 10px;
+  opacity: 0.4;
 }
 #toc:target #xslt-elements,
 #toc:target #xpath-functions {
