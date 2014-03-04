@@ -9,7 +9,7 @@ xsltproc --xinclude -o public/index.html build-docset.xslt elements.xml
 xsltproc --xinclude -o sql/docs.sql build-sql.xslt elements.xml
 
 # Build the Dash DocSet feed XML file
-xsltproc -o dist/xslt-quick-reference.xml --stringparam filename $ARCHIVE_NAME build-feed.xslt elements.xml
+xsltproc -o dist/xslt-quick-reference.xml --stringparam filename "$ARCHIVE_NAME" build-feed.xslt elements.xml
 
 # Backup the existing DocSet (if any)
 if [[ -d "$BUNDLE" ]]; then
@@ -38,4 +38,5 @@ tar --exclude='.DS_Store' -cvzf "dist/$ARCHIVE_NAME.tgz" "$BUNDLE"
 
 # Clean up
 rm -rf "$BUNDLE.bak"
-# rm -rf "$BUNDLE"
+
+echo "Completed build - don't forget to upload the $ARCHIVE_NAME.tgz and feed (XML) files to pimpmyxslt.com/reference as well as all the HTML files"
