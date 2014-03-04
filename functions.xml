@@ -34,7 +34,10 @@
 	
 	<function name="substring">
 		<description>
-			<p>Returns part of (a) <var>string</var> starting at <var>start</var>, spanning at most <var>length</var> characters.</p>
+			<p>
+				Returns part of (a) <var>string</var> starting at <var>start</var>, spanning at most <var>length</var> characters.
+				If <var>length</var> isn&#8217;t specified, the rest of the string from index <var>start</var> will be returned.
+			</p>
 		</description>
 		<argument name="string" type="expression" required="yes" />
 		<argument name="start" type="number" required="yes" />

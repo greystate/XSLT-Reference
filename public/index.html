@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XSLT Quick Reference — v0.9</title>
+<title>XSLT Quick Reference — v0.9.1</title>
 <link rel="stylesheet" href="css/docset.css">
 <script src="scripts/application.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -594,7 +594,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			<p>Returns the number of characters in the <var class="attr-ref">string</var>.</p>
 		</div></section><section class="function" id="substring"><h1><a href="#substring">substring(<span class="arglist"><span class="arg-ref required">string</span>, <span class="arg-ref required">start</span>, <span class="arg-ref">[length]</span></span>)</a></h1>
 <div class="desc">
-			<p>Returns part of (a) <var class="attr-ref">string</var> starting at <var class="attr-ref">start</var>, spanning at most <var class="attr-ref">length</var> characters.</p>
+			<p>
+				Returns part of (a) <var class="attr-ref">string</var> starting at <var class="attr-ref">start</var>, spanning at most <var class="attr-ref">length</var> characters.
+				If <var class="attr-ref">length</var> isn’t specified, the rest of the string from index <var class="attr-ref">start</var> will be returned.
+			</p>
 		</div></section><section class="function" id="substring-after"><h1><a href="#substring-after">substring-after(<span class="arglist"><span class="arg-ref required">source</span>, <span class="arg-ref required">find</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns the rest of the <var class="attr-ref">source</var> string, following the <var class="attr-ref">find</var> string.</p>
