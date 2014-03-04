@@ -155,7 +155,11 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 	</xsl:template>
 	
 	<xsl:template match="description//ref[contains(., '()')]">
-		<a href="#{substring-before(., '()')}" class="func-ref">
+		<xsl:variable name="func" select="substring-before(., '()')" />
+		<a href="#{$func}" class="func-ref">
+			<xsl:if test="key('elements-by-name', $func)">
+				<xsl:attribute name="href"><xsl:value-of select="concat('#&id-prefix;', $func, '-function')" /></xsl:attribute>
+			</xsl:if>
 			<xsl:value-of select="." />
 		</a>
 	</xsl:template>

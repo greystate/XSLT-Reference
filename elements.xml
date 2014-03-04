@@ -408,7 +408,7 @@
 				The value retrieved from the <var>use</var> attribute is stored as the index value.
 			</p>
 			<note>
-				To retrieve nodes from the index, use the XPath <var>key()</var> function.
+				To retrieve nodes from the index, use the XPath <ref>key()</ref> function.
 			</note>
 		</description>
 		<attribute ref="match" required="yes" />

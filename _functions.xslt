@@ -13,6 +13,9 @@
 
 	<xsl:template match="function">
 		<section class="function" id="&id-prefix;{@name}">
+			<xsl:if test="key('elements-by-name', @name)">
+				<xsl:attribute name="id"><xsl:value-of select="concat('&id-prefix;', @name, '-function')" /></xsl:attribute>
+			</xsl:if>
 			<xsl:apply-templates select="@name" />
 			<xsl:apply-templates select="description" />
 		</section>
@@ -21,6 +24,9 @@
 	<xsl:template match="function/@name">
 		<h1>
 			<a href="#&id-prefix;{.}">
+				<xsl:if test="key('elements-by-name', .)">
+					<xsl:attribute name="href"><xsl:value-of select="concat('#&id-prefix;', ., '-function')" /></xsl:attribute>
+				</xsl:if>
 				<xsl:value-of select="." />
 				<xsl:value-of select="$func-prefix" />
 				<span class="arglist">
