@@ -9,6 +9,8 @@
 
 	<xsl:output method="text" indent="no" omit-xml-declaration="yes" />
 	
+	<xsl:variable name="elements" select="/docset/element" />
+	
 	<xsl:template match="/">
 		<xsl:apply-templates select="docset/element | docset/functions/function" />
 	</xsl:template>
@@ -23,6 +25,9 @@
 			<xsl:value-of select="substring('Function|Element', not(self::function) * 9 + 1, 8)" />
 			<xsl:text>', 'index.html#</xsl:text>
 			<xsl:value-of select="@name" />
+			<xsl:if test="self::function and @name = $elements/@name">
+				<xsl:text>-function</xsl:text>
+			</xsl:if>
 		<xsl:text>');</xsl:text>
 	</xsl:template>
 	
