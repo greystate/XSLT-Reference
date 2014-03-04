@@ -23,7 +23,10 @@
 	<xsl:template match="/">
 		<html>
 		<head>
-			<title>XSLT Quick Reference</title>
+			<title>
+				<xsl:text>XSLT Quick Reference</xsl:text>
+				<xsl:value-of select="concat(' &#8212; v', docset/@version)" />
+			</title>
 			<link rel="stylesheet" href="css/docset.css" />
 			<script src="scripts/application.min.js"></script>
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
