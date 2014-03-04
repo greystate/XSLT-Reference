@@ -2,3 +2,4 @@ codekit-config.json
 config.codekit
 
 *.docset
+.codekit-cache
