@@ -183,11 +183,16 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</a>
 	</xsl:template>
 	
+	<xsl:template name="feed-link">
+		<a class="feed" href="dash-feed://http%3A%2F%2Fpimpmyxslt.com%2Freference%2Fxslt-quick-reference.xml" title="Subscribe to feed for Dash here">Dash Feed</a>
+	</xsl:template>
+	
 	<xsl:template name="toc-link">
 		<nav class="toc-link">
 			<a href="#toc" title="Show a simplified table of contents">Summary</a>
 			<a href="#xslt-elements">Elements</a>
 			<a href="#xpath-functions">Functions</a>
+			<xsl:call-template name="feed-link" />
 		</nav>
 	</xsl:template>
 	
