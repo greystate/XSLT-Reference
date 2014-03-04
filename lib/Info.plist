@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>xslt-quick-reference</string>
+	<string>XSLT Quick Reference</string>
 	<key>CFBundleName</key>
 	<string>XSLT Quick Reference</string>
 	<key>DocSetPlatformFamily</key>
-	<string>xslt-quick-reference</string>
+	<string>xslt</string>
 	<key>isDashDocset</key>
 	<true/>
 </dict>
