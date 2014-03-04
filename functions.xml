@@ -123,5 +123,10 @@
 		<argument name="condition" type="expression" required="yes" />
 	</function>
 	
+	<function name="key">
+		<argument name="name" type="string" required="yes" />
+		<argument name="value" type="expression" required="yes" />
+	</function>
+	
 	
 </functions>
