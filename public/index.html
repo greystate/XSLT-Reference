@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XSLT Quick Reference — v0.9.1</title>
+<title>XSLT Quick Reference — v0.9.2</title>
 <link rel="stylesheet" href="css/docset.css">
 <script src="scripts/application.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -570,6 +570,12 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</div></section><section class="function" id="current"><h1><a href="#current">current(<span class="arglist"></span>)</a></h1>
 <div class="desc">
 			<p>Returns the current node</p>
+		</div></section><section class="function" id="document"><h1><a href="#document">document(<span class="arglist"><span class="arg-ref required">URL</span></span>)</a></h1>
+<div class="desc">
+			<p>
+				Returns a nodeset pointing at the root node of the document found at the
+				specified <var class="attr-ref">URL</var>.
+			</p>
 		</div></section><section class="function" id="format-number"><h1><a href="#format-number">format-number(<span class="arglist"><span class="arg-ref required">number</span>, <span class="arg-ref required">pattern</span>, <span class="arg-ref">[decimal-format]</span></span>)</a></h1></section><section class="function" id="function-available"><h1><a href="#function-available">function-available(<span class="arglist"><span class="arg-ref required">function</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns <var class="attr-ref">true()</var> if a function with the specified name exists.</p>
@@ -580,12 +586,23 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</div></section><section class="function" id="generate-id"><h1><a href="#generate-id">generate-id(<span class="arglist"><span class="arg-ref">[node]</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns a unique string ID for the selected node (or the current node if none specified).</p>
-		</div></section><section class="function" id="key-function"><h1><a href="#key-function">key(<span class="arglist"><span class="arg-ref required">name</span>, <span class="arg-ref required">value</span></span>)</a></h1></section><section class="function" id="normalize-space"><h1><a href="#normalize-space">normalize-space(<span class="arglist"><span class="arg-ref">[source]</span></span>)</a></h1>
+		</div></section><section class="function" id="key-function"><h1><a href="#key-function">key(<span class="arglist"><span class="arg-ref required">name</span>, <span class="arg-ref required">value</span></span>)</a></h1>
+<div class="desc">
+			<p>
+				Returns a node set of all the nodes in the <var class="attr-ref">name</var> index,
+				with the value <var class="attr-ref">value</var> stored.
+				Used in conjunction with the <a href="#key" class="elem-ref">key</a> element to facilitate
+				fast and easy lookups in the source XML.
+			</p>
+		</div></section><section class="function" id="normalize-space"><h1><a href="#normalize-space">normalize-space(<span class="arglist"><span class="arg-ref">[source]</span></span>)</a></h1>
 <div class="desc">
 			<p>
 				Returns a copy of the <var class="attr-ref">source</var> string with leading and trailing space removed, as well as
 				compressing runs of whitespace characters into a single space.
 			</p>
+		</div></section><section class="function" id="number-function"><h1><a href="#number-function">number(<span class="arglist"><span class="arg-ref required">source</span></span>)</a></h1>
+<div class="desc">
+			<p>Convert a node set, boolean or string to a number</p>
 		</div></section><section class="function" id="position"><h1><a href="#position">position(<span class="arglist"></span>)</a></h1>
 <div class="desc">
 			<p>Returns the current node's index (1-based) within the <em>current nodelist</em>.</p>
