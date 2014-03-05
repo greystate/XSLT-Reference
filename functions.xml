@@ -139,5 +139,15 @@
 		<argument name="value" type="expression" required="yes" />
 	</function>
 	
+	<function name="document">
+		<description>
+			<p>
+				Returns a nodeset pointing at the root node of the document found at the
+				specified <var>URL</var>.
+			</p>
+		</description>
+		<argument name="URL" type="URI" required="yes" />
+	</function>
+	
 	
 </functions>
