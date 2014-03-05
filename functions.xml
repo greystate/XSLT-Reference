@@ -149,5 +149,12 @@
 		<argument name="URL" type="URI" required="yes" />
 	</function>
 	
+	<function name="number">
+		<description>
+			<p>Convert a node set, boolean or string to a number</p>
+		</description>
+		<argument name="source" type="expression" required="yes" />
+	</function>
+	
 	
 </functions>
