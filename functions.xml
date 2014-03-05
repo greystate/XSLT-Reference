@@ -127,6 +127,14 @@
 	</function>
 	
 	<function name="key">
+		<description>
+			<p>
+				Returns a node set of all the nodes in the <var>name</var> index,
+				with the value <var>value</var> stored.
+				Used in conjunction with the <ref>key</ref> element to facilitate
+				fast and easy lookups in the source XML.
+			</p>
+		</description>
 		<argument name="name" type="string" required="yes" />
 		<argument name="value" type="expression" required="yes" />
 	</function>
