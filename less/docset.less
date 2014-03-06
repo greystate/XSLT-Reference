@@ -45,6 +45,7 @@ code {
 .element, .function {
 	margin: 10px 2em;
 	padding: 10px;
+	position: relative;
 
 	font-size: 1em;
 
@@ -66,11 +67,10 @@ code {
 	}
 }
 
-.desc {
+.desc, .sample {
 	display: none;
 	padding: 5px;
 	margin: 0 10px;
-	color: @color_desc;
 	
 	> p { margin: 0 0 0.6em; }
 	
@@ -81,7 +81,33 @@ code {
 			text-decoration: underline;
 		}
 	}
+}
 
+.desc {
+	color: @color_desc;
+}
+
+.sample {
+	.font-size(14);
+	
+	margin: 0 15px 8px;
+	border-radius: 4px;
+	padding: 10px;
+	background: rgba(100, 100, 10, 0.1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+
+	pre {
+		margin: 0;
+		padding: 0;
+		white-space: pre;
+		overflow-x: auto;
+	}
+
+	code {
+		background: transparent;
+		font-family: Inconsolata, Monaco, Courier, monospace;
+		
+	}
 }
 
 .note {
@@ -172,7 +198,7 @@ li.attr-ref:before {
 		background: @color_selected;
 	}
 	
-	.desc { display: block; }
+	.desc, .sample { display: block; }
 	.type { display: inline; }
 }
 
@@ -217,6 +243,21 @@ li.attr-ref:before {
 		margin-bottom: 0;
 		padding-bottom: 0;
 		padding-top: 0;
+		
+		&.with-sample {
+			&:before {
+				content: "";
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background: rgba(255, 128, 0, 0.3);
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-4px);
+			}
+		}
 	}
 	
 	.element {
