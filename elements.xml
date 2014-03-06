@@ -16,6 +16,7 @@
 
 	<!ENTITY template-content '
 		&fallback-content;
+		<element ref="apply-imports" />
 		<element ref="fallback" />
 	'>
 
@@ -209,6 +210,24 @@
 		
 		<element ref="sort" />
 		<element ref="with-param" />
+	</element>
+	
+	<element name="apply-imports">
+		<description>
+			<p>
+				This is used to allow the processor to process any imported templates that
+				matches the context node
+			</p>
+		</description>
+		<example>
+			<pre><![CDATA[<!-- We need to wrap every movie element -->
+<xsl:template match="movie">
+  <div class="movie">
+    <!-- Process the imported template for movie elements -->
+    <xsl:apply-imports />
+  </div>
+</xsl:template>]]></pre>
+		</example>
 	</element>
 
 	<element name="call-template">
