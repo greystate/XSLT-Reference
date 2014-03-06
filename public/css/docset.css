@@ -229,6 +229,7 @@ code {
 .function {
   margin: 10px 2em;
   padding: 10px;
+  position: relative;
   font-size: 1em;
 }
 .element > h1,
@@ -245,20 +246,46 @@ code {
 .function > h1 {
   color: #333333;
 }
-.desc {
+.desc,
+.sample {
   display: none;
   padding: 5px;
   margin: 0 10px;
-  color: #336699;
 }
-.desc > p {
+.desc > p,
+.sample > p {
   margin: 0 0 0.6em;
 }
-.desc a {
+.desc a,
+.sample a {
   font-weight: bold;
 }
-.desc a:hover {
+.desc a:hover,
+.sample a:hover {
   text-decoration: underline;
+}
+.desc {
+  color: #336699;
+}
+.sample {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin: 0 15px 8px;
+  border-radius: 4px;
+  padding: 10px;
+  background: rgba(100, 100, 10, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+}
+.sample pre {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  overflow-x: auto;
+}
+.sample code {
+  background: transparent;
+  font-family: Inconsolata, Monaco, Courier, monospace;
 }
 .note {
   border-radius: 3px;
@@ -340,7 +367,9 @@ li.attr-ref:before {
   background: rgba(255, 255, 255, 0.6);
 }
 .element:target .desc,
-.function:target .desc {
+.function:target .desc,
+.element:target .sample,
+.function:target .sample {
   display: block;
 }
 .element:target .type,
@@ -388,6 +417,21 @@ li.attr-ref:before {
   margin-bottom: 0;
   padding-bottom: 0;
   padding-top: 0;
+}
+#toc:target .element.with-sample:before,
+#toc:target .function.with-sample:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 128, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 #toc:target .element .desc,
 #toc:target .element .content {

@@ -12,7 +12,22 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </head>
 <body id="toc">
 <section id="xslt-elements"><h1>XSLT elements</h1>
-<section class="element" id="apply-templates"><h1><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h1>
+<section class="element with-sample" id="apply-imports"><h1><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></h1>
+<div class="desc">
+			<p>
+				This is used to allow the processor to process any imported templates that
+				matches the context node
+			</p>
+		</div>
+<div class="sample">
+			<pre>&lt;!-- We need to wrap every movie element --&gt;
+&lt;xsl:template match="movie"&gt;
+  &lt;div class="movie"&gt;
+    &lt;!-- Process the imported template for movie elements --&gt;
+    &lt;xsl:apply-imports /&gt;
+  &lt;/div&gt;
+&lt;/xsl:template&gt;</pre>
+		</div></section><section class="element" id="apply-templates"><h1><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></h1>
 <div class="desc">
 			<p>
 				Collects the nodes specified by the <var class="attr-ref">select</var> attribute and
@@ -64,6 +79,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
 </ul></section><section class="element" id="attribute-set"><h1><a href="#attribute-set">&lt;xsl:attribute-set&gt;</a></h1>
 <div class="desc">
@@ -101,11 +117,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				(or, if no <a href="#when" class="elem-ref">when</a>-statements succeed, the contents of <a href="#otherwise" class="elem-ref">otherwise</a>, if present).
 			</p>
 		</div>
-<ul class="content"></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#when">&lt;xsl:when&gt;</a></li>
 <li class="elem-ref"><a href="#otherwise">&lt;xsl:otherwise&gt;</a></li>
-</ul></section><section class="element" id="comment"><h1><a href="#comment">&lt;xsl:comment&gt;</a></h1>
+</ul></section><section class="element with-sample" id="comment"><h1><a href="#comment">&lt;xsl:comment&gt;</a></h1>
 <div class="desc">
 			<p>Use this to generate a comment in the output.</p>
 			<p class="note">
@@ -115,8 +130,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				gets the stylesheet.
 			</p>
 		</div>
-<ul class="content"></ul>
-<ul class="content"></ul></section><section class="element" id="decimal-format"><h1><a href="#decimal-format">&lt;xsl:decimal-format&gt;</a></h1>
+<div class="sample">
+			<pre>&lt;xsl:comment&gt;This file is auto-generated&lt;/xsl:comment&gt;</pre>
+		</div></section><section class="element" id="decimal-format"><h1><a href="#decimal-format">&lt;xsl:decimal-format&gt;</a></h1>
 <div class="desc">
 			<p>
 				Defines a named custom format for use with the <a href="#number" class="elem-ref">number</a> instruction
@@ -146,8 +162,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 <li class="attr-ref">pattern-separator <span class="type"><span class="general">char</span></span>
 </li>
-</ul>
-<ul class="content"></ul></section><section class="element" id="element"><h1><a href="#element">&lt;xsl:element&gt;</a></h1>
+</ul></section><section class="element" id="element"><h1><a href="#element">&lt;xsl:element&gt;</a></h1>
 <div class="desc">
 			<p>
 				Creates an element with a specific <var class="attr-ref">name</var>.
@@ -176,6 +191,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
 </ul></section><section class="element" id="fallback"><h1><a href="#fallback">&lt;xsl:fallback&gt;</a></h1>
 <div class="desc">
@@ -184,7 +200,6 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				parent element is not supported by the XSLT processor. Rarely used.
 			</p>
 		</div>
-<ul class="content"></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
 <li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
@@ -217,6 +232,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
 </ul></section><section class="element" id="if"><h1><a href="#if">&lt;xsl:if&gt;</a></h1>
 <ul class="content"><li class="attr-ref required">test <span class="type"><span class="general">condition</span></span>
@@ -232,6 +248,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
 </ul></section><section class="element" id="import"><h1><a href="#import">&lt;xsl:import&gt;</a></h1>
 <div class="desc">
@@ -241,11 +258,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 		</div>
 <ul class="content"><li class="attr-ref required">href <span class="type"><span class="general">URI</span></span>
-</li></ul>
-<ul class="content"></ul></section><section class="element" id="include"><h1><a href="#include">&lt;xsl:include&gt;</a></h1>
+</li></ul></section><section class="element" id="include"><h1><a href="#include">&lt;xsl:include&gt;</a></h1>
 <ul class="content"><li class="attr-ref required">href <span class="type"><span class="general">URI</span></span>
-</li></ul>
-<ul class="content"></ul></section><section class="element" id="key"><h1><a href="#key">&lt;xsl:key&gt;</a></h1>
+</li></ul></section><section class="element" id="key"><h1><a href="#key">&lt;xsl:key&gt;</a></h1>
 <div class="desc">
 			<p>
 				Creates a named index of elements matching the expression in the <var class="attr-ref">match</var> attribute.
@@ -262,8 +277,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 <li class="attr-ref required">use <span class="type"><span class="general">expression</span></span>
 </li>
-</ul>
-<ul class="content"></ul></section><section class="element" id="message"><h1><a href="#message">&lt;xsl:message&gt;</a></h1>
+</ul></section><section class="element" id="message"><h1><a href="#message">&lt;xsl:message&gt;</a></h1>
 <div class="desc">
 			<p>
 				Used to output debugging/logging info to <code>stdout</code> during
@@ -272,8 +286,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 		</div>
 <ul class="content"><li class="attr-ref">terminate<span class="type"> (<span class="enum">yes|no</span>)</span>
-</li></ul>
-<ul class="content"></ul></section><section class="element" id="number"><h1><a href="#number">&lt;xsl:number&gt;</a></h1>
+</li></ul></section><section class="element" id="number"><h1><a href="#number">&lt;xsl:number&gt;</a></h1>
 <ul class="content">
 <li class="attr-ref">count <span class="type"><span class="general">expression</span></span>
 </li>
@@ -293,15 +306,13 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 <li class="attr-ref">grouping-size <span class="type"><span class="general">number</span></span>
 </li>
-</ul>
-<ul class="content"></ul></section><section class="element" id="otherwise"><h1><a href="#otherwise">&lt;xsl:otherwise&gt;</a></h1>
+</ul></section><section class="element" id="otherwise"><h1><a href="#otherwise">&lt;xsl:otherwise&gt;</a></h1>
 <div class="desc">
 			<p>
 				Part of a <a href="#choose" class="elem-ref">choose</a> construct - executed if none of the preceding
 				<a href="#when" class="elem-ref">when</a> statements returned <var class="attr-ref">true()</var>.
 			</p>
 		</div>
-<ul class="content"></ul>
 <ul class="content">
 <li class="elem-ref"><a href="#if">&lt;xsl:if&gt;</a></li>
 <li class="elem-ref"><a href="#choose">&lt;xsl:choose&gt;</a></li>
@@ -313,6 +324,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
 </ul></section><section class="element" id="output"><h1><a href="#output">&lt;xsl:output&gt;</a></h1>
 <ul class="content">
@@ -328,8 +340,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 <li class="attr-ref">cdata-section-elements <span class="type"><span class="nmtokens">list of names</span></span>
 </li>
-</ul>
-<ul class="content"></ul></section><section class="element" id="param"><h1><a href="#param">&lt;xsl:param&gt;</a></h1>
+</ul></section><section class="element" id="param"><h1><a href="#param">&lt;xsl:param&gt;</a></h1>
 <div class="desc">
 			<p>
 				Defines a value that can be used in many places, which should be easily changeable
@@ -372,15 +383,13 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 		</div>
 <ul class="content"><li class="attr-ref">elements <span class="type"><span class="nmtokens">list of names</span></span>
-</li></ul>
-<ul class="content"></ul></section><section class="element" id="processing-instruction"><h1><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h1>
+</li></ul></section><section class="element" id="processing-instruction"><h1><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h1>
 <div class="desc">
 			<p class="note">Although the <var class="attr-ref">name</var> attribute isn't required, no output
 			will be generated if it's missing.</p>
 		</div>
 <ul class="content"><li class="attr-ref">name <span class="type"><span class="general">string</span></span>
-</li></ul>
-<ul class="content"></ul></section><section class="element" id="sort"><h1><a href="#sort">&lt;xsl:sort&gt;</a></h1>
+</li></ul></section><section class="element" id="sort"><h1><a href="#sort">&lt;xsl:sort&gt;</a></h1>
 <div class="desc">
 			<p>
 				If present, this <strong>must</strong> be the first element inside a <a href="#for-each" class="elem-ref">for-each</a> or an
@@ -401,8 +410,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 <li class="attr-ref">lang <span class="type"><span class="general">string</span></span>
 </li>
-</ul>
-<ul class="content"></ul></section><section class="element" id="strip-space"><h1><a href="#strip-space">&lt;xsl:strip-space&gt;</a></h1>
+</ul></section><section class="element" id="strip-space"><h1><a href="#strip-space">&lt;xsl:strip-space&gt;</a></h1>
 <div class="desc">
 			<p>
 				Instructs the processor to remove all white-space nodes from specific
@@ -413,8 +421,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 		</div>
 <ul class="content"><li class="attr-ref">elements <span class="type"><span class="nmtokens">list of names</span></span>
-</li></ul>
-<ul class="content"></ul></section><section class="element" id="stylesheet"><h1><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></h1>
+</li></ul></section><section class="element" id="stylesheet"><h1><a href="#stylesheet">&lt;xsl:stylesheet&gt;</a></h1>
 <ul class="content">
 <li class="attr-ref required">version<span class="type"> (<span class="enum">1.0</span>)</span>
 </li>
@@ -473,11 +480,11 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
 </ul></section><section class="element" id="text"><h1><a href="#text">&lt;xsl:text&gt;</a></h1>
 <ul class="content"><li class="attr-ref">disable-output-escaping<span class="type"> (<span class="enum">yes|no</span>)</span>
-</li></ul>
-<ul class="content"></ul></section><section class="element" id="transform"><h1><a href="#transform">&lt;xsl:transform&gt;</a></h1>
+</li></ul></section><section class="element" id="transform"><h1><a href="#transform">&lt;xsl:transform&gt;</a></h1>
 <div class="desc">
 			<p>This is an alias for the <a href="#stylesheet" class="elem-ref">stylesheet</a> element - almost never used.</p>
 		</div>
@@ -507,8 +514,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 <li class="attr-ref">disable-output-escaping<span class="type"> (<span class="enum">yes|no</span>)</span>
 </li>
-</ul>
-<ul class="content"></ul></section><section class="element" id="variable"><h1><a href="#variable">&lt;xsl:variable&gt;</a></h1>
+</ul></section><section class="element" id="variable"><h1><a href="#variable">&lt;xsl:variable&gt;</a></h1>
 <ul class="content">
 <li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
 </li>
@@ -546,6 +552,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
+<li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
 </ul></section><section class="element" id="with-param"><h1><a href="#with-param">&lt;xsl:with-param&gt;</a></h1>
 <ul class="content">
@@ -553,8 +560,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 </li>
 <li class="attr-ref">select <span class="type"><span class="general">expression</span></span> <span class="type"><span class="general"></span></span>
 </li>
-</ul>
-<ul class="content"></ul></section></section><section id="xpath-functions"><h1>XPath functions</h1>
+</ul></section></section><section id="xpath-functions"><h1>XPath functions</h1>
 <section class="function" id="boolean"><h1><a href="#boolean">boolean(<span class="arglist"><span class="arg-ref required">condition</span></span>)</a></h1>
 <div class="desc">
 			<p>Convert the <var class="attr-ref">condition</var> expression to either <var class="attr-ref">true()</var> or <var class="attr-ref">false()</var>.</p>
@@ -594,12 +600,15 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				Used in conjunction with the <a href="#key" class="elem-ref">key</a> element to facilitate
 				fast and easy lookups in the source XML.
 			</p>
-		</div></section><section class="function" id="normalize-space"><h1><a href="#normalize-space">normalize-space(<span class="arglist"><span class="arg-ref">[source]</span></span>)</a></h1>
+		</div></section><section class="function with-sample" id="normalize-space"><h1><a href="#normalize-space">normalize-space(<span class="arglist"><span class="arg-ref">[source]</span></span>)</a></h1>
 <div class="desc">
 			<p>
 				Returns a copy of the <var class="attr-ref">source</var> string with leading and trailing space removed, as well as
 				compressing runs of whitespace characters into a single space.
 			</p>
+		</div>
+<div class="sample">
+			<code>normalize-space('  a   little  tiny space   ')</code> returns: <code>a little tiny space</code>
 		</div></section><section class="function" id="number-function"><h1><a href="#number-function">number(<span class="arglist"><span class="arg-ref required">source</span></span>)</a></h1>
 <div class="desc">
 			<p>Convert a node set, boolean or string to a number</p>
