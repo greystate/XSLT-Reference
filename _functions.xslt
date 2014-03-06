@@ -13,11 +13,13 @@
 
 	<xsl:template match="function">
 		<section class="function" id="&id-prefix;{@name}">
+			<xsl:if test="example"><xsl:attribute name="class">function with-sample</xsl:attribute></xsl:if>
 			<xsl:if test="key('elements-by-name', @name)">
 				<xsl:attribute name="id"><xsl:value-of select="concat('&id-prefix;', @name, '-function')" /></xsl:attribute>
 			</xsl:if>
 			<xsl:apply-templates select="@name" />
 			<xsl:apply-templates select="description" />
+			<xsl:apply-templates select="example" />
 		</section>
 	</xsl:template>
 	

@@ -58,8 +58,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 
 	<xsl:template match="element">
 		<section class="element" id="&id-prefix;{@name}">
+			<xsl:if test="example"><xsl:attribute name="class">element with-sample</xsl:attribute></xsl:if>
 			<xsl:apply-templates select="@name" />
 			<xsl:apply-templates select="description" />
+			<xsl:apply-templates select="example" />
 			<xsl:if test="attribute">
 				<ul class="content">
 					<xsl:apply-templates select="attribute" mode="content" />
@@ -198,6 +200,20 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			<a href="#xpath-functions">Functions</a>
 			<xsl:call-template name="feed-link" />
 		</nav>
+	</xsl:template>
+	
+	<xsl:template match="example">
+		<div class="sample">
+			<xsl:apply-templates mode="copy" />
+		</div>
+	</xsl:template>
+	
+	<!-- Identity transform -->
+	<xsl:template match="* | text()" mode="copy">
+		<xsl:copy>
+			<xsl:copy-of select="@*" />
+			<xsl:apply-templates select="* | text()" mode="copy" />
+		</xsl:copy>
 	</xsl:template>
 	
 	<xsl:include href="_functions.xslt" />
