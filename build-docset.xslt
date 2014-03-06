@@ -60,12 +60,16 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		<section class="element" id="&id-prefix;{@name}">
 			<xsl:apply-templates select="@name" />
 			<xsl:apply-templates select="description" />
-			<ul class="content">
-				<xsl:apply-templates select="attribute" mode="content" />
-			</ul>
-			<ul class="content">
-				<xsl:apply-templates select="element" mode="content" />
-			</ul>
+			<xsl:if test="attribute">
+				<ul class="content">
+					<xsl:apply-templates select="attribute" mode="content" />
+				</ul>
+			</xsl:if>
+			<xsl:if test="element">
+				<ul class="content">
+					<xsl:apply-templates select="element" mode="content" />
+				</ul>
+			</xsl:if>
 		</section>
 	</xsl:template>
 
