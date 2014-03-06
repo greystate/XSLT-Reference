@@ -130,6 +130,9 @@
 				gets the stylesheet.
 			</note>
 		</description>
+		<example>
+			<pre><![CDATA[<xsl:comment>This file is auto-generated</xsl:comment>]]></pre>
+		</example>
 	</element>
 	
 	<element name="attribute">
