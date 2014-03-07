@@ -2,6 +2,7 @@
 @import "normalize";
 @import "constants";
 @import "forkmebanner";
+@import (less) "../lib/prism-dark.css";
 
 html {
 	font-size: @root_size;
@@ -33,13 +34,6 @@ a {
 	text-decoration: none;
 	
 	&:hover { text-decoration: underline; }
-}
-
-code {
-	font-family: inherit;
-	font-size: 1em;
-	color: @color_code;
-	background: @bgcolor_code;
 }
 
 .element, .function {
@@ -88,25 +82,10 @@ code {
 }
 
 .sample {
-	.font-size(14);
+	.font-size(16);
 	
-	margin: 0 15px 8px;
-	border-radius: 4px;
-	padding: 10px;
-	background: rgba(100, 100, 10, 0.1);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
-
-	pre {
-		margin: 0;
-		padding: 0;
-		white-space: pre;
-		overflow-x: auto;
-	}
-
-	code {
-		background: transparent;
-		font-family: Inconsolata, Monaco, Courier, monospace;
-		
+	pre, code {
+		.font-size(12);
 	}
 }
 
