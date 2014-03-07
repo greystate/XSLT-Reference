@@ -239,6 +239,13 @@
 		</description>
 		<attribute ref="name" required="yes" />
 		<element ref="with-param" />
+		<example><![CDATA[<!-- Simple -->
+<xsl:call template="headers" />
+
+<!-- With argument -->
+<xsl:call template="fibonacci">
+	<xsl:with-param name="from" select="13" />
+</xsl:call>]]></example>
 	</element>
 
 	<element name="with-param">
