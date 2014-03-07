@@ -131,9 +131,7 @@
 				gets the stylesheet.
 			</note>
 		</description>
-		<example>
-			<pre><![CDATA[<xsl:comment>This file is auto-generated</xsl:comment>]]></pre>
-		</example>
+		<example><![CDATA[<xsl:comment>This file is auto-generated</xsl:comment>]]></example>
 	</element>
 	
 	<element name="attribute">
@@ -219,15 +217,13 @@
 				matches the context node
 			</p>
 		</description>
-		<example>
-			<pre><![CDATA[<!-- We need to wrap every movie element -->
+		<example><![CDATA[<!-- We need to wrap every movie element -->
 <xsl:template match="movie">
   <div class="movie">
     <!-- Process the imported template for movie elements -->
     <xsl:apply-imports />
   </div>
-</xsl:template>]]></pre>
-		</example>
+</xsl:template>]]></example>
 	</element>
 
 	<element name="call-template">
