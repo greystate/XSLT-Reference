@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XSLT Quick Reference — v0.9.3.1</title>
+<title>XSLT Quick Reference — v0.9.3.2</title>
 <link rel="stylesheet" href="css/docset.css">
 <script src="scripts/application.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -76,6 +76,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 <li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
@@ -101,12 +103,12 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 		</div>
 <div class="sample"><pre><code>&lt;!-- Simple --&gt;
-&lt;xsl:call template="headers" /&gt;
+&lt;xsl:call-template name="headers" /&gt;
 
 &lt;!-- With argument --&gt;
-&lt;xsl:call template="fibonacci"&gt;
+&lt;xsl:call-template name="fibonacci"&gt;
 	&lt;xsl:with-param name="from" select="13" /&gt;
-&lt;/xsl:call&gt;</code></pre></div>
+&lt;/xsl:call-template&gt;</code></pre></div>
 <ul class="content"><li class="attr-ref required">name <span class="type"><span class="general">string</span></span>
 </li></ul>
 <ul class="content"><li class="elem-ref"><a href="#with-param">&lt;xsl:with-param&gt;</a></li></ul></section><section class="element" id="choose"><h1><a href="#choose">&lt;xsl:choose&gt;</a></h1>
@@ -193,6 +195,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 <li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
@@ -213,6 +217,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 </ul></section><section class="element" id="for-each"><h1><a href="#for-each">&lt;xsl:for-each&gt;</a></h1>
 <div class="desc">
@@ -234,6 +240,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 <li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
@@ -250,6 +258,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 <li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
@@ -326,6 +336,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 <li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
@@ -482,6 +494,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 <li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
@@ -554,6 +568,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <li class="elem-ref"><a href="#param">&lt;xsl:param&gt;</a></li>
 <li class="elem-ref"><a href="#variable">&lt;xsl:variable&gt;</a></li>
 <li class="elem-ref"><a href="#number">&lt;xsl:number&gt;</a></li>
+<li class="elem-ref"><a href="#apply-templates">&lt;xsl:apply-templates&gt;</a></li>
+<li class="elem-ref"><a href="#call-template">&lt;xsl:call-template&gt;</a></li>
 <li class="elem-ref"><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></li>
 <li class="elem-ref"><a href="#apply-imports">&lt;xsl:apply-imports&gt;</a></li>
 <li class="elem-ref"><a href="#fallback">&lt;xsl:fallback&gt;</a></li>
@@ -579,11 +595,11 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</div></section><section class="function" id="current"><h1><a href="#current">current(<span class="arglist"></span>)</a></h1>
 <div class="desc">
 			<p>Returns the current node</p>
-		</div></section><section class="function" id="document"><h1><a href="#document">document(<span class="arglist"><span class="arg-ref required">URL</span></span>)</a></h1>
+		</div></section><section class="function" id="document"><h1><a href="#document">document(<span class="arglist"><span class="arg-ref required">URL</span>, <span class="arg-ref">[base]</span></span>)</a></h1>
 <div class="desc">
 			<p>
-				Returns a nodeset pointing at the root node of the document found at the
-				specified <var class="attr-ref">URL</var>.
+				Returns a nodeset pointing at the root node ("/") of the document found at the
+				specified <var class="attr-ref">URL</var>. 
 			</p>
 		</div></section><section class="function" id="format-number"><h1><a href="#format-number">format-number(<span class="arglist"><span class="arg-ref required">number</span>, <span class="arg-ref required">pattern</span>, <span class="arg-ref">[decimal-format]</span></span>)</a></h1></section><section class="function" id="function-available"><h1><a href="#function-available">function-available(<span class="arglist"><span class="arg-ref required">function</span></span>)</a></h1>
 <div class="desc">

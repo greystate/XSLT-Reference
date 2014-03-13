@@ -11,6 +11,8 @@
 		<element ref="param" />
 		<element ref="variable" />
 		<element ref="number" />
+		<element ref="apply-templates" />
+		<element ref="call-template" />
 		<element ref="processing-instruction" />
 	'>
 
@@ -37,7 +39,7 @@
 		<element ref="output" />
 	'>
 ]>
-<docset name="XSLT 1.0" version="0.9.3.1">
+<docset name="XSLT 1.0" version="0.9.3.2">
 	
 	<!-- Attributes for later reference -->
 	<attribute name="match" content="pattern" />
@@ -240,12 +242,12 @@
 		<attribute ref="name" required="yes" />
 		<element ref="with-param" />
 		<example><![CDATA[<!-- Simple -->
-<xsl:call template="headers" />
+<xsl:call-template name="headers" />
 
 <!-- With argument -->
-<xsl:call template="fibonacci">
+<xsl:call-template name="fibonacci">
 	<xsl:with-param name="from" select="13" />
-</xsl:call>]]></example>
+</xsl:call-template>]]></example>
 	</element>
 
 	<element name="with-param">

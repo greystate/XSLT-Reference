@@ -142,11 +142,12 @@
 	<function name="document">
 		<description>
 			<p>
-				Returns a nodeset pointing at the root node of the document found at the
-				specified <var>URL</var>.
+				Returns a nodeset pointing at the root node ("/") of the document found at the
+				specified <var>URL</var>. 
 			</p>
 		</description>
 		<argument name="URL" type="URI" required="yes" />
+		<argument name="base" type="expression" />
 	</function>
 	
 	<function name="number">
