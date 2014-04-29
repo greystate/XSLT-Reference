@@ -139,6 +139,25 @@
 		<argument name="value" type="expression" required="yes" />
 	</function>
 	
+	<function name="id">
+		<description>
+			<p>
+				If the nodes in your document has a unique ID attribute (defined in the DOCTYPE), you can
+				use the <ref>id</ref> function to select them with. The <var>ids</var> argument takes a whitespace
+				separated string of IDs or a nodeset to take values from, and returns a nodeset containing all
+				of the nodes referenced by their IDs.
+			</p>
+		</description>
+		<example>
+			<pre><code><![CDATA[<!-- Grab three specific nodes by their IDs -->
+<xsl:variable name="static" select="id('4815 1623 4200')" />
+
+<!-- Grab any node referenced in a `<nodeId>` child -->
+<xsl:variable name="dynamic" select="id(nodeId)" />]]></code></pre>
+		</example>
+		<argument name="ids" type="string" required="yes" />
+	</function>
+	
 	<function name="document">
 		<description>
 			<p>
