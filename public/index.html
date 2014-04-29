@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XSLT Quick Reference — v0.9.3.2</title>
+<title>XSLT Quick Reference — v0.9.3.3</title>
 <link rel="stylesheet" href="css/docset.css">
 <script src="scripts/application.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -611,6 +611,21 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</div></section><section class="function" id="generate-id"><h1><a href="#generate-id">generate-id(<span class="arglist"><span class="arg-ref">[node]</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns a unique string ID for the selected node (or the current node if none specified).</p>
+		</div></section><section class="function with-sample" id="id"><h1><a href="#id">id(<span class="arglist"><span class="arg-ref required">ids</span></span>)</a></h1>
+<div class="desc">
+			<p>
+				If the nodes in your document has a unique ID attribute (defined in the DOCTYPE), you can
+				use the <a href="#id" class="elem-ref">id</a> function to select them with. The <var class="attr-ref">ids</var> argument takes a whitespace
+				separated string of IDs or a nodeset to take values from, and returns a nodeset containing all
+				of the nodes referenced by their IDs.
+			</p>
+		</div>
+<div class="sample">
+			<pre><code>&lt;!-- Grab three specific nodes by their IDs --&gt;
+&lt;xsl:variable name="static" select="id('4815 1623 4200')" /&gt;
+
+&lt;!-- Grab any node referenced in a `&lt;nodeId&gt;` child --&gt;
+&lt;xsl:variable name="dynamic" select="id(nodeId)" /&gt;</code></pre>
 		</div></section><section class="function" id="key-function"><h1><a href="#key-function">key(<span class="arglist"><span class="arg-ref required">name</span>, <span class="arg-ref required">value</span></span>)</a></h1>
 <div class="desc">
 			<p>
