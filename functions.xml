@@ -171,7 +171,7 @@
 	
 	<function name="number">
 		<description>
-			<p>Convert a node set, boolean or string to a number</p>
+			<p>Convert a nodeset, boolean value or string to a number</p>
 		</description>
 		<argument name="source" type="expression" required="yes" />
 	</function>
