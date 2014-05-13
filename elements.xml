@@ -39,7 +39,7 @@
 		<element ref="output" />
 	'>
 ]>
-<docset name="XSLT 1.0" version="0.9.3.3">
+<docset name="XSLT 1.0" version="0.9.3.4">
 	
 	<!-- Attributes for later reference -->
 	<attribute name="match" content="pattern" />
