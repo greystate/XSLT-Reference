@@ -196,5 +196,12 @@
 		</description>
 	</function>
 	
+	<function name="string">
+		<description>
+			<p>Convert a value (nodeset, number, boolean or another string) to a <var>string</var> value</p>
+		</description>
+		<argument name="value" type="expression" required="yes" />
+	</function>
+	
 	
 </functions>
