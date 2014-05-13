@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XSLT Quick Reference — v0.9.3.3</title>
+<title>XSLT Quick Reference — v0.9.3.4</title>
 <link rel="stylesheet" href="css/docset.css">
 <script src="scripts/application.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -398,11 +398,22 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			</p>
 		</div>
 <ul class="content"><li class="attr-ref">elements <span class="type"><span class="nmtokens">list of names</span></span>
-</li></ul></section><section class="element" id="processing-instruction"><h1><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h1>
+</li></ul></section><section class="element with-sample" id="processing-instruction"><h1><a href="#processing-instruction">&lt;xsl:processing-instruction&gt;</a></h1>
 <div class="desc">
+			<p>
+				Generates a <em>Processing Instruction</em> in the output; usually used for
+				adding some kind of machine-info to the file.
+			</p>
+			<p>
+				A processing instruction can be selected in an XPath expression using the <a href="#processing-instruction-function" class="func-ref">processing-instruction()</a> function.
+			</p>
 			<p class="note">Although the <var class="attr-ref">name</var> attribute isn't required, no output
 			will be generated if it's missing.</p>
 		</div>
+<div class="sample"><pre><code>&lt;!-- Generates something like this: &lt;?doc-version v0.9.3.4 ?&gt; --&gt;
+&lt;xsl:processing-instruction name="doc-version"&gt;
+  &lt;xsl:value-of select="$version" /&gt;
+&lt;/xsl:processing-instruction&gt;</code></pre></div>
 <ul class="content"><li class="attr-ref">name <span class="type"><span class="general">string</span></span>
 </li></ul></section><section class="element" id="sort"><h1><a href="#sort">&lt;xsl:sort&gt;</a></h1>
 <div class="desc">
@@ -583,6 +594,11 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <section class="function" id="boolean"><h1><a href="#boolean">boolean(<span class="arglist"><span class="arg-ref required">condition</span></span>)</a></h1>
 <div class="desc">
 			<p>Convert the <var class="attr-ref">condition</var> expression to either <var class="attr-ref">true()</var> or <var class="attr-ref">false()</var>.</p>
+			<p>An empty string, an empty nodeset or the number 0 returns <var class="attr-ref">false()</var>, anything else returns <var class="attr-ref">true()</var>.</p>
+			<p class="note">
+				Watch out for these pitfalls: ALL of these return <var class="attr-ref">true()</var> when used in an expression that expects a boolean result,
+				e.g., in the <var class="attr-ref">test</var> attribute of a <a href="#when" class="elem-ref">when</a> or an <a href="#if" class="elem-ref">if</a> element: "1", "0", "true", "false"
+			</p>
 		</div></section><section class="function" id="concat"><h1><a href="#concat">concat(<span class="arglist"><span class="arg-ref required">string1</span>, <span class="arg-ref required">string2</span>, <span class="arg-ref">[stringN…]</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns a string by concatenating the string value of all arguments</p>
@@ -601,6 +617,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				Returns a nodeset pointing at the root node ("/") of the document found at the
 				specified <var class="attr-ref">URL</var>. 
 			</p>
+		</div></section><section class="function" id="false"><h1><a href="#false">false(<span class="arglist"></span>)</a></h1>
+<div class="desc">
+			<p>Returns the boolean value <strong>false</strong></p>
 		</div></section><section class="function" id="format-number"><h1><a href="#format-number">format-number(<span class="arglist"><span class="arg-ref required">number</span>, <span class="arg-ref required">pattern</span>, <span class="arg-ref">[decimal-format]</span></span>)</a></h1></section><section class="function" id="function-available"><h1><a href="#function-available">function-available(<span class="arglist"><span class="arg-ref required">function</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns <var class="attr-ref">true()</var> if a function with the specified name exists.</p>
@@ -645,10 +664,17 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			<code>normalize-space('  a   little  tiny space   ')</code> returns: <code>a little tiny space</code>
 		</div></section><section class="function" id="number-function"><h1><a href="#number-function">number(<span class="arglist"><span class="arg-ref required">source</span></span>)</a></h1>
 <div class="desc">
-			<p>Convert a node set, boolean or string to a number</p>
+			<p>Convert a nodeset, boolean value or string to a number</p>
 		</div></section><section class="function" id="position"><h1><a href="#position">position(<span class="arglist"></span>)</a></h1>
 <div class="desc">
 			<p>Returns the current node's index (1-based) within the <em>current nodelist</em>.</p>
+		</div></section><section class="function" id="processing-instruction-function"><h1><a href="#processing-instruction-function">processing-instruction(<span class="arglist"><span class="arg-ref">[name]</span></span>)</a></h1>
+<div class="desc">
+			<p>Returns a nodeset of the current context node's Processing Instruction children - if a <var class="attr-ref">name</var> is specified,
+			the list is filtered to only include those matching that.</p>
+		</div></section><section class="function" id="string"><h1><a href="#string">string(<span class="arglist"><span class="arg-ref required">value</span></span>)</a></h1>
+<div class="desc">
+			<p>Convert a value (nodeset, number, boolean or another string) to a <var class="attr-ref">string</var> value</p>
 		</div></section><section class="function" id="string-length"><h1><a href="#string-length">string-length(<span class="arglist"><span class="arg-ref required">string</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns the number of characters in the <var class="attr-ref">string</var>.</p>
@@ -657,6 +683,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 			<p>
 				Returns part of (a) <var class="attr-ref">string</var> starting at <var class="attr-ref">start</var>, spanning at most <var class="attr-ref">length</var> characters.
 				If <var class="attr-ref">length</var> isn’t specified, the rest of the string from index <var class="attr-ref">start</var> will be returned.
+			</p>
+			<p class="note">
+				Indexes in XPath/XSLT are 1-based, so the first character in a string can be found with: <code>substring($string, 1, 1)</code> 
 			</p>
 		</div></section><section class="function" id="substring-after"><h1><a href="#substring-after">substring-after(<span class="arglist"><span class="arg-ref required">source</span>, <span class="arg-ref required">find</span></span>)</a></h1>
 <div class="desc">
@@ -670,6 +699,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				Performs character-replacements in the <var class="attr-ref">source</var> string, by replacing every character in the
 				<var class="attr-ref">find</var> argument found in <var class="attr-ref">source</var>, with the character in <var class="attr-ref">replace</var> at
 				the same index </p>
+		</div></section><section class="function" id="true"><h1><a href="#true">true(<span class="arglist"></span>)</a></h1>
+<div class="desc">
+			<p>Returns the boolean value <strong>true</strong></p>
 		</div></section></section><a href="https://github.com/greystate/XSLT-Reference#readme"><img class="forkme" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-orange@2x.png" alt="Fork me on GitHub"></a><nav class="toc-link"><a href="#toc" title="Show a simplified table of contents">Summary</a><a href="#xslt-elements">Elements</a><a href="#xpath-functions">Functions</a><a class="feed" href="dash-feed://http%3A%2F%2Fpimpmyxslt.com%2Freference%2Fxslt-quick-reference.xml" title="Subscribe to feed for Dash here">Dash Feed</a></nav>
 </body>
 </html>
