@@ -122,6 +122,11 @@
 	<function name="boolean">
 		<description>
 			<p>Convert the <var>condition</var> expression to either <var>true()</var> or <var>false()</var>.</p>
+			<p>An empty string, an empty nodeset or the number 0 returns <var>false()</var>, anything else returns <var>true()</var>.</p>
+			<note>
+				Watch out for these pitfalls: ALL of these return <var>true()</var> when used in an expression that expects a boolean result,
+				e.g., in the <var>test</var> attribute of a <ref>when</ref> or an <ref>if</ref> element: "1", "0", "true", "false"
+			</note>
 		</description>
 		<argument name="condition" type="expression" required="yes" />
 	</function>
