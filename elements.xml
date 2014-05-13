@@ -171,9 +171,20 @@
 	
 	<element name="processing-instruction">
 		<description>
+			<p>
+				Generates a <em>Processing Instruction</em> in the output; usually used for
+				adding some kind of machine-info to the file.
+			</p>
+			<p>
+				A processing instruction can be selected in an XPath expression using the <ref>processing-instruction()</ref> function.
+			</p>
 			<note>Although the <var>name</var> attribute isn't required, no output
 			will be generated if it's missing.</note>
 		</description>
+		<example><![CDATA[<!-- Generates something like this: <?doc-version v0.9.3.4 ?> -->
+<xsl:processing-instruction name="doc-version">
+  <xsl:value-of select="$version" />
+</xsl:processing-instruction>]]></example>
 		<attribute ref="name" />
 	</element>
 	
