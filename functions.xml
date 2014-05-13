@@ -184,5 +184,17 @@
 		<argument name="source" type="expression" required="yes" />
 	</function>
 	
+	<function name="true">
+		<description>
+			<p>Returns the boolean value <strong>true</strong></p>
+		</description>
+	</function>
+	
+	<function name="false">
+		<description>
+			<p>Returns the boolean value <strong>false</strong></p>
+		</description>
+	</function>
+	
 	
 </functions>
