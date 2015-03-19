@@ -212,6 +212,8 @@
 	<function name="string">
 		<description>
 			<p>Convert a value (nodeset, number, boolean or another string) to a <var>string</var> value</p>
+			<note>Converting a nodeset to a string <em>will only return the string value of the first node in the set.</em>
+			</note>
 		</description>
 		<argument name="value" type="expression" required="yes" />
 	</function>
