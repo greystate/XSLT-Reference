@@ -32,6 +32,19 @@
 		</description>
 	</function>
 	
+	<function name="count">
+		<description>
+			<p>Returns the number of nodes in the <var>source</var> nodeset</p>
+			<note>
+				Often mistakenly used to check if a nodeset has any nodes, e.g.:
+				<code><![CDATA[<xsl:if test="count($children) &gt; 0">]]></code> which is not necessary at all,
+				simply testing the nodeset itself will return <var>true()</var> if it has any nodes,
+				and <var>false()</var> if it's empty - e.g.: <code><![CDATA[<xsl:if test="$children">]]></code>
+			</note>
+		</description>
+		<argument name="source" type="nodeset" required="yes" />
+	</function>
+	
 	<function name="substring">
 		<description>
 			<p>
@@ -199,6 +212,8 @@
 	<function name="string">
 		<description>
 			<p>Convert a value (nodeset, number, boolean or another string) to a <var>string</var> value</p>
+			<note>Converting a nodeset to a string <em>will only return the string value of the first node in the set.</em>
+			</note>
 		</description>
 		<argument name="value" type="expression" required="yes" />
 	</function>

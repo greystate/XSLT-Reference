@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XSLT Quick Reference — v0.9.3.4</title>
+<title>XSLT Quick Reference — v0.9.4</title>
 <link rel="stylesheet" href="css/docset.css">
 <script src="scripts/application.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -608,6 +608,15 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				Returns <var class="attr-ref">true()</var> if the <var class="attr-ref">source</var> string contains the <var class="attr-ref">find</var> string.
 				Otherwise, it returns <var class="attr-ref">false().</var>
 			</p>
+		</div></section><section class="function" id="count"><h1><a href="#count">count(<span class="arglist"><span class="arg-ref required">source</span></span>)</a></h1>
+<div class="desc">
+			<p>Returns the number of nodes in the <var class="attr-ref">source</var> nodeset</p>
+			<p class="note">
+				Often mistakenly used to check if a nodeset has any nodes, e.g.:
+				<code>&lt;xsl:if test="count($children) &amp;gt; 0"&gt;</code> which is not necessary at all,
+				simply testing the nodeset itself will return <var class="attr-ref">true()</var> if it has any nodes,
+				and <var class="attr-ref">false()</var> if it's empty - e.g.: <code>&lt;xsl:if test="$children"&gt;</code>
+			</p>
 		</div></section><section class="function" id="current"><h1><a href="#current">current(<span class="arglist"></span>)</a></h1>
 <div class="desc">
 			<p>Returns the current node</p>
@@ -675,6 +684,8 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</div></section><section class="function" id="string"><h1><a href="#string">string(<span class="arglist"><span class="arg-ref required">value</span></span>)</a></h1>
 <div class="desc">
 			<p>Convert a value (nodeset, number, boolean or another string) to a <var class="attr-ref">string</var> value</p>
+			<p class="note">Converting a nodeset to a string <em>will only return the string value of the first node in the set.</em>
+			</p>
 		</div></section><section class="function" id="string-length"><h1><a href="#string-length">string-length(<span class="arglist"><span class="arg-ref required">string</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns the number of characters in the <var class="attr-ref">string</var>.</p>
