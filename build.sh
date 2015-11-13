@@ -3,12 +3,15 @@ ARCHIVE_NAME="XSLT_Quick_Reference"
 BUNDLE="dist/$DOCSET_NAME.docset"
 
 # Build the resulting file
+echo "Build HTML file"
 xsltproc --xinclude -o public/index.html build-docset.xslt elements.xml
 
 # Build the SQL to populate the docSet.dsidx SQLLite database
+echo "Build SQL script"
 xsltproc --xinclude -o sql/docs.sql build-sql.xslt elements.xml
 
 # Build the Dash DocSet feed XML file
+echo "Build Dash DocSet XML feed"
 xsltproc -o dist/xslt-quick-reference.xml --stringparam filename "$ARCHIVE_NAME" build-feed.xslt elements.xml
 
 # Backup the existing DocSet (if any)
@@ -34,6 +37,7 @@ sqlite3 "$BUNDLE/Contents/Resources/docSet.dsidx" "CREATE UNIQUE INDEX anchor ON
 sqlite3 "$BUNDLE/Contents/Resources/docSet.dsidx" ".read sql/docs.sql"
 
 # Create the archived Docset file
+echo "Create archive"
 tar --exclude='.DS_Store' -cvzf "dist/$ARCHIVE_NAME.tgz" "$BUNDLE"
 
 # Clean up

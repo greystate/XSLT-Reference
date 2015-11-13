@@ -32,14 +32,15 @@
 	'>
 
 	<!ENTITY root-content '
+		<element ref="attribute-set" />
+		<element ref="key" />
+		<element ref="namespace-alias" />
 		<element ref="import" />
 		<element ref="include" />
-		<element ref="key" />
-		<element ref="attribute-set" />
 		<element ref="output" />
 	'>
 ]>
-<docset name="XSLT 1.0" version="0.9.4">
+<docset name="XSLT 1.0" version="0.9.6">
 	
 	<!-- Attributes for later reference -->
 	<attribute name="match" content="pattern" />
@@ -57,6 +58,17 @@
 		
 		&root-content;
 		
+	</element>
+
+	<element name="namespace-alias">
+		<description>
+			<p>
+				Assigns an alias to an existing prefix so it's possible to generate literal result elements
+				that would otherwise be interpreted as instructions (e.g. when generating an XSLT stylesheet).
+			</p>
+		</description>
+		<attribute name="stylesheet-prefix" content="string" required="yes" />
+		<attribute name="result-prefix" content="string" required="yes" />
 	</element>
 
 	<element name="transform">

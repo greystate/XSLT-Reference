@@ -137,9 +137,8 @@ input[disabled] {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
+       box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -148,7 +147,6 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -182,11 +180,11 @@ table {
 @media only screen and (max-width: 680px) {
   .forkme {
     -webkit-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
     -webkit-transform-origin: 100% 0;
-    -ms-transform-origin: 100% 0;
-    transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
   }
 }
 /**
@@ -197,7 +195,7 @@ table {
 code[class*="language-"],
 pre[class*="language-"] {
   color: white;
-  text-shadow: 0 -0.1em 0.2em #000000;
+  text-shadow: 0 -0.1em 0.2em black;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
@@ -229,7 +227,6 @@ pre[class*="language-"] {
   overflow: auto;
   border: 0.3em solid #7a6652;
   border-radius: .5em;
-  -webkit-box-shadow: 1px 1px .5em black inset;
   box-shadow: 1px 1px .5em black inset;
 }
 /* Inline code */
@@ -237,8 +234,7 @@ pre[class*="language-"] {
   padding: .15em .2em .05em;
   border-radius: .3em;
   border: 0.13em solid #7a6652;
-  -webkit-box-shadow: 1px 1px 0.3em -0.1em #000000 inset;
-  box-shadow: 1px 1px 0.3em -0.1em #000000 inset;
+  box-shadow: 1px 1px 0.3em -0.1em black inset;
 }
 .token.comment,
 .token.prolog,
@@ -330,7 +326,7 @@ a:hover {
 .function > h1 {
   font-size: 1.4em;
   margin: 0;
-  color: #006600;
+  color: #060;
 }
 .element:hover,
 .function:hover {
@@ -338,7 +334,7 @@ a:hover {
   background: rgba(198, 198, 185, 0.5);
 }
 .function > h1 {
-  color: #333333;
+  color: #333;
 }
 .desc,
 .sample {
@@ -359,7 +355,7 @@ a:hover {
   text-decoration: underline;
 }
 .desc {
-  color: #336699;
+  color: #369;
 }
 .desc code {
   font-size: 12px;
@@ -406,29 +402,29 @@ li.attr-ref:before {
   content: "@";
 }
 .elem-ref {
-  color: #006600;
+  color: #060;
 }
 .attr-ref {
   font-style: normal;
-  color: #660000;
+  color: #600;
 }
 .arg-ref {
   font-weight: normal;
   font-style: italic;
-  color: #880000;
+  color: #800;
 }
 .func-ref {
-  color: #333333;
+  color: #333;
 }
 .required {
   font-weight: bold;
 }
 .type {
   display: none;
-  color: #666666;
+  color: #666;
 }
 .type .enum {
-  color: #006600;
+  color: #060;
   font-style: normal;
 }
 .type .general {
@@ -437,7 +433,6 @@ li.attr-ref:before {
 .element:target,
 .function:target {
   border-radius: 6px;
-  -webkit-box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   box-shadow: 0 10px 8px -10px rgba(0, 0, 0, 0.8), 0 -10px 8px -10px rgba(0, 0, 0, 0.8);
   border: solid rgba(0, 0, 0, 0.4);
   border-width: 1px 0;
@@ -517,8 +512,8 @@ li.attr-ref:before {
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-4px);
-  -ms-transform: translateY(-4px);
-  transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 #toc:target .element .desc,
 #toc:target .element .content {
