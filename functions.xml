@@ -17,12 +17,23 @@
 			<p>Returns a unique string ID for the selected node (or the current node if none specified).</p>
 		</description>
 		<argument name="node" type="expression" />
-		
 	</function>
 	
 	<function name="position">
 		<description>
 			<p>Returns the current node's index (1-based) within the <em>current nodelist</em>.</p>
+		</description>
+	</function>
+	
+	<function name="name">
+		<description>
+			<p>Returns the name of the current node or the first node in the specified node set</p>
+		</description>
+	</function>
+	
+	<function name="local-name">
+		<description>
+			<p>Returns the name of the current node or the first node in the specified node set - without the namespace prefix</p>
 		</description>
 	</function>
 	
