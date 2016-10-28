@@ -42,7 +42,16 @@
 			<p>Returns the current node</p>
 		</description>
 	</function>
-	
+	<function name="name">
+		<description>
+			<p>Returns the name</p>
+		</description>
+	</function>
+	<function name="local-name">
+		<description>
+			<p>Returns the local name</p>
+		</description>
+	</function>
 	<function name="count">
 		<description>
 			<p>Returns the number of nodes in the <var>source</var> nodeset</p>
