@@ -26,6 +26,18 @@
 		</description>
 	</function>
 	
+	<function name="name">
+		<description>
+			<p>Returns the name of the current node or the first node in the specified node set</p>
+		</description>
+	</function>
+	
+	<function name="local-name">
+		<description>
+			<p>Returns the name of the current node or the first node in the specified node set - without the namespace prefix</p>
+		</description>
+	</function>
+	
 	<function name="current">
 		<description>
 			<p>Returns the current node</p>
