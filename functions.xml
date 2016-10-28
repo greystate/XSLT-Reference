@@ -17,7 +17,6 @@
 			<p>Returns a unique string ID for the selected node (or the current node if none specified).</p>
 		</description>
 		<argument name="node" type="expression" />
-		
 	</function>
 	
 	<function name="position">
