@@ -10,19 +10,18 @@
 	<xsl:variable name="func-prefix" select="'('" />
 	<xsl:variable name="func-suffix" select="')'" />
 
-
 	<xsl:template match="function">
 		<section class="function" id="&id-prefix;{@name}">
-			<xsl:if test="example"><xsl:attribute name="class">function with-sample</xsl:attribute></xsl:if>
+			<xsl:if test="$examples/example[@function = current()/@name]"><xsl:attribute name="class">function with-sample</xsl:attribute></xsl:if>
 			<xsl:if test="key('elements-by-name', @name)">
 				<xsl:attribute name="id"><xsl:value-of select="concat('&id-prefix;', @name, '-function')" /></xsl:attribute>
 			</xsl:if>
 			<xsl:apply-templates select="@name" />
 			<xsl:apply-templates select="description" />
-			<xsl:apply-templates select="example" />
+			<xsl:apply-templates select="$examples/example[@function = current()/@name]" />
 		</section>
 	</xsl:template>
-	
+
 	<xsl:template match="function/@name">
 		<h1>
 			<a href="#&id-prefix;{.}">
@@ -38,7 +37,7 @@
 			</a>
 		</h1>
 	</xsl:template>
-	
+
 	<xsl:template match="argument" mode="arglist">
 		<span class="arg-ref">
 			<xsl:if test="@required = 'yes'"><xsl:attribute name="class">arg-ref required</xsl:attribute></xsl:if>
@@ -47,7 +46,7 @@
 			<xsl:if test="not(@required = 'yes')">]</xsl:if>
 		</span>
 		<xsl:if test="not(position() = last())">, </xsl:if>
-		
+
 	</xsl:template>
 
 	<xsl:template match="argument" mode="typeinfo">

@@ -20,6 +20,8 @@
 	<xsl:key name="elements-by-name" match="element" use="@name" />
 	<xsl:key name="nodes-by-name" match="element | attribute" use="@name" />
 
+	<xsl:variable name="examples" select= "document('examples.xml')/examples"/>
+
 	<xsl:template match="/">
 		<html>
 		<head>
@@ -58,10 +60,10 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 
 	<xsl:template match="element">
 		<section class="element" id="&id-prefix;{@name}">
-			<xsl:if test="example"><xsl:attribute name="class">element with-sample</xsl:attribute></xsl:if>
+			<xsl:if test="$examples/example[@element = current()/@name]"><xsl:attribute name="class">element with-sample</xsl:attribute></xsl:if>
 			<xsl:apply-templates select="@name" />
 			<xsl:apply-templates select="description" />
-			<xsl:apply-templates select="example" />
+			<xsl:apply-templates select="$examples/example[@element = current()/@name]" />
 			<xsl:if test="attribute">
 				<ul class="content">
 					<xsl:apply-templates select="attribute" mode="content" />
