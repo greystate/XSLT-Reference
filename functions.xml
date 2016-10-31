@@ -94,9 +94,6 @@
 				compressing runs of whitespace characters into a single space.
 			</p>
 		</description>
-		<example>
-			<code>normalize-space('  a   little  tiny space   ')</code> returns: <code>a little tiny space</code>
-		</example>
 		<argument name="source" type="expression" />
 	</function>
 	
@@ -180,13 +177,6 @@
 				of the nodes referenced by their IDs.
 			</p>
 		</description>
-		<example>
-			<pre><code><![CDATA[<!-- Grab three specific nodes by their IDs -->
-<xsl:variable name="static" select="id('4815 1623 4200')" />
-
-<!-- Grab any node referenced in a `<nodeId>` child -->
-<xsl:variable name="dynamic" select="id(nodeId)" />]]></code></pre>
-		</example>
 		<argument name="ids" type="string" required="yes" />
 	</function>
 	

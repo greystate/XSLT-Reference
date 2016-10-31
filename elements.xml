@@ -145,7 +145,6 @@
 				gets the stylesheet.
 			</note>
 		</description>
-		<example><![CDATA[<xsl:comment>This file is auto-generated</xsl:comment>]]></example>
 	</element>
 	
 	<element name="attribute">
@@ -193,10 +192,6 @@
 			<note>Although the <var>name</var> attribute isn't required, no output
 			will be generated if it's missing.</note>
 		</description>
-		<example><![CDATA[<!-- Generates something like this: <?doc-version v0.9.3.4 ?> -->
-<xsl:processing-instruction name="doc-version">
-  <xsl:value-of select="$version" />
-</xsl:processing-instruction>]]></example>
 		<attribute ref="name" />
 	</element>
 	
