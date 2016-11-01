@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE docset [
+<!ENTITY % version SYSTEM "version.ent">
+	%version;
 	
 	<!ENTITY fallback-content '
 		<element ref="if" />
@@ -40,7 +42,7 @@
 		<element ref="output" />
 	'>
 ]>
-<docset name="XSLT 1.0" version="0.9.6">
+<docset name="XSLT 1.0" version="&version;">
 	
 	<!-- Attributes for later reference -->
 	<attribute name="match" content="pattern" />
