@@ -29,12 +29,14 @@
 		<description>
 			<p>Returns the name of the current node or the first node in the specified node set</p>
 		</description>
+		<argument name="source" type="node-set" />
 	</function>
 	
 	<function name="local-name">
 		<description>
 			<p>Returns the name of the current node or the first node in the specified node set - without the namespace prefix</p>
 		</description>
+		<argument name="source" type="node-set" />
 	</function>
 	
 	<function name="current">
@@ -226,7 +228,5 @@
 		</description>
 		<argument name="name" type="string" />
 	</function>
-	
-	
-	
+
 </functions>
