@@ -237,13 +237,6 @@
 				matches the context node
 			</p>
 		</description>
-		<example><![CDATA[<!-- We need to wrap every movie element -->
-<xsl:template match="movie">
-  <div class="movie">
-    <!-- Process the imported template for movie elements -->
-    <xsl:apply-imports />
-  </div>
-</xsl:template>]]></example>
 	</element>
 
 	<element name="call-template">
@@ -259,13 +252,6 @@
 		</description>
 		<attribute ref="name" required="yes" />
 		<element ref="with-param" />
-		<example><![CDATA[<!-- Simple -->
-<xsl:call-template name="headers" />
-
-<!-- With argument -->
-<xsl:call-template name="fibonacci">
-	<xsl:with-param name="from" select="13" />
-</xsl:call-template>]]></example>
 	</element>
 
 	<element name="with-param">
