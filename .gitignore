@@ -1,5 +1,6 @@
 codekit-config.json
 config.codekit
+config.codekit3
 
 *.docset
 .codekit-cache
