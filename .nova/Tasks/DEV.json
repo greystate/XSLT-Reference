@@ -1,0 +1,9 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "xsltproc --xinclude -o public\/index.html build-docset.xslt elements.xml"
+    }
+  },
+  "identifier" : "145D541A-7F0F-4922-9B40-C649A4121324"
+}
