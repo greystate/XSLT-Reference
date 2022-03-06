@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XSLT Quick Reference — v0.9.8</title>
+<title>XSLT Quick Reference — v0.9.9</title>
 <link rel="stylesheet" href="css/docset.css">
 <script src="scripts/application.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -613,6 +613,9 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				Watch out for these pitfalls: ALL of these return <var class="attr-ref">true()</var> when used in an expression that expects a boolean result,
 				e.g., in the <var class="attr-ref">test</var> attribute of a <a href="#when" class="elem-ref">when</a> or an <a href="#if" class="elem-ref">if</a> element: "1", "0", "true", "false"
 			</p>
+		</div></section><section class="function" id="ceiling"><h1><a href="#ceiling">ceiling(<span class="arglist"><span class="arg-ref required">value</span></span>)</a></h1>
+<div class="desc">
+			<p>Returns an the supplied <var class="attr-ref">value</var> rounded up to the nearest integer.</p>
 		</div></section><section class="function" id="concat"><h1><a href="#concat">concat(<span class="arglist"><span class="arg-ref required">string1</span>, <span class="arg-ref required">string2</span>, <span class="arg-ref">[stringN…]</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns a string by concatenating the string value of all arguments</p>
@@ -638,11 +641,17 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 <div class="desc">
 			<p>
 				Returns a nodeset pointing at the root node ("/") of the document found at the
-				specified <var class="attr-ref">URL</var>. 
+				specified <var class="attr-ref">URL</var>.
+			</p>
+			<p class="note">
+				Supplying an empty string to the <var class="attr-ref">URL</var> parameter returns the XSLT stylesheet itself.
 			</p>
 		</div></section><section class="function" id="false"><h1><a href="#false">false(<span class="arglist"></span>)</a></h1>
 <div class="desc">
 			<p>Returns the boolean value <strong>false</strong></p>
+		</div></section><section class="function" id="floor"><h1><a href="#floor">floor(<span class="arglist"><span class="arg-ref required">value</span></span>)</a></h1>
+<div class="desc">
+			<p>Returns an the supplied <var class="attr-ref">value</var> rounded down to the nearest integer.</p>
 		</div></section><section class="function" id="format-number"><h1><a href="#format-number">format-number(<span class="arglist"><span class="arg-ref required">number</span>, <span class="arg-ref required">pattern</span>, <span class="arg-ref">[decimal-format]</span></span>)</a></h1></section><section class="function" id="function-available"><h1><a href="#function-available">function-available(<span class="arglist"><span class="arg-ref required">function</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns <var class="attr-ref">true()</var> if a function with the specified name exists.</p>
@@ -716,7 +725,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 				If <var class="attr-ref">length</var> isn’t specified, the rest of the string from index <var class="attr-ref">start</var> will be returned.
 			</p>
 			<p class="note">
-				Indexes in XPath/XSLT are 1-based, so the first character in a string can be found with: <code>substring($string, 1, 1)</code> 
+				Indexes in XPath/XSLT are 1-based, so the first character in a string can be found with: <code>substring($string, 1, 1)</code>
 			</p>
 		</div></section><section class="function" id="substring-after"><h1><a href="#substring-after">substring-after(<span class="arglist"><span class="arg-ref required">source</span>, <span class="arg-ref required">find</span></span>)</a></h1>
 <div class="desc">
@@ -724,12 +733,16 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		</div></section><section class="function" id="substring-before"><h1><a href="#substring-before">substring-before(<span class="arglist"><span class="arg-ref required">source</span>, <span class="arg-ref required">find</span></span>)</a></h1>
 <div class="desc">
 			<p>Returns everything that comes before the <var class="attr-ref">find</var> string inside the <var class="attr-ref">source</var> string.</p>
+		</div></section><section class="function" id="sum"><h1><a href="#sum">sum(<span class="arglist"><span class="arg-ref required">source</span></span>)</a></h1>
+<div class="desc">
+			<p>Add the numbers in all nodes selected by the <var class="attr-ref">source</var> expression and return the result.</p>
 		</div></section><section class="function" id="translate"><h1><a href="#translate">translate(<span class="arglist"><span class="arg-ref required">source</span>, <span class="arg-ref required">find</span>, <span class="arg-ref required">replace</span></span>)</a></h1>
 <div class="desc">
 			<p>
 				Performs character-replacements in the <var class="attr-ref">source</var> string, by replacing every character in the
 				<var class="attr-ref">find</var> argument found in <var class="attr-ref">source</var>, with the character in <var class="attr-ref">replace</var> at
-				the same index </p>
+				the same index
+			</p>
 		</div></section><section class="function" id="true"><h1><a href="#true">true(<span class="arglist"></span>)</a></h1>
 <div class="desc">
 			<p>Returns the boolean value <strong>true</strong></p>
