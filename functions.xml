@@ -5,7 +5,8 @@
 			<p>
 				Performs character-replacements in the <var>source</var> string, by replacing every character in the
 				<var>find</var> argument found in <var>source</var>, with the character in <var>replace</var> at
-				the same index </p>
+				the same index
+			</p>
 		</description>
 		<argument name="source" type="string" required="yes" />
 		<argument name="find" type="string" required="yes" />
@@ -188,6 +189,9 @@
 				Returns a nodeset pointing at the root node ("/") of the document found at the
 				specified <var>URL</var>.
 			</p>
+			<note>
+				Supplying an empty string to the <var>URL</var> parameter returns the XSLT stylesheet itself.
+			</note>
 		</description>
 		<argument name="URL" type="URI" required="yes" />
 		<argument name="base" type="expression" />
@@ -231,18 +235,22 @@
 
 	<function name="sum">
 		<description>
-			<p>Add the numbers in all nodes selected by the <ref>source</ref> expression and return the result.</p>
+			<p>Add the numbers in all nodes selected by the <var>source</var> expression and return the result.</p>
 		</description>
-		<argument name="source" type="expression" />
+		<argument name="source" type="expression" required="yes" />
 	</function>
 
 	<function name="ceiling">
-		<description></description>
-		<argument name="value" type="expression" />
+		<description>
+			<p>Returns an the supplied <var>value</var> rounded up to the nearest integer.</p>
+		</description>
+		<argument name="value" type="expression" required="yes" />
 	</function>
 
 	<function name="floor">
-		<description></description>
-		<argument name="value" type="expression" />
+		<description>
+			<p>Returns an the supplied <var>value</var> rounded down to the nearest integer.</p>
+		</description>
+		<argument name="value" type="expression" required="yes" />
 	</function>
 </functions>
