@@ -1,5 +1,5 @@
-@import "helpers-0.6";
-@import "normalize";
+@import "mixins";
+// @import "normalize";
 @import "constants";
 @import "forkmebanner";
 @import (less) "../lib/prism-dark.css";
@@ -10,13 +10,13 @@ html {
 
 body {
 	.font-size(12);
-	
+
 	max-width: 600px;
 	margin: 0 auto;
 	background: #dcdcdc;
 	color: #314159;
-	font-family: inconsolata, "courier new", monospace;	
-	
+	font-family: inconsolata, "courier new", monospace;
+
 	@media only screen and (max-width: 680px) {
 		.font-size(10);
 	}
@@ -32,7 +32,7 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
-	
+
 	&:hover { text-decoration: underline; }
 }
 
@@ -48,7 +48,7 @@ a {
 		margin: 0;
 		color: @color_elem;
 	}
-	
+
 	&:hover {
 		border-radius: 6px;
 		background: @color_hovered;
@@ -65,9 +65,9 @@ a {
 	display: none;
 	padding: 5px;
 	margin: 0 10px;
-	
+
 	> p { margin: 0 0 0.6em; }
-	
+
 	a {
 		font-weight: bold;
 
@@ -79,7 +79,7 @@ a {
 
 .desc {
 	color: @color_desc;
-	
+
 	code {
 		.font-size(12);
 	}
@@ -87,7 +87,7 @@ a {
 
 .sample {
 	.font-size(16);
-	
+
 	pre, code {
 		.font-size(12);
 	}
@@ -99,7 +99,7 @@ a {
 	font-size: 75%;
 	color: @color_note;
 	background: @bgcolor_note;
-	
+
 	&:before {
 		content: "Note:\A0";
 		float: left;
@@ -112,7 +112,7 @@ a {
 	padding: 0 0 0 10px;
 	margin: 5px 0;
 	list-style: none;
-	
+
 	> h2 { font-size: 12px; }
 }
 
@@ -156,7 +156,7 @@ li.attr-ref:before {
 		color: @color_attr_type_enum;
 		font-style: normal;
 	}
-	
+
 	.general { font-style: italic; }
 }
 
@@ -167,20 +167,20 @@ li.attr-ref:before {
 	box-shadow:
 		0 10px 8px -10px hsla(120, 0%, 0%, 0.8),
 		0 -10px 8px -10px hsla(120, 0%, 0%, 0.8);
-	
+
 	border: solid rgba(0, 0, 0, 0.4);
 	border-width: 1px 0;
-	
+
 	background: @color_selected;
 	font-size: 175%;
 	margin: 10px 0;
-	
+
 	a { text-decoration: none; }
-	
+
 	&:hover {
 		background: @color_selected;
 	}
-	
+
 	.desc, .sample { display: block; }
 	.type { display: inline; }
 }
@@ -198,9 +198,9 @@ li.attr-ref:before {
 	border: solid @color_selected;
 	border-width: 0 3px 0 0;
 	background: rgba(255, 255, 255, 0.5);
-	
+
 	a { display: block; }
-	
+
 	@media only screen and (max-width: 680px) {
 		right: 0;
 		left: auto;
@@ -220,13 +220,13 @@ li.attr-ref:before {
 		width: 45%;
 		float: left;
 	}
-	
+
 	.element, .function {
 		margin-top: 2px;
 		margin-bottom: 0;
 		padding-bottom: 0;
 		padding-top: 0;
-		
+
 		&.with-sample {
 			&:before {
 				content: "";
@@ -242,14 +242,14 @@ li.attr-ref:before {
 			}
 		}
 	}
-	
+
 	.element {
 		.desc, .content {
 			clip: rect(0, 0, 0, 0);
 			position: absolute;
 		}
 	}
-	
+
 	.function {
 		.arglist {
 			display: none;
