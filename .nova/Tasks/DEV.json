@@ -2,7 +2,7 @@
   "actions" : {
     "build" : {
       "enabled" : true,
-      "script" : "xsltproc --xinclude -o public\/index.html build-docset.xslt elements.xml"
+      "script" : "xsltproc --xinclude -o build\/index.html src\/xslt\/build-docset.xslt src\/xml\/elements.xml"
     }
   },
   "identifier" : "145D541A-7F0F-4922-9B40-C649A4121324"

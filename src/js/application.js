@@ -1,1 +1,1 @@
-// @codekit-append "../lib/prism.js"
+// @codekit-append "../../lib/prism.js"
