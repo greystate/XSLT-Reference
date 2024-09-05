@@ -20,7 +20,7 @@
 	<xsl:key name="elements-by-name" match="element" use="@name" />
 	<xsl:key name="nodes-by-name" match="element | attribute" use="@name" />
 
-	<xsl:variable name="examples" select= "document('examples.xml')/examples"/>
+	<xsl:variable name="examples" select= "document('../xml/examples.xml')/examples"/>
 
 	<xsl:template match="/">
 		<html>
