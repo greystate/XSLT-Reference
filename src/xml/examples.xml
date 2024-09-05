@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <examples>
-	
+
 	<example element="comment"><![CDATA[<xsl:comment>This file is auto-generated</xsl:comment>]]></example>
 
 	<example element="processing-instruction"><![CDATA[<!-- Generates something like this: <?doc-version v0.9.3.4 ?> -->
 <xsl:processing-instruction name="doc-version">
   <xsl:value-of select="$version" />
 </xsl:processing-instruction>]]></example>
-	
+
 	<example element="apply-imports"><![CDATA[<!-- We need to wrap every movie element -->
 <xsl:template match="movie">
   <div class="movie">
@@ -35,5 +35,15 @@
 <!-- Grab any node referenced in a `<nodeId>` child -->
 <xsl:variable name="dynamic" select="id(nodeId)" />]]></code></pre>
 	</example>
+
+	<example function="round">
+		<pre><code><![CDATA[<!-- Prints "12" -->
+<xsl:value-of select="round(11.9)" />
+
+<!-- Prints "10" -->
+<xsl:value-of select="round(10.48)" />
+]]></code></pre>
+	</example>
+
 
 </examples>

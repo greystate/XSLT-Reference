@@ -242,14 +242,21 @@
 
 	<function name="ceiling">
 		<description>
-			<p>Returns an the supplied <var>value</var> rounded up to the nearest integer.</p>
+			<p>Returns the supplied <var>value</var> rounded up to the nearest integer.</p>
 		</description>
 		<argument name="value" type="expression" required="yes" />
 	</function>
 
 	<function name="floor">
 		<description>
-			<p>Returns an the supplied <var>value</var> rounded down to the nearest integer.</p>
+			<p>Returns the supplied <var>value</var> rounded down to the nearest integer.</p>
+		</description>
+		<argument name="value" type="expression" required="yes" />
+	</function>
+
+	<function name="round">
+		<description>
+			<p>Returns the supplied <var>value</var> rounded to the nearest integer, e.g. up if the decimal part is 0.5 or more, down if it's less than 0.5.</p>
 		</description>
 		<argument name="value" type="expression" required="yes" />
 	</function>
