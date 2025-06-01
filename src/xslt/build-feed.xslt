@@ -10,7 +10,7 @@
 	<xsl:template match="/">
 		<entry>
 			<version><xsl:value-of select="docset/@version" /></version>
-			<url><xsl:value-of select="concat('http://pimpmyxslt.com/reference/', $filename, '.tgz')" /></url>
+			<url><xsl:value-of select="concat('https://xslt.dk/reference/', $filename, '.tgz')" /></url>
 		</entry>
 	</xsl:template>
 

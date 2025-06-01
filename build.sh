@@ -24,7 +24,7 @@ fi
 mkdir -p "$BUNDLE/Contents/Resources/Documents/"
 
 # Copy the HTML Doc(s)
-cp -R public/* "$BUNDLE/Contents/Resources/Documents"
+cp -R build/* "$BUNDLE/Contents/Resources/Documents"
 
 # Copy the Info.plist file
 cp "lib/Info.plist" "$BUNDLE/Contents"
@@ -43,4 +43,4 @@ tar --exclude='.DS_Store' -cvzf "dist/$ARCHIVE_NAME.tgz" "$BUNDLE"
 # Clean up
 rm -rf "$BUNDLE.bak"
 
-echo "Completed build - don't forget to upload the $ARCHIVE_NAME.tgz and feed (XML) files to pimpmyxslt.com/reference as well as all the HTML files"
+echo "Completed build - don't forget to upload the $ARCHIVE_NAME.tgz and feed (XML) files to xslt.dk/reference as well as all the HTML files"
