@@ -185,7 +185,7 @@ So you definitely shouldn't be editing it, or you'll end up sad...
 		<a href="https://github.com/greystate/XSLT-Reference#readme">
 			<img
 				class="forkme"
-				src="//aral.github.io/fork-me-on-github-retina-ribbons/right-orange@2x.png"
+				src="/assets/fork-me-right-orange@2x.png"
 				alt="Fork me on GitHub"
 			/>
 		</a>
