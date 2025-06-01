@@ -20,14 +20,14 @@ if you see anything that's missing.
 
 ## Dev notes
 
-I use  [CodeKit][] for preprocessing the LESS file, which also runs *Autoprefixer* on the compiled CSS so I can write as much real CSS as possible.
+I use  [CodeKit][KIT] for preprocessing the LESS file, which also runs *Autoprefixer* on the compiled CSS so I can write as much real CSS as possible.
 A simple bash script transforms the XML file with the list of elements into a single HTML file. Yay, XSLT!
 
-*Chriztian Steinmeier, 2013–2015*
+*Chriztian Steinmeier (since 2013)*
 
-[DASH]: http://kapeli.com/dash/
-[XSLTREF]: http://pimpmyxslt.com/reference/
-[PIMP]: http://pimpmyxslt.com/
-[CodeKit]: http://incident57.com/codekit/
-[EX1]: http://pimpmyxslt.com/reference/#number
+[DASH]: https://kapeli.com/dash/
+[XSLTREF]: https://xslt.dk/reference/
+[PIMP]: https://xslt.dk/
+[KIT]: https://codekitapp.com
+[EX1]: https://xslt.dk/reference/#number
 [ISSUES]: https://github.com/greystate/XSLT-Reference/issues
