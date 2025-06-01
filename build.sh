@@ -4,15 +4,15 @@ BUNDLE="dist/$DOCSET_NAME.docset"
 
 # Build the resulting file
 echo "Build HTML file"
-xsltproc --xinclude -o public/index.html build-docset.xslt elements.xml
+xsltproc --xinclude -o build/index.html src/xslt/build-docset.xslt src/xml/elements.xml
 
 # Build the SQL to populate the docSet.dsidx SQLLite database
 echo "Build SQL script"
-xsltproc --xinclude -o sql/docs.sql build-sql.xslt elements.xml
+xsltproc --xinclude -o sql/docs.sql src/xslt/build-sql.xslt src/xml/elements.xml
 
 # Build the Dash DocSet feed XML file
 echo "Build Dash DocSet XML feed"
-xsltproc -o dist/xslt-quick-reference.xml --stringparam filename "$ARCHIVE_NAME" build-feed.xslt elements.xml
+xsltproc -o dist/xslt-quick-reference.xml --stringparam filename "$ARCHIVE_NAME" src/xslt/build-feed.xslt src/xml/elements.xml
 
 # Backup the existing DocSet (if any)
 if [[ -d "$BUNDLE" ]]; then
